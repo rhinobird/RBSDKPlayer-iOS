@@ -44,8 +44,8 @@ Minimum iOS Target: `10.0`
 
 RBSDKPlayer works for both Objective-C & Swift projects. There're multiple ways to add a controller as a subview, treat `RBSDKPlayerViewController` the same as any other controller. This is just an example.
 
-An Objective-C demo project is included [here](tree/master/sdkdemo-objc)
-A demo project is included [here](tree/master/sdkdemo-swift)
+An Objective-C demo project is included [here](sdkdemo-objc)
+A demo project is included [here](sdkdemo-swift)
 
 **Initialize the SDK by setting the security & access key**
 
