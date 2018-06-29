@@ -1,9 +1,14 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.0.1-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.1.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
-## Installation with CocoaPods
+## Introduction
+_TODO: Add SDK Description here._
+
+We're working on making this sdk completely public, but in the mean, to make it work you'll need to get direct authorization from us, [send us an email](mailto:benjamin@rhinobird.tv) and we will send you the needed keys to make this work.
+
+## Install the SDK using CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. See [Installation Guide](https://cocoapods.org/#install) for more information. You can install it with the following command:
 
 ```
@@ -28,6 +33,9 @@ Then run the installation command:
 $ pod install
 ```
 
+## Install the SDK using Carthage
+_We're currently working on adding support for Carthage._
+
 ## Requirements
 
 Minimum iOS Target: `10.0`
@@ -36,25 +44,76 @@ Minimum iOS Target: `10.0`
 
 RBSDKPlayer works for both Objective-C & Swift projects. There're multiple ways to add a controller as a subview, treat `RBSDKPlayerViewController` the same as any other controller. This is just an example.
 
-### Objective-C
+An Objective-C demo project is included [here](tree/master/sdkdemo-objc)
+A demo project is included [here](tree/master/sdkdemo-swift)
 
-A demo project is included [here](https://github.com/rhinobird/RBSDKPlayer/tree/master/sdkdemo-objc)
+**Initialize the SDK by setting the security & access key**
 
-**Create the properties (ViewController.h)**
+If you need these keys, refer to the [Introduction Section](#introduction) of this document.
+
+```
+[RBSDK.sharedInstance setSecretKey:<#Secret Key Here#>
+                         accessKey:<#Access Key Here#>];
+```
+```
+RBSDK.sharedInstance().setSecretKey(<#Secret Key Here#>,
+                                    accessKey: <#Access Key Here#>)
+```
+
+**Create the properties**
 
 ```
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
 @property (strong, nonatomic) RBSDKPlayerViewController *playerController;
 ```
+```
+@IBOutlet weak var playerContainerView: UIView?
+var playerController: RBSDKPlayerViewController?
+```
+Connect them to the interface file if needed.
 
 **Create the controller, add it as a subview**
-```
-self.playerController = [[RBSDKPlayerViewController alloc] initWithMomentId:<moment_id>
-                                                                   autoplay:YES];
 
-self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-[self.playerContainerView addSubview:self.playerController.view];
-[self addChildViewController:self.playerController];
+Before creating a player, make sure that everything in the SDK core is loaded, by calling `loadAsynchronouslyWithCompletionHandler:` method and in the `completionHandler` set the player.
+```
+[RBSDK.sharedInstance loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
+        if (success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.playerController = [[RBSDKPlayerViewController alloc] initWithMomentId:<#Moment Id#>
+                [self.playerController setDelegate:self];
+                                                                                   autoplay:YES];
+                self.playerController.view.frame = self.playerContainerView.bounds;
+                self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+                [self.playerContainerView addSubview:self.playerController.view];
+                [self addChildViewController:self.playerController];
+            });
+        } else {
+            NSLog(@"Error trying to configure the sdk: %@", error.localizedDescription);
+        }
+    }];
+```
+```
+RBSDK.sharedInstance().loadAsynchronously { success, error in
+            if (success) {
+                DispatchQueue.main.async {
+                    self.playerController = RBSDKPlayerViewController(momentId: <#Moment Id#>,
+                                                                      autoplay: true)
+                    self.playerController?.setDelegate(self)
+
+                    if let playerController = self.playerController,
+                        let playerContainerView = self.playerContainerView {
+                        playerController.view.frame = playerContainerView.bounds
+                        playerController.view.autoresizingMask = [.flexibleWidth,
+                                                                  .flexibleHeight]
+                        playerContainerView.addSubview(playerController.view)
+                        self.addChildViewController(playerController)
+                    }
+                }
+
+            } else if let error = error {
+                print("Error trying to configure the sdk: \(error)")
+            }
+        }
 ```
 
 **Resize the player view on any layout change**
@@ -67,34 +126,6 @@ self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
     self.playerController.view.frame = self.playerContainerView.bounds;
 }
 ```
-
-### Swift
-
-A demo project is included [here](https://github.com/rhinobird/RBSDKPlayer/tree/master/sdkdemo-swift)
-
-**Create the properties**
-
-```
-@IBOutlet weak var playerContainerView: UIView?
-var playerController: RBSDKPlayerViewController?
-```
-
-**Create the controller, add it as a subview**
-```
-playerController = RBSDKPlayerViewController(momentId: <moment_id>,
-                                             autoplay: true)
-
-if let playerController = playerController,
-    let playerContainerView = playerContainerView {
-
-    playerController.view.autoresizingMask = [.flexibleWidth,
-                                              .flexibleHeight]
-    playerContainerView.addSubview(playerController.view)
-    addChildViewController(playerController)
-}
-```
-
-**Resize the player view on any layout change**
 ```
 override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
@@ -103,6 +134,36 @@ override func viewDidLayoutSubviews() {
 
     if let bounds = playerContainerView?.bounds {
         playerController?.view.frame = bounds
+    }
+}
+```
+
+**Delegate**
+
+If you need feedback about the player's loading process, implement the `RBPlayerViewControllerDelegate` methods on your class.
+
+```
+# pragma mark - RBPlayerViewControllerDelegate
+
+- (void)playerControllerLoadDidSucceed:(BOOL)succeed {
+    if (succeed) {
+        NSLog(@"Player load succeed");
+    } else {
+        NSLog(@"Player was not able to load");
+    }
+}
+```
+```
+// MARK: RBPlayerViewControllerDelegate
+
+extension ViewController: RBPlayerViewControllerDelegate {
+
+    func playerControllerLoadDidSucceed(_ succeed: Bool) {
+        if (succeed) {
+            print("Player load succeed")
+        } else {
+            print("Player was not able to load")
+        }
     }
 }
 ```
