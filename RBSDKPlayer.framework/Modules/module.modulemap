@@ -1,0 +1,6 @@
+framework module RBSDKPlayer {
+  umbrella header "RBSDKPlayer.h"
+
+  export *
+  module * { export * }
+}
