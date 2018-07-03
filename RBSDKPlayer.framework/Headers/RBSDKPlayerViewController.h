@@ -10,6 +10,8 @@
 
 #import <RBSDKPlayer/RBPlayerViewControllerDelegate.h>
 
+FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNotification;
+
 @interface RBSDKPlayerViewController : UIViewController
 
 /**
@@ -20,7 +22,8 @@
 
  @return An instance of RBSDKPlayerViewController
  */
-- (instancetype)initWithMomentId:(nonnull NSString *)momentId autoplay:(BOOL)autoplay;
+- (instancetype _Nonnull)initWithMomentId:(nonnull NSString *)momentId
+                                 autoplay:(BOOL)autoplay;
 
 /**
  Check RBPlayerViewControllerDelegate for details
