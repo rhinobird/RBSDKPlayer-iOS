@@ -1,15 +1,15 @@
 Pod::Spec.new do |s|
 
   s.name         = "RBSDKPlayer"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Interactive video player SDK by Rhinobird"
 
-  s.homepage     = "https://github.com/rhinobird/RBSDKPlayer"
+  s.homepage     = "https://github.com/rhinobird/RBSDKPlayer-iOS"
   s.license      = "MIT"
   s.author       = { "Rhinobird Inc." => "benjamin@rhinobird.tv" }
   s.platform     = :ios, "10.3"
 
-  s.source       = { :git => "git@github.com:rhinobird/RBSDKPlayer-iOS.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/rhinobird/RBSDKPlayer-iOS.git", :tag => "#{s.version}" }
 
   s.source_files = "RBSDKPlayer.framework/Headers/*.h"
   s.public_header_files = "RBSDKPlayer.framework/Headers/*.h"
