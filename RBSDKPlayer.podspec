@@ -14,6 +14,7 @@ Pod::Spec.new do |s|
   s.source_files = "RBSDKPlayer.framework/Headers/*.h"
   s.public_header_files = "RBSDKPlayer.framework/Headers/*.h"
   s.vendored_frameworks = "RBSDKPlayer.framework"
+  s.swift_version = '4.1'
 
   s.dependency 'AWSS3', '~> 2.4.0'
   s.dependency 'MBCircularProgressBar', '~> 0.3'
@@ -21,6 +22,7 @@ Pod::Spec.new do |s|
   s.dependency 'NHNetworkTime', '~> 1.7'
   s.dependency 'SDWebImage', '~> 3.7'
   s.dependency 'XCDYouTubeKit', '~> 2.5'
-  s.dependency 'Socket.IO-Client-Swift', '~> 12.0.0'
+  s.dependency 'Socket.IO-Client-Swift', '~> 13.0'
+
 
 end
