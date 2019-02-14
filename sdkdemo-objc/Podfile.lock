@@ -9,7 +9,7 @@ PODS:
   - Mixpanel (3.3.9)
   - NHNetworkTime (1.7):
     - CocoaAsyncSocket (~> 7.5.0)
-  - RBSDKPlayer (0.1.3):
+  - RBSDKPlayer (0.1.5):
     - AWSS3 (~> 2.4.0)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
@@ -52,7 +52,7 @@ SPEC CHECKSUMS:
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 5bc76524e4e6f7eea1db809cceaf17b4ad504b05
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: 77a32cec77cc8610f91165ae2b88313fb4a5972a
+  RBSDKPlayer: a1e90e9ac960eecf9eb451da72bffd9d7cc1a055
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5

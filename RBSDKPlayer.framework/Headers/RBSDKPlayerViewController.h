@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-#import <RBSDKPlayer/RBSDKPlayerViewControllerDelegate.h>
+#import "RBSDKPlayerViewControllerDelegate.h"
 #import "RBSDKPlayerOptions.h"
 
 FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNotification;

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Rhinobird. All rights reserved.
 //
 
-#import <RBSDKPlayer/RBSDKPlayer.h>
+#import "RBSDKPlayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
