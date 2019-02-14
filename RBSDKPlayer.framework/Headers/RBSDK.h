@@ -13,27 +13,33 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
 
 @interface RBSDK : NSObject
 
-// YES when is safe to create a player and all is already loaded
-@property (nonatomic, getter=isReady) BOOL ready;
-
-// YES when the configurator is still loading stuff
-@property (nonatomic, getter=isLoading) BOOL loading;
-
 /**
- Returns a RBSDK configuration singleton
+ Returns a RBSDK configuration singleton, only use the singleton or unexpected
+ things will happen.
 
  @return A RBSDK configuration singleton
  */
 + (instancetype)sharedInstance;
 
 /**
- Set the secrect and access key, this is needed for creating RBSDKPlayerViewController
+ Set the secret and access key, this is needed for creating RBSDKPlayerViewController
 
  @params secretKey SDK's secret key
  @params accessKey SDK's access key
  */
 - (void)setSecretKey:(nonnull NSString *)secretKey
            accessKey:(nonnull NSString *)accessKey;
+
+/**
+ Set the secret, access and token key, this is needed for creating RBSDKPlayerViewController
+
+ @params secretKey SDK's secret key
+ @params accessKey SDK's access key
+ @params accessKey SDK's access key
+ */
+- (void)setSecretKey:(nonnull NSString *)secretKey
+           accessKey:(nonnull NSString *)accessKey
+            tokenKey:(nonnull NSString *)tokenKey;
 
 /**
  Use this method if you want to initialize a player a soon as posible, completion
@@ -44,5 +50,11 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
  was successfull or not, and if is not, check the NSError information.
  */
 - (void)loadAsynchronouslyWithCompletionHandler:(RBLoadHandlerBlock)completionHandler;
+
+// YES when is safe to create a player and all is already loaded
+- (BOOL)isReady;
+
+// YES when the configurator is still loading stuff
+- (BOOL)isLoading;
 
 @end

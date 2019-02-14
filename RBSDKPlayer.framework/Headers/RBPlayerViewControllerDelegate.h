@@ -10,6 +10,7 @@
 #define RBPlayerViewControllerDelegate_h
 
 @class UIScrollView;
+@class RBSDKPlayerViewController;
 
 @protocol RBPlayerViewControllerDelegate <NSObject>
 
@@ -31,6 +32,11 @@
  @return a vertical scrollview (or any subclass)
  */
 - (nullable UIScrollView *)playerControllerMainScrollView;
+
+/**
+
+ */
+- (void)playerControllerCaptionChanged:(NSString *)caption;
 
 @end
 

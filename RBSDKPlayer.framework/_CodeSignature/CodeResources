@@ -6,7 +6,15 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		vGpycB3xtqwUwDKkrHPcmRng1dk=
+		mkhKGj3ATp9nSTvMMwmGQ6Hg8ak=
+		</data>
+		<key>BCOVPUIResources.bundle/Info.plist</key>
+		<data>
+		o1EOEIahqebLKfSb7lUZ0f4dNjo=
+		</data>
+		<key>BCOVPUIResources.bundle/bcovpuiiconfont.ttf</key>
+		<data>
+		V3S0EyOH2MlUOs2JM0RiwxW0CxY=
 		</data>
 		<key>CorpSansRd-BlackCnd.otf</key>
 		<data>
@@ -138,23 +146,35 @@
 		</data>
 		<key>Headers/RBPlayerViewControllerDelegate.h</key>
 		<data>
-		0Ij4iNZmKM0yYzsahYzBT3p9Ouw=
+		+25voo2GV9cnuLuGDkiFeNsDNBw=
 		</data>
 		<key>Headers/RBSDK.h</key>
 		<data>
-		sYyBogjnJpqUBcOu//5mY306ttU=
+		ELlo32opaK+fdkxxXcY4D7fkEMg=
+		</data>
+		<key>Headers/RBSDKBrightcovePlayerViewController.h</key>
+		<data>
+		18B/fGFZedlErveW3WxlGBIWu38=
 		</data>
 		<key>Headers/RBSDKPlayer.h</key>
 		<data>
-		ILdAKXSOqkeRrWvpzvAf77IvIok=
+		sE1GmG/tc557QSn4yWcK0jYKZhc=
+		</data>
+		<key>Headers/RBSDKPlayerOptions.h</key>
+		<data>
+		Cor2u6t2lo5xsnbbZnQkmsYLuJM=
 		</data>
 		<key>Headers/RBSDKPlayerViewController.h</key>
 		<data>
-		I7yyBTa5x59cQ+ISHp6n5/EJS7E=
+		HIRM9q5k55wrbFVTsJhJ27zi57k=
+		</data>
+		<key>Headers/RBSDKRhinobirdPlayerViewController.h</key>
+		<data>
+		/+IjL8KLXZKFOBLreUK21vcRcLQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		BwLjqZbtlN2tHPeFrsv52Xfrqh0=
+		Ib5JOCWMA6vDiM+OF6e2WT7qhpU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -162,115 +182,119 @@
 		</data>
 		<key>PlayerViewController.nib</key>
 		<data>
-		dewrpNkDjOIuS6+jkWGJgT29Hb8=
+		ySyJEWqd0XPf9opVhpVVlNB5/E0=
 		</data>
 		<key>RBActivityIndicatorView.nib</key>
 		<data>
-		Pe2L5AmZzeXcj+qSYBtvyELKjk4=
+		wrSmiGL6fv0isrQjfQUcXvQa9iA=
 		</data>
 		<key>RBAddAngleView.nib</key>
 		<data>
-		L+bcAIvauGPZNzqsN+mRyqYvtls=
+		49BHDXf8838Ue7YJCsEs2lmtYBA=
 		</data>
 		<key>RBAddVideoReactionView.nib</key>
 		<data>
-		K5rZlSadqUCCMlrHFti7yf6i8FU=
+		g/scyJfzu6k7YLNv96h/DuPiglg=
 		</data>
 		<key>RBAnglesFigureView.nib</key>
 		<data>
-		qoVlBlIcWyO68dphuBu7MTkskx4=
+		nkr4yx62s2cz6etMOZwUSrSm0Y8=
 		</data>
 		<key>RBChatViewController.nib</key>
 		<data>
-		tfTofEGgtw9zLQtbZEf18bEBKpI=
+		c8MVQCQx7SOqA+NdhsdbFcqE1cE=
 		</data>
 		<key>RBLikeReactionView.nib</key>
 		<data>
-		yAxN1wmGTmJ2kLwJ3EmFZJd1fZM=
+		kcLmm4aA90R+bxT0VaVyYg4NJZ8=
 		</data>
 		<key>RBLikeTableViewCell.nib</key>
 		<data>
-		wCBv+YVs8OM8Y1PzYMn0u8S7MRk=
+		rU82+pRKYyrowJ9o70iu7EB27Vw=
 		</data>
 		<key>RBLikeTableViewController.nib</key>
 		<data>
-		QD1I14NywU8JlsFGmymYQaLyKfg=
+		fORl7ZAzbXUWqYztLnUJ9YBMStE=
+		</data>
+		<key>RBLoaderLayerView.nib</key>
+		<data>
+		3YFjA31f+d3jTilMy3iz6izlNDM=
 		</data>
 		<key>RBPlayerControlsView.nib</key>
 		<data>
-		f+Oi1JY3D5nTMdeHt3TZWX+u1qs=
+		Zh10cje8vYSf3qOuVV4Y8HdSvZU=
 		</data>
 		<key>RBQuickVideoPlayerView.nib</key>
 		<data>
-		1F3TRNTrxHuu5Km+/8y+wcOz2V4=
+		aZZ3lxznpT+uRmlzeGKTlknXUa0=
 		</data>
 		<key>RBReactionBubblesView.nib</key>
 		<data>
-		/6Kig8vD10KmL7f9pH1me/bYYB4=
+		RcBeowNiFLtMGPs6z2lRIUuU8jU=
 		</data>
 		<key>RBShortProfileViewController.nib</key>
 		<data>
-		KY87dTcHisERU4bpaAx64ux7Blw=
+		lQlK3DFbjhGZx1yQmy45uVFWSac=
 		</data>
 		<key>RBSideEndingView.nib</key>
 		<data>
-		f3bLwPH98k08pG59vuadc7pSIZI=
+		PjiXh60ETP3S5zFAC0jY0eGqu50=
 		</data>
 		<key>RBSingleReactionBubbleView.nib</key>
 		<data>
-		gfj9hGqB7W9H0xaiLGQp4vlVWLg=
+		A0d7URTOphOvh17rJ9nyDEADx3M=
 		</data>
 		<key>RBUploadReactionView.nib</key>
 		<data>
-		9pBpuuggDmExXBzi61ApLCyjUYc=
+		QXrFlpLCRSbxpIKXCXJbmGd6v8g=
 		</data>
 		<key>RBVideoFailedView.nib</key>
 		<data>
-		fKMZ+WYhKyZmG79IHLXivUWeSgM=
+		RkGUmTm5YgbuAKJpYvOXmTF6y8I=
 		</data>
 		<key>RBVideoProgressView.nib</key>
 		<data>
-		HYMh3qNWyZtWiYcHckMgCbENqVo=
+		omV3ZeQbnMFhfGPV6sj5Gf8aDNs=
 		</data>
 		<key>RBVideoReactionView.nib</key>
 		<data>
-		XqwN8rrpknt1pI9ZNeUuyO8Vlig=
+		1ge8AquM8B8PuwY4ILIZSjyKRm0=
 		</data>
 		<key>RBVisualIndexCollectionViewCell.nib</key>
 		<data>
-		63aoCX738bDVIgD5K5U7ULVFMs0=
+		38W0h8hntLISL5iZIR9tPn+MUnU=
 		</data>
 		<key>RBVisualIndexCollectionViewController.nib</key>
 		<data>
-		me3Um9OPsm7mvfOWvjsoAfrCAlk=
+		qGqAaRnndlIW8Z0X4oCmcDf0dJA=
 		</data>
 		<key>SuggestFollowingsView.nib</key>
 		<data>
-		h9nMRzt5hlbBSfLNzetlyFJXaIw=
+		qXjTnE5ltzZgsMKmokyoP3FdC8s=
 		</data>
 		<key>UIChatTableViewCell.nib</key>
 		<data>
-		tWch5UhmY45H6e2wdiZr+MXnlq4=
+		PC3PIXJV6IARzaXj3G0mUSuZePw=
 		</data>
 		<key>UIPlayerView.nib</key>
 		<data>
-		wJvde1wBsqz7ku387y4mL2NJSh0=
+		RuzNW6oXuC6rvz79yo9Snn+kyQk=
 		</data>
 		<key>UISameTimeViewController.nib</key>
 		<data>
-		+OoHhPpEZLRbUJ8bZtrIAWjXPiw=
+		Rhw7Yu61xfyfGmxfk7gTkOcy8sU=
 		</data>
 		<key>UIToggleFollowViewController.nib</key>
 		<data>
-		H22PWDrIOS+7sbT0uccnUn0d/+g=
+		nzDOH08IW0oz/oRRZinLwG4bT6g=
 		</data>
 		<key>UIToggleLikeView.nib</key>
 		<data>
-		PKyqHw+ZLxblr3+WJ/i5pDK6aD4=
+		gHbcTfzDV4ZMTKGT8JEBSHJH5K4=
 		</data>
 		<key>UIToggleRepostViewController.nib</key>
 		<data>
-		t2fQ25vg/GcJZDSU+6yMoY6RvvA=
+		ivsrtIEq5lTejh7Dc4PyrgSf7AU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -279,11 +303,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vGpycB3xtqwUwDKkrHPcmRng1dk=
+			mkhKGj3ATp9nSTvMMwmGQ6Hg8ak=
 			</data>
 			<key>hash2</key>
 			<data>
-			dZNJkW/2GQjivDEcgo9cHp3Gl6y5L6Pp7u+G+qHttHQ=
+			gIqOq0O1ox1eoVc05LvwXRiE+gBf0qhJcZme9lQptEQ=
+			</data>
+		</dict>
+		<key>BCOVPUIResources.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o1EOEIahqebLKfSb7lUZ0f4dNjo=
+			</data>
+			<key>hash2</key>
+			<data>
+			oL1m68M5J2z+lmeK7sWdkGslW/VCoc67+30pUcTzp1Q=
+			</data>
+		</dict>
+		<key>BCOVPUIResources.bundle/bcovpuiiconfont.ttf</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			V3S0EyOH2MlUOs2JM0RiwxW0CxY=
+			</data>
+			<key>hash2</key>
+			<data>
+			zT11lCUKjIENMR0u9gtCIsnSHm4S41hf6M53qp9wTwc=
 			</data>
 		</dict>
 		<key>CorpSansRd-BlackCnd.otf</key>
@@ -642,44 +688,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Ij4iNZmKM0yYzsahYzBT3p9Ouw=
+			+25voo2GV9cnuLuGDkiFeNsDNBw=
 			</data>
 			<key>hash2</key>
 			<data>
-			z4kW0YAM3XnW7OJTTHfP5PmdbqMOY6J66SK6uHchxcE=
+			VHOkCsoRqq5Zk+r6u1MHsPRdf2WO7nuLAJawIPofYPA=
 			</data>
 		</dict>
 		<key>Headers/RBSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			sYyBogjnJpqUBcOu//5mY306ttU=
+			ELlo32opaK+fdkxxXcY4D7fkEMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			2x70JwYiMm5JaCgZNYZsNV0yEfkyU3ubvAVgOiyZmJE=
+			JYvJAbDPFsYOBMm554m9dPFoV9sFtS61TdFFEyi//J4=
+			</data>
+		</dict>
+		<key>Headers/RBSDKBrightcovePlayerViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			18B/fGFZedlErveW3WxlGBIWu38=
+			</data>
+			<key>hash2</key>
+			<data>
+			Un6L0aNbsfQNGvt8+271VOT0M2juZH3N4lzlMNl4AXc=
 			</data>
 		</dict>
 		<key>Headers/RBSDKPlayer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ILdAKXSOqkeRrWvpzvAf77IvIok=
+			sE1GmG/tc557QSn4yWcK0jYKZhc=
 			</data>
 			<key>hash2</key>
 			<data>
-			nkAO12DRSXBnhYBp9p/XbvbhkTj8QyJgigSE8vGi1VU=
+			mTfXPNOZqPyDtmtemcUinySN94qLDWi+x/QtpetPXy4=
+			</data>
+		</dict>
+		<key>Headers/RBSDKPlayerOptions.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Cor2u6t2lo5xsnbbZnQkmsYLuJM=
+			</data>
+			<key>hash2</key>
+			<data>
+			KVx9pRjHR1lBsgzSEfH+Fdiw6p0Tlxc/ZxqFROo2GqI=
 			</data>
 		</dict>
 		<key>Headers/RBSDKPlayerViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I7yyBTa5x59cQ+ISHp6n5/EJS7E=
+			HIRM9q5k55wrbFVTsJhJ27zi57k=
 			</data>
 			<key>hash2</key>
 			<data>
-			HAlmBhSQ2qwek6ZO3pZpCzhWQij8zSCrP2BJsE5KWlc=
+			SPQCCr7FlKX/LScWH898miAdks6MFTO9RBf6aCj9cHI=
+			</data>
+		</dict>
+		<key>Headers/RBSDKRhinobirdPlayerViewController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			/+IjL8KLXZKFOBLreUK21vcRcLQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			Qw3lCcf+uub+NhE2oMpmBMtUew/+RNm3e/msg0taA3s=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -697,314 +776,325 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			dewrpNkDjOIuS6+jkWGJgT29Hb8=
+			ySyJEWqd0XPf9opVhpVVlNB5/E0=
 			</data>
 			<key>hash2</key>
 			<data>
-			m0HLZd9uo9HZV97h5DWruRx0r3Fnwl1iz5m+QFe+7ic=
+			i8g47ZgDE/q6fXZ5BoH3Rv1VF3L5RcW41FiDJ5j4LVQ=
 			</data>
 		</dict>
 		<key>RBActivityIndicatorView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Pe2L5AmZzeXcj+qSYBtvyELKjk4=
+			wrSmiGL6fv0isrQjfQUcXvQa9iA=
 			</data>
 			<key>hash2</key>
 			<data>
-			pFQpLvy5SmRWGejTOIrEgyzWiuOzmXB+rsiaXczoYTY=
+			KSgYmKmgllvD/DzIN8J3Wf9p//USN7pPoel5fVNdlUA=
 			</data>
 		</dict>
 		<key>RBAddAngleView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L+bcAIvauGPZNzqsN+mRyqYvtls=
+			49BHDXf8838Ue7YJCsEs2lmtYBA=
 			</data>
 			<key>hash2</key>
 			<data>
-			jSmrtHETO6ejX2FSQFh59Pv0pbugZ5EVE7okY9yjYFY=
+			hmNRdLyA5SYq8SqJ1DX21pU2jg7yzOv40+f6wLqhH2g=
 			</data>
 		</dict>
 		<key>RBAddVideoReactionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			K5rZlSadqUCCMlrHFti7yf6i8FU=
+			g/scyJfzu6k7YLNv96h/DuPiglg=
 			</data>
 			<key>hash2</key>
 			<data>
-			PKHum2OCSloIOH7AEb3/zFzC6o+C1R9drVG/Ajt7my0=
+			CX/8Lfiz+7ApVQumAH9qrQnEayhYv9/kdZ4XkAPJCGg=
 			</data>
 		</dict>
 		<key>RBAnglesFigureView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qoVlBlIcWyO68dphuBu7MTkskx4=
+			nkr4yx62s2cz6etMOZwUSrSm0Y8=
 			</data>
 			<key>hash2</key>
 			<data>
-			QS6zNJFd3cyAfDaSveI0N8vUYdUAUiaGMJ3IqTLzbKw=
+			P2hWlAeEhaMVBU7U9ljaaNfEwahMWCPpl4scTbsDt3k=
 			</data>
 		</dict>
 		<key>RBChatViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tfTofEGgtw9zLQtbZEf18bEBKpI=
+			c8MVQCQx7SOqA+NdhsdbFcqE1cE=
 			</data>
 			<key>hash2</key>
 			<data>
-			oOr+z6DXxsoU55QEfkhOspbgrpnkZMAtD4ob1xXHhog=
+			atPCivoTJrePjK3tQsjeReYb7il5MsHvHf4+Qf40Fsg=
 			</data>
 		</dict>
 		<key>RBLikeReactionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			yAxN1wmGTmJ2kLwJ3EmFZJd1fZM=
+			kcLmm4aA90R+bxT0VaVyYg4NJZ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			PK4LEH+bFtLSg4y9fqOLi7Y8uEfhdAuj7DYF00aUdlc=
+			kWOlhl/zJJg+Bv0wT5LDfHZI9ArmudfnHam3mQR/0EI=
 			</data>
 		</dict>
 		<key>RBLikeTableViewCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wCBv+YVs8OM8Y1PzYMn0u8S7MRk=
+			rU82+pRKYyrowJ9o70iu7EB27Vw=
 			</data>
 			<key>hash2</key>
 			<data>
-			+PCq/dcm8B37qLBLIc/qZ8ssg10uYg9Ou9KsxzUDqdg=
+			ZpWs4tM4GJAKUbu/HCZlEWHEy/u6iVwm9HiZiOSvU48=
 			</data>
 		</dict>
 		<key>RBLikeTableViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QD1I14NywU8JlsFGmymYQaLyKfg=
+			fORl7ZAzbXUWqYztLnUJ9YBMStE=
 			</data>
 			<key>hash2</key>
 			<data>
-			4qymDjENhmhD+qfEwA3Reo9a4hgiZbCIATXy/KdvWG8=
+			ypugEe9k/2PPKuSHx9AXPir+iOiMT6eUNRtbsXq6WFY=
+			</data>
+		</dict>
+		<key>RBLoaderLayerView.nib</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3YFjA31f+d3jTilMy3iz6izlNDM=
+			</data>
+			<key>hash2</key>
+			<data>
+			VyFTjHwOfnH0LwkVwIMbeGp1LGPXUIR6ZICivX3wfv8=
 			</data>
 		</dict>
 		<key>RBPlayerControlsView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f+Oi1JY3D5nTMdeHt3TZWX+u1qs=
+			Zh10cje8vYSf3qOuVV4Y8HdSvZU=
 			</data>
 			<key>hash2</key>
 			<data>
-			3VETOHb/aNngLfJxCQSrMe/yyq/03hJp2qR8RKFOYTQ=
+			l/NQKOjBrP6pCo2rYO5xuL1Skju1ikGJIXsePUgBsoE=
 			</data>
 		</dict>
 		<key>RBQuickVideoPlayerView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			1F3TRNTrxHuu5Km+/8y+wcOz2V4=
+			aZZ3lxznpT+uRmlzeGKTlknXUa0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zy3EI6+duuGDj89YzQX83HK5dIQDgLIDjseQN06yxrI=
+			EeWu4tIfEluQ0T+ldsPB963tXrjRa7yHe5F97HEq7ww=
 			</data>
 		</dict>
 		<key>RBReactionBubblesView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/6Kig8vD10KmL7f9pH1me/bYYB4=
+			RcBeowNiFLtMGPs6z2lRIUuU8jU=
 			</data>
 			<key>hash2</key>
 			<data>
-			6vbdKWETaQEPjX16xAZHm/Yznq8M3jhsdNIMJzb1XfE=
+			dg/c+9tlHrHkry+Ig5/oAT75RKN/cdn0fxec7WtjgJo=
 			</data>
 		</dict>
 		<key>RBShortProfileViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			KY87dTcHisERU4bpaAx64ux7Blw=
+			lQlK3DFbjhGZx1yQmy45uVFWSac=
 			</data>
 			<key>hash2</key>
 			<data>
-			QylZgDDwdolNpRZANCroeVKrRirjGzjDtg8lQO+CQ5E=
+			ZTUyjAdGn/JWXI5xq0vOwlT/AeU5PpVj814b5WuZHU4=
 			</data>
 		</dict>
 		<key>RBSideEndingView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			f3bLwPH98k08pG59vuadc7pSIZI=
+			PjiXh60ETP3S5zFAC0jY0eGqu50=
 			</data>
 			<key>hash2</key>
 			<data>
-			nZgrx1Nas4qvCK8BHDKFN0wfrLj2BWsIL+PqT4oMkQM=
+			TJFyNEoPle0mK2kRf7g2h8YJKjyXoqliq0m4m00FCtg=
 			</data>
 		</dict>
 		<key>RBSingleReactionBubbleView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gfj9hGqB7W9H0xaiLGQp4vlVWLg=
+			A0d7URTOphOvh17rJ9nyDEADx3M=
 			</data>
 			<key>hash2</key>
 			<data>
-			HB7jJ5bAuGy0ef7X3DUBNf5jJ5SW0Ij76MpygKkBTjI=
+			qXRTFgJ8kVN2GnNZwt4fTm6ZUO+t0Ig5Viua/J4fThE=
 			</data>
 		</dict>
 		<key>RBUploadReactionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9pBpuuggDmExXBzi61ApLCyjUYc=
+			QXrFlpLCRSbxpIKXCXJbmGd6v8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			DnCiFUmCgMRF10lPF/wcwGMIrVzCXRmLJKaz9gXfC4E=
+			oRpQDaJYRKU8uGluoIfHsm8ZxaLb2NowLsCyBpdlKQU=
 			</data>
 		</dict>
 		<key>RBVideoFailedView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fKMZ+WYhKyZmG79IHLXivUWeSgM=
+			RkGUmTm5YgbuAKJpYvOXmTF6y8I=
 			</data>
 			<key>hash2</key>
 			<data>
-			BzVcDHW9oejIgO4N0A7dkaN6DqcrBU+Epgzz4LGwZPs=
+			8/UrLNpei798qRHcWcGRf0rB6+VBQPzDp+LzjlYMmn0=
 			</data>
 		</dict>
 		<key>RBVideoProgressView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HYMh3qNWyZtWiYcHckMgCbENqVo=
+			omV3ZeQbnMFhfGPV6sj5Gf8aDNs=
 			</data>
 			<key>hash2</key>
 			<data>
-			F9yMsLM6eqLPZJgGWBrqt7D/sTU/Apo/BmLx+3Gqq7g=
+			i3yL1D8yr6p4gZ1MuEUjq6aL4T6+PGTPU3n/8aMttH0=
 			</data>
 		</dict>
 		<key>RBVideoReactionView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XqwN8rrpknt1pI9ZNeUuyO8Vlig=
+			1ge8AquM8B8PuwY4ILIZSjyKRm0=
 			</data>
 			<key>hash2</key>
 			<data>
-			Arrn4I2EqitTBRrEg3bo/Jkm+UhHF3L9CWMw3fzvtlQ=
+			H6l5WpRtIT/C4j35YeE4a9Bsn2A3fYgBlsB+UNt0HyY=
 			</data>
 		</dict>
 		<key>RBVisualIndexCollectionViewCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			63aoCX738bDVIgD5K5U7ULVFMs0=
+			38W0h8hntLISL5iZIR9tPn+MUnU=
 			</data>
 			<key>hash2</key>
 			<data>
-			EPryxJtlifBUZUa0/m3Y92YmOK48RVUWMMWsx3bvB6k=
+			cSu7LY6dPxnUY39m/R3SI8SzdLyV/k9/A3d8TBUboao=
 			</data>
 		</dict>
 		<key>RBVisualIndexCollectionViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			me3Um9OPsm7mvfOWvjsoAfrCAlk=
+			qGqAaRnndlIW8Z0X4oCmcDf0dJA=
 			</data>
 			<key>hash2</key>
 			<data>
-			dsrcFQyRpohEAZcAgLFtsXLamycExP89qfNspSFqv40=
+			XG4m5Ej4cfk5EFX5XVONliEcrPNsil9DHHv44B+bynE=
 			</data>
 		</dict>
 		<key>SuggestFollowingsView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			h9nMRzt5hlbBSfLNzetlyFJXaIw=
+			qXjTnE5ltzZgsMKmokyoP3FdC8s=
 			</data>
 			<key>hash2</key>
 			<data>
-			jba47o7KuJgkkzv3DeeBVKlnjby91URS8LkXGNkHjP8=
+			cqEIStisCYTHQGE3iSBqQ0lTnQOzesZ5tAbhzoB+tqY=
 			</data>
 		</dict>
 		<key>UIChatTableViewCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			tWch5UhmY45H6e2wdiZr+MXnlq4=
+			PC3PIXJV6IARzaXj3G0mUSuZePw=
 			</data>
 			<key>hash2</key>
 			<data>
-			2HWh0hbfAmnAVp6uoH28EEwptJ6uNbZ7QkOE/ln1gP8=
+			eaZrW6AwpQgMEERpGKlf7iEh+bVl+Athmoh1F8EC4Bc=
 			</data>
 		</dict>
 		<key>UIPlayerView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			wJvde1wBsqz7ku387y4mL2NJSh0=
+			RuzNW6oXuC6rvz79yo9Snn+kyQk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ESn87sSc3Ru0/l+Dvodx0DpgWEoJziti7ZvZphcV4Fw=
+			C0+kFNXsn2HXMIYfzp5VKu0mnTt9F+BRg1cHenJG864=
 			</data>
 		</dict>
 		<key>UISameTimeViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+OoHhPpEZLRbUJ8bZtrIAWjXPiw=
+			Rhw7Yu61xfyfGmxfk7gTkOcy8sU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Yc1c071zLGaJ2PowbdjPyYGEgjZolX+c/UxDprcph38=
+			/J0ddyUqrZbVjKpb13OSLLOTnt351kxJamI+aFvPCqI=
 			</data>
 		</dict>
 		<key>UIToggleFollowViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			H22PWDrIOS+7sbT0uccnUn0d/+g=
+			nzDOH08IW0oz/oRRZinLwG4bT6g=
 			</data>
 			<key>hash2</key>
 			<data>
-			8XlDBlVDHP68/yYeIWe4Ngn6+maynh1L9hnjpNo+SI0=
+			Kw3oURDDgHHWAYBbxU8VFvTJixAU2rA8LciL2SVYpWk=
 			</data>
 		</dict>
 		<key>UIToggleLikeView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PKyqHw+ZLxblr3+WJ/i5pDK6aD4=
+			gHbcTfzDV4ZMTKGT8JEBSHJH5K4=
 			</data>
 			<key>hash2</key>
 			<data>
-			cXPon78lE1D9raOIKnvnOl563WPB6O5pVXTMen1KaOY=
+			xwo7yafbzBM3YnzxZo8qgDtTLPN4MEZH7zUYtBbgRME=
 			</data>
 		</dict>
 		<key>UIToggleRepostViewController.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			t2fQ25vg/GcJZDSU+6yMoY6RvvA=
+			ivsrtIEq5lTejh7Dc4PyrgSf7AU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Fm06ikORdX4voSg4uMDQTV6mOR5cBnOEFv1kYJIedh0=
+			IqGGFYehhV8Ftw4kvh2sHEaH14ACT63PM3RBMB+dR9E=
 			</data>
 		</dict>
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -1035,24 +1125,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -1088,13 +1166,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

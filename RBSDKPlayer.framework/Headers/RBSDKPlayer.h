@@ -16,4 +16,7 @@ FOUNDATION_EXPORT const unsigned char RBSDKPlayerVersionString[];
 
 #import <RBSDKPlayer/RBSDK.h>
 #import <RBSDKPlayer/RBSDKPlayerViewController.h>
+#import <RBSDKPlayer/RBSDKRhinobirdPlayerViewController.h>
+#import <RBSDKPlayer/RBSDKBrightcovePlayerViewController.h>
+#import <RBSDKPlayer/RBSDKPlayerOptions.h>
 #import <RBSDKPlayer/RBPlayerViewControllerDelegate.h>
