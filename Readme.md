@@ -44,8 +44,8 @@ Minimum iOS Target: `10.0`
 
 RBSDKPlayer works for both Objective-C & Swift projects. There're multiple ways to add a controller as a subview, treat `RBSDKRhinobirdPlayerViewController` or `RBSDKBrightcovePlayerViewController` the same as any other controller. This is just an example.
 
-An Objective-C demo project is included [here](sdkdemo-objc)
-A Swift demo project is included [here](sdkdemo-swift)
+An Objective-C demo project is included [here](https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-objc)
+A Swift demo project is included [here](https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-swift)
 
 **Initialize the SDK by setting the security & access key**
 
@@ -72,7 +72,7 @@ var playerController: RBSDKPlayerViewController?
 ```
 Connect them to the interface file if needed.
 
-**Create the controller, add it as a subview**
+**Setting everything before loading the player**
 
 Before creating a player, make sure that everything in the SDK core is loaded, by calling `loadAsynchronouslyWithCompletionHandler:` method and in the `completionHandler` set the player. Also, is important to load the player on the main thread.
 ```

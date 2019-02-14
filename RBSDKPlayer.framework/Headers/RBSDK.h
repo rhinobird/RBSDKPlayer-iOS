@@ -8,34 +8,43 @@
 
 #import <Foundation/Foundation.h>
 
-// Loading completion handler
+/**
+ Loading completion handler
+ */
 typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
 
+
+/**
+ `RBSDK` object provide a singleton to load easily player controllers, the first
+ step is to set the secret and access keys, then use the
+ `-[RBSDK loadAsynchronouslyWithCompletionHandler:]` method to load everything.
+ */
 @interface RBSDK : NSObject
 
 /**
- Returns a RBSDK configuration singleton, only use the singleton or unexpected
+ Returns a `RBSDK` configuration singleton, only use the singleton or unexpected
  things will happen.
 
- @return A RBSDK configuration singleton
+ @return A `RBSDK` configuration singleton
  */
 + (instancetype)sharedInstance;
 
 /**
- Set the secret and access key, this is needed for creating RBSDKPlayerViewController
+ Set the secret and access key, this is needed for creating a player controller
 
- @params secretKey SDK's secret key
- @params accessKey SDK's access key
+ @param secretKey SDK's secret key
+ @param accessKey SDK's access key
  */
 - (void)setSecretKey:(nonnull NSString *)secretKey
            accessKey:(nonnull NSString *)accessKey;
 
 /**
- Set the secret, access and token key, this is needed for creating RBSDKPlayerViewController
+ Set the secret, access and token key, this is needed for creating a player
+ controller
 
- @params secretKey SDK's secret key
- @params accessKey SDK's access key
- @params accessKey SDK's access key
+ @param secretKey SDK's secret key
+ @param accessKey SDK's access key
+ @param tokenKey SDK's token key
  */
 - (void)setSecretKey:(nonnull NSString *)secretKey
            accessKey:(nonnull NSString *)accessKey
@@ -46,15 +55,23 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
  handler will be called after the configuration ends, is important to check
  if the process ended successfully or not.
 
- @params completionHandler The completion handler will say if the configuration
+ @param completionHandler The completion handler will say if the configuration
  was successfull or not, and if is not, check the NSError information.
  */
 - (void)loadAsynchronouslyWithCompletionHandler:(RBLoadHandlerBlock)completionHandler;
 
-// YES when is safe to create a player and all is already loaded
+/**
+ Check if the sdk is ready to load players
+
+ @return YES when is safe to create a player and all is already loaded
+ */
 - (BOOL)isReady;
 
-// YES when the configurator is still loading stuff
+/**
+ Check if the sdk is still loading
+
+ @return YES when the configurator is still loading stuff
+ */
 - (BOOL)isLoading;
 
 @end

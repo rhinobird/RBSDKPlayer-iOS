@@ -10,18 +10,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/**
+ `RBSDKRhinobirdPlayerViewController` is the Reel player controller for
+ Rhinobird videos.
+ */
 @interface RBSDKRhinobirdPlayerViewController : RBSDKPlayerViewController
 
 /**
  Initialize a player controller with a specific moment-id
 
- @params momentId Moment's string id
- @params options RBSDKPlayerOption
+ @param momentId Moment's string id
+ @param options RBSDKPlayerOption
 
- @return An instance of RBSDKPlayerViewController
+ @return An instance of `RBSDKPlayerViewController`
  */
-- (instancetype _Nonnull)initWithMomentId:(nonnull NSString *)momentId
-                                  options:(RBSDKPlayerOption)options;
+- (nonnull instancetype)initWithMomentId:(nonnull NSString *)momentId
+                                 options:(RBSDKPlayerOption)options;
 
 @end
 

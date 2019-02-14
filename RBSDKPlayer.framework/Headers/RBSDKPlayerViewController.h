@@ -8,30 +8,41 @@
 
 @import UIKit;
 
-#import <RBSDKPlayer/RBPlayerViewControllerDelegate.h>
+#import <RBSDKPlayer/RBSDKPlayerViewControllerDelegate.h>
 #import "RBSDKPlayerOptions.h"
 
 FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNotification;
 
 @class PlayerViewController;
 
+/**
+ `RBSDKPlayerViewController` is an abstract class, you're not suposed to initialize
+ this object directly, use `RBSDKRhinobirdPlayerViewController` or
+ `RBSDKBrightcovePlayerViewController` instead.
+ */
 @interface RBSDKPlayerViewController : UIViewController
 
-// Player's options
+/**
+ Player's options
+ */
 @property (nonatomic) RBSDKPlayerOption options;
 
-// Real player view controller
-@property (strong, nonatomic) PlayerViewController * _Nullable playerViewController;
+/**
+ Player view controller internal logic
+ */
+@property (strong, nonatomic, nullable) PlayerViewController * playerViewController;
 
-// Object's delegate
-@property (weak, nonatomic) id <RBPlayerViewControllerDelegate> _Nullable delegate;
+/**
+ Player's delegate
+ */
+@property (weak, nonatomic, nullable) id <RBSDKPlayerViewControllerDelegate> delegate;
 
 /**
  Check RBPlayerViewControllerDelegate for details
 
  @params delegate Object's delegate
  */
-- (void)setDelegate:(nullable id<RBPlayerViewControllerDelegate>)delegate;
+- (void)setDelegate:(nullable id<RBSDKPlayerViewControllerDelegate>)delegate;
 
 /**
  Set playback to YES (rate = 1.0) for the entire reel
@@ -44,10 +55,13 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 - (void)pause;
 
 /**
- These methods are intended for internal use, don't use them or everything can
- break
+ This methods is intended for internal use.
  */
 - (void)initializePlayerViewController;
+
+/**
+ This methods is intended for internal use.
+ */
 - (void)attachPlayerViewController;
 
 @end

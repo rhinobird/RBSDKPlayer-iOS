@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RBSDK Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/RBSDK" class="dashAnchor"></a>
+    <a title="RBSDK Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RBSDKPlayer Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/rhinobird/RBSDKPlayer-iOS"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RBSDKPlayer Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RBSDK Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDK.html">RBSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RBSDKPlayerGoToFullScreenNotification">RBSDKPlayerGoToFullScreenNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RBSDKPlayerVersionNumber">RBSDKPlayerVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RBSDKPlayerVersionString">RBSDKPlayerVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/RBSDKPlayerViewControllerDelegate.html">RBSDKPlayerViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RBSDK</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">RBSDK</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>RBSDK</code> object provide a singleton to load easily player controllers, the first
+step is to set the secret and access keys, then use the
+<code><a href="../Classes/RBSDK.html#/c:objc(cs)RBSDK(im)loadAsynchronouslyWithCompletionHandler:">-[RBSDK loadAsynchronouslyWithCompletionHandler:]</a></code> method to load everything.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDK(cm)sharedInstance"></a>
+                    <a name="//apple_ref/objc/Method/+sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDK(cm)sharedInstance">+sharedInstance</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code>RBSDK</code> configuration singleton, only use the singleton or unexpected
+things will happen.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">sharedInstance</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">sharedInstance</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>RBSDK</code> configuration singleton</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDK.h#L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDK(im)setSecretKey:accessKey:"></a>
+                    <a name="//apple_ref/objc/Method/-setSecretKey:accessKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDK(im)setSecretKey:accessKey:">-setSecretKey:accessKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the secret and access key, this is needed for creating a player controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setSecretKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">secretKey</span>
+           <span class="nf">accessKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accessKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setSecretKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">secretKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secretKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDK&rsquo;s secret key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDK&rsquo;s access key</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDK.h#L38-L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDK(im)setSecretKey:accessKey:tokenKey:"></a>
+                    <a name="//apple_ref/objc/Method/-setSecretKey:accessKey:tokenKey:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDK(im)setSecretKey:accessKey:tokenKey:">-setSecretKey:accessKey:tokenKey:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the secret, access and token key, this is needed for creating a player
+controller</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">setSecretKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">secretKey</span>
+           <span class="nf">accessKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accessKey</span>
+            <span class="nf">tokenKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">tokenKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setSecretKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">secretKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">accessKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">tokenKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>secretKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDK&rsquo;s secret key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accessKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDK&rsquo;s access key</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tokenKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>SDK&rsquo;s token key</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDK.h#L49-L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDK(im)loadAsynchronouslyWithCompletionHandler:"></a>
+                    <a name="//apple_ref/objc/Method/-loadAsynchronouslyWithCompletionHandler:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDK(im)loadAsynchronouslyWithCompletionHandler:">-loadAsynchronouslyWithCompletionHandler:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Use this method if you want to initialize a player a soon as posible, completion
+handler will be called after the configuration ends, is important to check
+if the process ended successfully or not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">loadAsynchronouslyWithCompletionHandler</span><span class="p">:</span>
+    <span class="p">(</span><span class="n"><a href="../Type Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a></span><span class="p">)</span><span class="nv">completionHandler</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">loadAsynchronously</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a></span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The completion handler will say if the configuration
+was successfull or not, and if is not, check the NSError information.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDK.h#L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDK(im)isReady"></a>
+                    <a name="//apple_ref/objc/Method/-isReady" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDK(im)isReady">-isReady</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if the sdk is ready to load players</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isReady</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isReady</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES when is safe to create a player and all is already loaded</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDK.h#L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDK(im)isLoading"></a>
+                    <a name="//apple_ref/objc/Method/-isLoading" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDK(im)isLoading">-isLoading</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if the sdk is still loading</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isLoading</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isLoading</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>YES when the configurator is still loading stuff</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDK.h#L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-02-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import <RBSDKPlayer/RBPlayerViewControllerDelegate.h>
+#import <RBSDKPlayer/RBSDKPlayerViewControllerDelegate.h>
 
 @class RBSDKPlayerViewController;
 
-@interface ViewController : UIViewController <RBPlayerViewControllerDelegate>
+@interface ViewController : UIViewController <RBSDKPlayerViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
 @property (strong, nonatomic) RBSDKPlayerViewController *playerController;

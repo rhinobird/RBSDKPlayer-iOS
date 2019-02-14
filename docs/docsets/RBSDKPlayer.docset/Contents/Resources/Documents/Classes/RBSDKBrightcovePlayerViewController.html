@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RBSDKBrightcovePlayerViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/RBSDKBrightcovePlayerViewController" class="dashAnchor"></a>
+    <a title="RBSDKBrightcovePlayerViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RBSDKPlayer Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/rhinobird/RBSDKPlayer-iOS"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RBSDKPlayer Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RBSDKBrightcovePlayerViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDK.html">RBSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RBSDKPlayerGoToFullScreenNotification">RBSDKPlayerGoToFullScreenNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RBSDKPlayerVersionNumber">RBSDKPlayerVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RBSDKPlayerVersionString">RBSDKPlayerVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/RBSDKPlayerViewControllerDelegate.html">RBSDKPlayerViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RBSDKBrightcovePlayerViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">RBSDKBrightcovePlayerViewController</span> <span class="p">:</span> <span class="nc"><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></span></code></pre>
+
+                </div>
+              </div>
+            <p><code>RBSDKBrightcovePlayerViewController</code> is the Reel player controller for
+Brightcove videos, there&rsquo;re 3 ways to initialize the player.</p>
+
+<ol>
+<li><p>By using an array of valid media ids from the Brightcove video cloud, see
+<code><a href="../Classes/RBSDKBrightcovePlayerViewController.html#/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcoveMediaIdArray:accountId:options:">-[RBSDKBrightcovePlayerViewController initWithBrightcoveMediaIdArray:accountId:options:]</a></code></p></li>
+<li><p>By using a media id from the Brightcove video cloud, Rhinobird API will
+retreive related videos and put them all together as a Reel see
+<code><a href="../Classes/RBSDKBrightcovePlayerViewController.html#/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcoveMediaId:accountId:options:">-[RBSDKBrightcovePlayerViewController initWithBrightcoveMediaId:accountId:options:]</a></code></p></li>
+<li><p>By using a playlist id from the Brightcove video cloud and wit that information
+create a Reel, see
+<code><a href="../Classes/RBSDKBrightcovePlayerViewController.html#/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcovePlaylistId:accountId:options:">-[RBSDKBrightcovePlayerViewController initWithBrightcovePlaylistId:accountId:options:]</a></code></p></li>
+</ol>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcoveMediaIdArray:accountId:options:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBrightcoveMediaIdArray:accountId:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcoveMediaIdArray:accountId:options:">-initWithBrightcoveMediaIdArray:accountId:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a player controller with an array of brightcove media ids</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">initWithBrightcoveMediaIdArray</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">mediaIdArray</span>
+                     <span class="nf">accountId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accountId</span>
+                       <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">brightcoveMediaIdArray</span> <span class="nv">mediaIdArray</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">accountId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mediaIdArray</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Brightcove array of media ids</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accountId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Brightcove account id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>RBSDKPlayerOption</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of <code><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDKBrightcovePlayerViewController.h#L40-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcoveMediaId:accountId:options:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBrightcoveMediaId:accountId:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcoveMediaId:accountId:options:">-initWithBrightcoveMediaId:accountId:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a player controller with an array of brightcove media ids</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithBrightcoveMediaId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">mediaId</span>
+                                        <span class="nf">accountId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accountId</span>
+                                          <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">brightcoveMediaId</span> <span class="nv">mediaId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">accountId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>mediaId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Brightcove media id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accountId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Brightcove account id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>RBSDKPlayerOption</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of <code><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDKBrightcovePlayerViewController.h#L53-L55">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcovePlaylistId:accountId:options:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithBrightcovePlaylistId:accountId:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKBrightcovePlayerViewController(im)initWithBrightcovePlaylistId:accountId:options:">-initWithBrightcovePlaylistId:accountId:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a player controller with an array of brightcove media ids</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+<span class="nf">initWithBrightcovePlaylistId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">playlistId</span>
+                   <span class="nf">accountId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">accountId</span>
+                     <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">brightcovePlaylistId</span> <span class="nv">playlistId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">accountId</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>playlistId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Brightcove playlist id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>accountId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Brightcove account id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>RBSDKPlayerOption</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of <code><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.4/RBSDKPlayer.framework/Headers/RBSDKBrightcovePlayerViewController.h#L66-L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-02-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

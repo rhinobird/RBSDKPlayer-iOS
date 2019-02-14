@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RBSDKPlayer  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="RBSDKPlayer  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RBSDKPlayer Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/rhinobird/RBSDKPlayer-iOS"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RBSDKPlayer Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RBSDKPlayer  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/RBSDK.html">RBSDK</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RBSDKPlayerGoToFullScreenNotification">RBSDKPlayerGoToFullScreenNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RBSDKPlayerVersionNumber">RBSDKPlayerVersionNumber</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RBSDKPlayerVersionString">RBSDKPlayerVersionString</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/RBSDKPlayerViewControllerDelegate.html">RBSDKPlayerViewControllerDelegate</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='rbsdkplayer' class='heading'>RBSDKPlayer</h1>
+
+<p><a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/pod-v0.1.3-blue.svg" alt="Version"></a>
+<a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/platform-iOS-lightgrey.svg" alt="Platform"></a></p>
+<h2 id='introduction' class='heading'>Introduction</h2>
+
+<p>The rhinobird SDK supports content hosted by Rhinobird but it can also connect to other services like Mediastream and Brightcove.</p>
+
+<p>We&rsquo;re working on making this sdk completely public, but in the mean, to make it work you&rsquo;ll need to get direct authorization from us, <a href="mailto:benjamin@rhinobird.tv">send us an email</a> and we will send you the needed keys to make this work.</p>
+<h2 id='install-the-sdk-using-cocoapods' class='heading'>Install the SDK using CocoaPods</h2>
+
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Swift and Objective-C Cocoa projects. See <a href="https://cocoapods.org/#install">Installation Guide</a> for more information. You can install it with the following command:</p>
+<pre class="highlight plaintext"><code>$ gem install cocoapods
+</code></pre>
+<h3 id='podfile' class='heading'>Podfile</h3>
+
+<p>To integrate RBSDKPlayer with your iOS project using CocoaPods, just add the following in your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+
+target 'AppTargetName' do
+  pod 'RBSDKPlayer', '~&gt; 0.1'
+end
+</code></pre>
+
+<p>Then run the installation command:</p>
+<pre class="highlight plaintext"><code>$ pod install
+</code></pre>
+<h2 id='install-the-sdk-using-carthage' class='heading'>Install the SDK using Carthage</h2>
+
+<p><em>We&rsquo;re currently working on adding support for Carthage.</em></p>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<p>Minimum iOS Target: <code>10.0</code></p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>RBSDKPlayer works for both Objective-C &amp; Swift projects. There&rsquo;re multiple ways to add a controller as a subview, treat <code><a href="Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a></code> or <code><a href="Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a></code> the same as any other controller. This is just an example.</p>
+
+<p>An Objective-C demo project is included <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-objc">here</a>
+A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-swift">here</a></p>
+
+<p><strong>Initialize the SDK by setting the security &amp; access key</strong></p>
+
+<p>The first step is to configure the sdk for auth, use the provided keys, if you don&rsquo;t have them, refer to the <a href="#introduction">Introduction Section</a> of this document.</p>
+<pre class="highlight plaintext"><code>[RBSDK.sharedInstance setSecretKey:&lt;#Secret Key Here#&gt;
+                         accessKey:&lt;#Access Key Here#&gt;];
+</code></pre>
+<pre class="highlight plaintext"><code>RBSDK.sharedInstance().setSecretKey(&lt;#Secret Key Here#&gt;,
+                                    accessKey: &lt;#Access Key Here#&gt;)
+</code></pre>
+
+<p><strong>Create the properties</strong></p>
+<pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">IBOutlet</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">playerContainerView</span><span class="p">;</span>
+<span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RBSDKPlayerViewController</span> <span class="o">*</span><span class="n">playerController</span><span class="p">;</span>
+</code></pre>
+<pre class="highlight plaintext"><code>@IBOutlet weak var playerContainerView: UIView?
+var playerController: RBSDKPlayerViewController?
+</code></pre>
+
+<p>Connect them to the interface file if needed.</p>
+
+<p><strong>Setting everything before loading the player</strong></p>
+
+<p>Before creating a player, make sure that everything in the SDK core is loaded, by calling <code>loadAsynchronouslyWithCompletionHandler:</code> method and in the <code>completionHandler</code> set the player. Also, is important to load the player on the main thread.</p>
+<pre class="highlight plaintext"><code>// Objective-C
+[RBSDK.sharedInstance loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
+        if (success) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self loadPlayer];
+            });
+        } else {
+            NSLog(@"Error trying to configure the sdk: %@", error.localizedDescription);
+        }
+    }];
+</code></pre>
+<pre class="highlight plaintext"><code>// Swift
+RBSDK.sharedInstance().loadAsynchronously { success, error in
+            if (success) {
+                DispatchQueue.main.async {
+                    self.loadPlayer()
+                }
+
+            } else if let error = error {
+                print("Error trying to configure the sdk: \(error)")
+            }
+        }
+</code></pre>
+
+<p><strong>Loading the player with Rhinobird cloud data</strong></p>
+<pre class="highlight plaintext"><code>// Objective-C
+- (void)loadPlayer {
+    RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
+    NSString *momentId = &lt;#Moment Id#&gt;;
+    self.playerController = [[RBSDKRhinobirdPlayerViewController alloc] initWithMomentId:momentId
+                                                                                 options:options];
+    [self.playerController setDelegate:self];
+
+    self.playerController.view.frame = self.playerContainerView.bounds;
+    self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    [self.playerContainerView addSubview:self.playerController.view];
+    [self addChildViewController:self.playerController];
+}
+</code></pre>
+
+<p><strong>Loading the player with an array of Brightcove media ids</strong></p>
+<pre class="highlight plaintext"><code>// Objective-C
+- (void)loadPlayer {
+    RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
+
+    NSArray&lt;NSString *&gt; *mediaIdArray = &lt;#Media Ids Array#&gt;;
+    NSString *bcAccountId = &lt;#BC Account Id#&gt;;
+
+    self.playerController = [[RBSDKBrightcovePlayerViewController alloc] initWithBrightcoveMediaIdArray:mediaIdArray
+                                                                                              accountId:bcAccountId
+                                                                                                options:options];
+
+    [self.playerController setDelegate:self];
+
+    self.playerController.view.frame = self.playerContainerView.bounds;
+    self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    [self.playerContainerView addSubview:self.playerController.view];
+    [self addChildViewController:self.playerController];
+}
+</code></pre>
+
+<p><strong>Loading the player with a Brightcove media id, the player will create a Reel with content related to the media id</strong></p>
+<pre class="highlight plaintext"><code>// Objective-C
+- (void)loadPlayer {
+    RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
+
+    NSString *mediaId = &lt;#Media Id#&gt;;
+    NSString *bcAccountId = &lt;#BC Account Id#&gt;;
+
+    self.playerController = [[RBSDKBrightcovePlayerViewController alloc] initWithBrightcoveMediaId:mediaId
+                                                                                         accountId:bcAccountId
+                                                                                           options:options];
+
+    [self.playerController setDelegate:self];
+
+    self.playerController.view.frame = self.playerContainerView.bounds;
+    self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    [self.playerContainerView addSubview:self.playerController.view];
+    [self addChildViewController:self.playerController];
+}
+</code></pre>
+
+<p><strong>Loading the player with a Brightcove playlist id, the player will create a Reel with all the media contained by the playlist</strong></p>
+<pre class="highlight plaintext"><code>// Objective-C
+- (void)loadPlayer {
+    RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
+
+    NSString *playlistId = &lt;#PlaylistI Id#&gt;;
+    NSString *bcAccountId = &lt;#BC Account Id#&gt;;
+
+    self.playerController = [[RBSDKBrightcovePlayerViewController alloc] initWithBrightcovePlaylistId:playlistId
+                                                                                            accountId:bcAccountId
+                                                                                              options:options];
+
+    [self.playerController setDelegate:self];
+
+    self.playerController.view.frame = self.playerContainerView.bounds;
+    self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    [self.playerContainerView addSubview:self.playerController.view];
+    [self addChildViewController:self.playerController];
+}
+</code></pre>
+
+<p><strong>Resize the player view on any layout change</strong></p>
+<pre class="highlight plaintext"><code>// Objective-C
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+
+    // ...
+
+    self.playerController.view.frame = self.playerContainerView.bounds;
+}
+</code></pre>
+<pre class="highlight plaintext"><code>// Swift
+override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+
+    // ...
+
+    if let bounds = playerContainerView?.bounds {
+        playerController?.view.frame = bounds
+    }
+}
+</code></pre>
+
+<p><strong>Delegate</strong></p>
+
+<p>If you need feedback about the player&rsquo;s loading process, implement the <code>RBPlayerViewControllerDelegate</code> methods on your class.</p>
+<pre class="highlight plaintext"><code>// Objective-C
+# pragma mark - RBPlayerViewControllerDelegate
+
+- (void)playerControllerLoadDidSucceed:(BOOL)succeed {
+    if (succeed) {
+        NSLog(@"Player load succeed");
+    } else {
+        NSLog(@"Player was not able to load");
+    }
+}
+</code></pre>
+<pre class="highlight plaintext"><code>// Swift
+// MARK: RBPlayerViewControllerDelegate
+
+extension ViewController: RBPlayerViewControllerDelegate {
+
+    func playerControllerLoadDidSucceed(_ succeed: Bool) {
+        if (succeed) {
+            print("Player load succeed")
+        } else {
+            print("Player was not able to load")
+        }
+    }
+}
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-02-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

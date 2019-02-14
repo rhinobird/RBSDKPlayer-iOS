@@ -9,6 +9,9 @@
 #ifndef RBSDKPlayerOptions_h
 #define RBSDKPlayerOptions_h
 
+/**
+ `RBSDKPlayerOption` provice extra data for initializing players
+ */
 typedef NS_ENUM(NSUInteger, RBSDKPlayerOption) {
     /**
      Play as soon as the main video has loaded.

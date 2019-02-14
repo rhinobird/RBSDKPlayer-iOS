@@ -114,7 +114,7 @@ class ViewController: UIViewController {
 
 // MARK: RBPlayerViewControllerDelegate
 
-extension ViewController: RBPlayerViewControllerDelegate {
+extension ViewController: RBSDKPlayerViewControllerDelegate {
 
     func playerControllerLoadDidSucceed(_ succeed: Bool) {
         if (succeed) {
