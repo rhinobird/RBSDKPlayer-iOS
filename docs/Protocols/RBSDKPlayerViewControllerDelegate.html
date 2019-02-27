@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           RBSDKPlayer Docs
         </a>
-         (91% documented)
+         (92% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -60,6 +60,9 @@
                 <a class="nav-group-task-link" href="../Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a>
               </li>
               <li class="nav-group-task">
@@ -70,6 +73,12 @@
           <li class="nav-group-name">
             <a class="nav-group-name-link" href="../Constants.html">Constants</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@RBSDKErrorDomainHttp">RBSDKErrorDomainHttp</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Constants.html#/c:@RBSDKErrorDomainInternal">RBSDKErrorDomainInternal</a>
+              </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Constants.html#/c:@RBSDKPlayerGoToFullScreenNotification">RBSDKPlayerGoToFullScreenNotification</a>
               </li>
@@ -131,9 +140,9 @@ controllers with the player and comunicate betweem them.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerLoadDidSucceed:"></a>
-                    <a name="//apple_ref/objc/Method/-playerControllerLoadDidSucceed:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerLoadDidSucceed:">-playerControllerLoadDidSucceed:</a>
+                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerLoadDidSucceed:withError:"></a>
+                    <a name="//apple_ref/objc/Method/-playerControllerLoadDidSucceed:withError:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerLoadDidSucceed:withError:">-playerControllerLoadDidSucceed:withError:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -141,20 +150,21 @@ controllers with the player and comunicate betweem them.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called after the player controller has loaded, this doesn&rsquo;t means that the
-player is ready to play.</p>
+                        <p>Notifies that the player controller has loaded.
+This doesn&rsquo;t means that the player is ready to play.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerLoadDidSucceed</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">succeed</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerLoadDidSucceed</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">succeed</span>
+                             <span class="nf">withError</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerLoadDidSucceed</span><span class="p">(</span><span class="n">_</span> <span class="nv">succeed</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerLoadDidSucceed</span><span class="p">(</span><span class="n">_</span> <span class="nv">succeed</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -175,11 +185,59 @@ moment doesn&rsquo;t exist.</p>
                                 </div>
                               </td>
                             </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If succeed is NO, then will contain a error.</p>
+                                </div>
+                              </td>
+                            </tr>
                           </tbody>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.5/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L30">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerIsReadyToPlay"></a>
+                    <a name="//apple_ref/objc/Method/-playerControllerIsReadyToPlay" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerIsReadyToPlay">-playerControllerIsReadyToPlay</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notifies that the player controller is ready to Play.
+This means that the player first track (angle at position 0) is ready to play.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerIsReadyToPlay</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerIsReadyToPlay</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -219,7 +277,7 @@ is a subview.</p>
                         <p>a vertical scrollview (or any subclass)</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.5/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -227,9 +285,9 @@ is a subview.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerCaptionChanged:"></a>
-                    <a name="//apple_ref/objc/Method/-playerControllerCaptionChanged:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerCaptionChanged:">-playerControllerCaptionChanged:</a>
+                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerDidSwitchToMedia:"></a>
+                    <a name="//apple_ref/objc/Method/-playerControllerDidSwitchToMedia:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerDidSwitchToMedia:">-playerControllerDidSwitchToMedia:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -237,20 +295,20 @@ is a subview.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Everytime the video that&rsquo;s on screen changes, the player call this delegate
-method to inform the new caption.</p>
+                        <p>Notifies the video on screen did switch to a new one.
+The player call this delegate method to inform the new media information.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerCaptionChanged</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">caption</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerDidSwitchToMedia</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">media</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerCaptionChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">caption</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerDidSwitch</span><span class="p">(</span><span class="n">toMedia</span> <span class="nv">media</span><span class="p">:</span> <span class="kt"><a href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -261,12 +319,12 @@ method to inform the new caption.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>caption</em>
+                                <em>media</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>the new main view caption</p>
+                                  <p>The media information</p>
                                 </div>
                               </td>
                             </tr>
@@ -274,7 +332,170 @@ method to inform the new caption.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.1.5/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L46">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerDidChangePlayingStatus:"></a>
+                    <a name="//apple_ref/objc/Method/-playerControllerDidChangePlayingStatus:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerDidChangePlayingStatus:">-playerControllerDidChangePlayingStatus:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notifies the player has changed the playing status.
+The player call this delegate method to inform the new playing status information.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerDidChangePlayingStatus</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">isPlaying</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerDidChangePlayingStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Any</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isPlaying</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Current player playing status</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L62">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerColor"></a>
+                    <a name="//apple_ref/objc/Method/-playerControllerColor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerColor">-playerControllerColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Override the desired color on the player&rsquo;s controls and other UI</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="n">playerControllerColor</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>desired color</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerCurrentMedia:watchedTime:"></a>
+                    <a name="//apple_ref/objc/Method/-playerControllerCurrentMedia:watchedTime:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)RBSDKPlayerViewControllerDelegate(im)playerControllerCurrentMedia:watchedTime:">-playerControllerCurrentMedia:watchedTime:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Notifies the player current media watched time.
+The player call this delegate to report watched time of the current media showing.
+Watched Time is the total time that the media is playing and focused on view.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerCurrentMedia</span><span class="p">:(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">media</span>
+                         <span class="nf">watchedTime</span><span class="p">:(</span><span class="kt">float</span><span class="p">)</span><span class="nv">watchedTime</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">playerControllerCurrentMedia</span><span class="p">(</span><span class="n">_</span> <span class="nv">media</span><span class="p">:</span> <span class="kt"><a href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a></span><span class="p">?,</span> <span class="nv">watchedTime</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>media</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Media information</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>watchedTime</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Total watched time</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.2.0/RBSDKPlayer.framework/Headers/RBSDKPlayerViewControllerDelegate.h#L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +508,7 @@ method to inform the new caption.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-02-14)</p>
+      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-02-27)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -20,3 +20,5 @@ FOUNDATION_EXPORT const unsigned char RBSDKPlayerVersionString[];
 #import "RBSDKBrightcovePlayerViewController.h"
 #import "RBSDKPlayerOptions.h"
 #import "RBSDKPlayerViewControllerDelegate.h"
+#import "RBSDKPlayerMediaInfo.h"
+#import "RBSDKError.h"

@@ -9,7 +9,7 @@ PODS:
   - Mixpanel (3.3.9)
   - NHNetworkTime (1.7):
     - CocoaAsyncSocket (~> 7.5.0)
-  - RBSDKPlayer (0.1.5):
+  - RBSDKPlayer (0.2.0):
     - AWSS3 (~> 2.4.0)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
@@ -29,7 +29,7 @@ DEPENDENCIES:
   - RBSDKPlayer (from `../`)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AWSCore
     - AWSS3
     - CocoaAsyncSocket
@@ -52,7 +52,7 @@ SPEC CHECKSUMS:
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 5bc76524e4e6f7eea1db809cceaf17b4ad504b05
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: a1e90e9ac960eecf9eb451da72bffd9d7cc1a055
+  RBSDKPlayer: d0563d8e78cfeb1e263bea57407bd27dfe09fa09
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
@@ -60,4 +60,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 46b70314cff7105a57afc3a20582f15a9f6c8b90
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

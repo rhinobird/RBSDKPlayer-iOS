@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
                                                options:(RBSDKPlayerOption)options;
 
 /**
- Initialize a player controller with an array of brightcove media ids
+ Initialize a player controller with a brightcove media id
 
  @param mediaId Brightcove media id
  @param accountId Brightcove account id
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
                                           options:(RBSDKPlayerOption)options;
 
 /**
- Initialize a player controller with an array of brightcove media ids
+ Initialize a player controller with a brightcove playlist id
 
  @param playlistId Brightcove playlist id
  @param accountId Brightcove account id

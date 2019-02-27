@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		gC7B+dvItqp1UJ7NLbhbIzzK0ac=
+		AjpF4IC4mUyZWyqc/H2f1QVAv/w=
 		</data>
 		<key>BCOVPUIResources.bundle/Info.plist</key>
 		<data>
-		MhNP2D/Cjaa8IHOBDZQeKjv4zo8=
+		o1EOEIahqebLKfSb7lUZ0f4dNjo=
 		</data>
 		<key>BCOVPUIResources.bundle/bcovpuiiconfont.ttf</key>
 		<data>
@@ -150,23 +150,31 @@
 		</data>
 		<key>Headers/RBSDKBrightcovePlayerViewController.h</key>
 		<data>
-		Ojq8DeuNHVi8BgBGRJXaxoYeqtQ=
+		yt8MHbwmWYK6h9x5GY+W2fpFnRo=
+		</data>
+		<key>Headers/RBSDKError.h</key>
+		<data>
+		AineYiUO9Vw/wu1t2/hG3wr7fGE=
 		</data>
 		<key>Headers/RBSDKPlayer.h</key>
 		<data>
-		O7xJ56WwOITNsOtR/QxNZS0mOCQ=
+		5GAf2LVdyywvLPdEGtskxGopQes=
+		</data>
+		<key>Headers/RBSDKPlayerMediaInfo.h</key>
+		<data>
+		ClrwoPwxj/dDx0rtz4FDhaI8la8=
 		</data>
 		<key>Headers/RBSDKPlayerOptions.h</key>
 		<data>
-		L+eA59ururVFzY2FWeZ4YN5J2i8=
+		n8E8ZDbbVm8XVgwxqAALrBqlH4k=
 		</data>
 		<key>Headers/RBSDKPlayerViewController.h</key>
 		<data>
-		U/KPK9ByuGBlpmUGjt8uXRrofb0=
+		o4cTTK3oO6SucTCg8tzCWhfT1gw=
 		</data>
 		<key>Headers/RBSDKPlayerViewControllerDelegate.h</key>
 		<data>
-		EUb+J1fAeyRg+DTtViRf5OUdmL8=
+		Q8VtMvYGgU5FocKjWtkVtgXVz4s=
 		</data>
 		<key>Headers/RBSDKRhinobirdPlayerViewController.h</key>
 		<data>
@@ -174,7 +182,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Ib5JOCWMA6vDiM+OF6e2WT7qhpU=
+		AapvAaRa0+8t8d87zG/KgY465Ys=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -218,11 +226,11 @@
 		</data>
 		<key>RBLoaderLayerView.nib</key>
 		<data>
-		Y2wxGpVwm9Msw8qrF0XUSyM7OGQ=
+		Q2qVajomHRNjMrIP3ubjxcDySvw=
 		</data>
 		<key>RBPlayerControlsView.nib</key>
 		<data>
-		v8u5bxKHd2hpmwOL/de/rkQgV3c=
+		HwR5gIXCsOfGLiYKhCcetan4RTY=
 		</data>
 		<key>RBQuickVideoPlayerView.nib</key>
 		<data>
@@ -278,7 +286,7 @@
 		</data>
 		<key>UIPlayerView.nib</key>
 		<data>
-		QAVK+giiUAhmFNjfOKAXtrADV6Y=
+		iTHh1DB2iw2jLYRwIl48icme4r8=
 		</data>
 		<key>UISameTimeViewController.nib</key>
 		<data>
@@ -303,22 +311,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gC7B+dvItqp1UJ7NLbhbIzzK0ac=
+			AjpF4IC4mUyZWyqc/H2f1QVAv/w=
 			</data>
 			<key>hash2</key>
 			<data>
-			5uuOEhFXmr0dXCGIu+te9SjAW/045WNhoV19jDSuTWY=
+			X+xhWoFT+87Fri9uxzDKXz2kUmjsivxxbvHK/SQO1XY=
 			</data>
 		</dict>
 		<key>BCOVPUIResources.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MhNP2D/Cjaa8IHOBDZQeKjv4zo8=
+			o1EOEIahqebLKfSb7lUZ0f4dNjo=
 			</data>
 			<key>hash2</key>
 			<data>
-			quU5zgwtNEwRSkXFtu54TjOtf/L/Kw31ESExl9cfgPA=
+			oL1m68M5J2z+lmeK7sWdkGslW/VCoc67+30pUcTzp1Q=
 			</data>
 		</dict>
 		<key>BCOVPUIResources.bundle/bcovpuiiconfont.ttf</key>
@@ -699,55 +707,77 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ojq8DeuNHVi8BgBGRJXaxoYeqtQ=
+			yt8MHbwmWYK6h9x5GY+W2fpFnRo=
 			</data>
 			<key>hash2</key>
 			<data>
-			DHoSfbruqplhX64dmYYi6RyN3dK3dPz5M0zFbLdkJAI=
+			l9N7iA4HAERCkD7euOWCmTrEX/ArtAIyqIzNbkbYmes=
+			</data>
+		</dict>
+		<key>Headers/RBSDKError.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			AineYiUO9Vw/wu1t2/hG3wr7fGE=
+			</data>
+			<key>hash2</key>
+			<data>
+			mO0P+SyEMqi1gKLyODHfhGkOseUWq7dG6XInfyCF5jg=
 			</data>
 		</dict>
 		<key>Headers/RBSDKPlayer.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O7xJ56WwOITNsOtR/QxNZS0mOCQ=
+			5GAf2LVdyywvLPdEGtskxGopQes=
 			</data>
 			<key>hash2</key>
 			<data>
-			CxJiNi03hxMImbIfQMVYG+XBE9pGUqJxb4/YcsB6Xbg=
+			aR6NwjobdYGTulDmpjcPig/NCy+skJ6mCb3yBFnXv28=
+			</data>
+		</dict>
+		<key>Headers/RBSDKPlayerMediaInfo.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ClrwoPwxj/dDx0rtz4FDhaI8la8=
+			</data>
+			<key>hash2</key>
+			<data>
+			MT6KVk4O9c0XomfLg07nnrdBgn41arjWC42XUf87LHc=
 			</data>
 		</dict>
 		<key>Headers/RBSDKPlayerOptions.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			L+eA59ururVFzY2FWeZ4YN5J2i8=
+			n8E8ZDbbVm8XVgwxqAALrBqlH4k=
 			</data>
 			<key>hash2</key>
 			<data>
-			KztDs7uSLpZkeo1LRId8F9KI7PCt+OjeSDC5i5loSbI=
+			8SedB3QO4quOgCb9kqYHiiXmX6mmLpdrSvZjXhfNlLg=
 			</data>
 		</dict>
 		<key>Headers/RBSDKPlayerViewController.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			U/KPK9ByuGBlpmUGjt8uXRrofb0=
+			o4cTTK3oO6SucTCg8tzCWhfT1gw=
 			</data>
 			<key>hash2</key>
 			<data>
-			K4CXjjEEnpDb9I3F6y8XhcDkf/dngFSkRG0RQrJDG+U=
+			aEi7mwT3H4Bxs+M7D5g1gRki+RYoGC+E5l/Vu6QSMUU=
 			</data>
 		</dict>
 		<key>Headers/RBSDKPlayerViewControllerDelegate.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EUb+J1fAeyRg+DTtViRf5OUdmL8=
+			Q8VtMvYGgU5FocKjWtkVtgXVz4s=
 			</data>
 			<key>hash2</key>
 			<data>
-			6F/PQUojf+aIEIAAc8sXZBat5MWgP4S9KX26nwtUPdI=
+			8dmvGo2O219y9F3ImVmeqUHDw/i2uGAJLDHEWH3Bcuc=
 			</data>
 		</dict>
 		<key>Headers/RBSDKRhinobirdPlayerViewController.h</key>
@@ -875,22 +905,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Y2wxGpVwm9Msw8qrF0XUSyM7OGQ=
+			Q2qVajomHRNjMrIP3ubjxcDySvw=
 			</data>
 			<key>hash2</key>
 			<data>
-			zkRNrddMoumE3wwTe8gWdRBqwo5YkunQi6gTy+0yK0k=
+			ApHzSMyz6FPvknc0dYoNGudP7de7HM1SnRDx6RFsJ/8=
 			</data>
 		</dict>
 		<key>RBPlayerControlsView.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			v8u5bxKHd2hpmwOL/de/rkQgV3c=
+			HwR5gIXCsOfGLiYKhCcetan4RTY=
 			</data>
 			<key>hash2</key>
 			<data>
-			/fygJIG5LFr/7f8SQwhIblcE6pC/3hJJXuaI+EMe6jc=
+			j8+9bOc3wjzktUEmxTPGvvVok4vavt2xe6o+gPt9Zv4=
 			</data>
 		</dict>
 		<key>RBQuickVideoPlayerView.nib</key>
@@ -1040,11 +1070,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QAVK+giiUAhmFNjfOKAXtrADV6Y=
+			iTHh1DB2iw2jLYRwIl48icme4r8=
 			</data>
 			<key>hash2</key>
 			<data>
-			jFA2IWRsxjY6qwwANSt7rh09Igh/7C5PDxhRiZTclXg=
+			0JaPyZidjhdqG61TrNqS74i4Wp6UsXU6MvaBFCryCMk=
 			</data>
 		</dict>
 		<key>UISameTimeViewController.nib</key>

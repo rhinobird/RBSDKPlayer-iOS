@@ -10,9 +10,9 @@
 #define RBSDKPlayerOptions_h
 
 /**
- `RBSDKPlayerOption` provice extra data for initializing players
+ `RBSDKPlayerOption` provide extra data for initializing players
  */
-typedef NS_ENUM(NSUInteger, RBSDKPlayerOption) {
+typedef NS_OPTIONS(NSUInteger, RBSDKPlayerOption) {
     /**
      Play as soon as the main video has loaded.
      */
@@ -28,6 +28,13 @@ typedef NS_ENUM(NSUInteger, RBSDKPlayerOption) {
      Go fullscreen automatically when rotating the device to a landscape position.
      */
     RBSDKPlayerOptionAutoFullscreenOnLandscape  = 1 << 2,
+    
+    /**
+     Change the player Video Gravity.
+     By default, the Video Gravity is Aspect Fill.
+     RBSDKPlayerOptionVideoGravityAspectFit preserves the aspect ratio and fit within layer bounds.
+     */
+    RBSDKPlayerOptionVideoGravityAspectFit      = 1 << 3
 };
 
 #endif /* RBSDKPlayerOptions_h */

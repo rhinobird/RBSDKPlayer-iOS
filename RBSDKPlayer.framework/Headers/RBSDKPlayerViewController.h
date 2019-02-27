@@ -64,4 +64,18 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
  */
 - (void)attachPlayerViewController;
 
+/**
+ Returns the playing status of the player
+ 
+ @return BOOL YES if is playing
+ */
+- (BOOL)isPlaying;
+
+/**
+ Returns the media info of the current media showing
+ 
+ @return RBSDKPlayerMediaInfo Media info
+ */
+- (nullable RBSDKPlayerMediaInfo *)currentMediaInfo;
+
 @end

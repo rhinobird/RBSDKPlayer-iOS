@@ -1,6 +1,13 @@
 {
   "warnings": [
     {
+      "file": "/Users/fantini/Projects/ios/rhino/RBSDKPlayer/RBSDKPlayer.framework/Headers/RBSDKError.h",
+      "line": 25,
+      "symbol": "",
+      "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/fantini/Projects/ios/rhino/RBSDKPlayer/RBSDKPlayer.framework/Headers/RBSDKPlayer.h",
       "line": 12,
       "symbol": "RBSDKPlayerVersionNumber",
