@@ -1,12 +1,15 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.1.5-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.2.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
 The rhinobird SDK supports content hosted by Rhinobird but it can also connect to other services like Mediastream and Brightcove.
 
 We're working on making this sdk completely public, but in the mean, to make it work you'll need to get direct authorization from us, [send us an email](mailto:benjamin@rhinobird.tv) and we will send you the needed keys to make this work.
+
+## Documentation
+The documentation of this project can be found in this [link](https://rhinobird.github.io/RBSDKPlayer-iOS/)
 
 ## Install the SDK using CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. See [Installation Guide](https://cocoapods.org/#install) for more information. You can install it with the following command:
@@ -209,32 +212,17 @@ override func viewDidLayoutSubviews() {
 
 **Delegate**
 
-If you need feedback about the player's loading process, implement the `RBPlayerViewControllerDelegate` methods on your class.
+If you need feedback about the player, implement the `RBSDKPlayerViewControllerDelegate` methods on your class. Check [the documentation](https://rhinobird.github.io/RBSDKPlayer-iOS/Protocols/RBSDKPlayerViewControllerDelegate.html) for more details.
 
 ```
 // Objective-C
-# pragma mark - RBPlayerViewControllerDelegate
+# pragma mark - RBSDKPlayerViewControllerDelegate
 
-- (void)playerControllerLoadDidSucceed:(BOOL)succeed {
-    if (succeed) {
-        NSLog(@"Player load succeed");
-    } else {
-        NSLog(@"Player was not able to load");
-    }
-}
-```
-```
-// Swift
-// MARK: RBPlayerViewControllerDelegate
-
-extension ViewController: RBPlayerViewControllerDelegate {
-
-    func playerControllerLoadDidSucceed(_ succeed: Bool) {
-        if (succeed) {
-            print("Player load succeed")
-        } else {
-            print("Player was not able to load")
-        }
-    }
-}
+- (void)playerControllerLoadDidSucceed:(BOOL)succeed withError:(NSError *)error {}
+- (void)playerControllerIsReadyToPlay {}
+- (UIScrollView *)playerControllerMainScrollView {}
+- (void)playerControllerDidSwitchToMedia:(RBSDKPlayerMediaInfo *)media {}
+- (void)playerControllerDidChangePlayingStatus:(BOOL)isPlaying {}
+- (UIColor *)playerControllerColor {}
+- (void)playerControllerCurrentMedia:(RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime {}
 ```
