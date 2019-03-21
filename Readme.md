@@ -12,7 +12,7 @@ We're working on making this sdk completely public, but in the mean, to make it 
 The documentation of this project can be found [here](https://rhinobird.github.io/RBSDKPlayer-iOS/)
 
 ## Changelog
-The complete changelog of this project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/Changelog.md)
+The complete changelog of this project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/blob/master/Changelog.md)
 
 ## Install the SDK using CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. See [Installation Guide](https://cocoapods.org/#install) for more information. You can install it with the following command:

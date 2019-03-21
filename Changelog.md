@@ -1,6 +1,6 @@
 # RBSDKPlayer - Changelog
 
-This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://rhinobird.github.io/RBSDKPlayer-iOS/)
+This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/)
 
 ## v0.2.1 (2019/03/20)
 
