@@ -116,12 +116,21 @@ class ViewController: UIViewController {
 
 extension ViewController: RBSDKPlayerViewControllerDelegate {
 
-    func playerControllerLoadDidSucceed(_ succeed: Bool) {
+    func playerControllerLoadDidSucceed(_ succeed: Bool, withError error: Error?) {
         if (succeed) {
             print("Player load succeed")
+        } else if let errorDescription = error?.localizedDescription {
+            print("Player was not able to load, error: \(errorDescription)")
         } else {
             print("Player was not able to load")
         }
     }
+
+    func playerControllerCurrentMedia(_ media: RBSDKPlayerMediaInfo?, watchedTime: Float) {
+        if let otherParameters = media?.otherParameters {
+            print("Other parameters: \(otherParameters)")
+        }
+    }
+
 }
 

@@ -1,6 +1,6 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.2.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.2.1-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
@@ -9,7 +9,10 @@ The rhinobird SDK supports content hosted by Rhinobird but it can also connect t
 We're working on making this sdk completely public, but in the mean, to make it work you'll need to get direct authorization from us, [send us an email](mailto:benjamin@rhinobird.tv) and we will send you the needed keys to make this work.
 
 ## Documentation
-The documentation of this project can be found in this [link](https://rhinobird.github.io/RBSDKPlayer-iOS/)
+The documentation of this project can be found [here](https://rhinobird.github.io/RBSDKPlayer-iOS/)
+
+## Changelog
+The complete changelog of this project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/Changelog.md)
 
 ## Install the SDK using CocoaPods
 [CocoaPods](http://cocoapods.org) is a dependency manager for Swift and Objective-C Cocoa projects. See [Installation Guide](https://cocoapods.org/#install) for more information. You can install it with the following command:
@@ -26,7 +29,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 
 target 'AppTargetName' do
-  pod 'RBSDKPlayer', '~> 0.1'
+  pod 'RBSDKPlayer', '~> 0.2'
 end
 ```
 

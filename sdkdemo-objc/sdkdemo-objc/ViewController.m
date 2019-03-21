@@ -110,11 +110,20 @@
 
 # pragma mark - RBPlayerViewControllerDelegate
 
-- (void)playerControllerLoadDidSucceed:(BOOL)succeed {
+- (void)playerControllerLoadDidSucceed:(BOOL)succeed withError:(NSError *)error {
     if (succeed) {
         NSLog(@"Player load succeed");
+    } else if (error) {
+        NSLog(@"Player was not able to load, error: %@", error.localizedDescription);
     } else {
         NSLog(@"Player was not able to load");
+    }
+
+}
+
+- (void)playerControllerCurrentMedia:(RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime {
+    if (media && media.otherParameters) {
+        NSLog(@"Other parameters: %@", media.otherParameters);
     }
 }
 

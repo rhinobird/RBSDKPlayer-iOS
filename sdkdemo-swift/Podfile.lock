@@ -5,12 +5,14 @@ PODS:
   - CocoaAsyncSocket (7.5.1):
     - CocoaAsyncSocket/GCD (= 7.5.1)
   - CocoaAsyncSocket/GCD (7.5.1)
+  - GoogleAds-IMA-iOS-SDK (3.8.1)
   - MBCircularProgressBar (0.3.5)
   - Mixpanel (3.3.9)
   - NHNetworkTime (1.7):
     - CocoaAsyncSocket (~> 7.5.0)
-  - RBSDKPlayer (0.2.0):
+  - RBSDKPlayer (0.2.1):
     - AWSS3 (~> 2.4.0)
+    - GoogleAds-IMA-iOS-SDK (~> 3.7)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
     - NHNetworkTime (~> 1.7)
@@ -33,6 +35,7 @@ SPEC REPOS:
     - AWSCore
     - AWSS3
     - CocoaAsyncSocket
+    - GoogleAds-IMA-iOS-SDK
     - MBCircularProgressBar
     - Mixpanel
     - NHNetworkTime
@@ -49,10 +52,11 @@ SPEC CHECKSUMS:
   AWSCore: 7c3c129991e6387bcbad7132bc3661e7135754db
   AWSS3: fef6aa8f8f625df8f67f1b6574fe761f3a4ddc99
   CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
+  GoogleAds-IMA-iOS-SDK: 9659b8999443366d2d159413c189e55d88734b78
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 5bc76524e4e6f7eea1db809cceaf17b4ad504b05
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: d0563d8e78cfeb1e263bea57407bd27dfe09fa09
+  RBSDKPlayer: 6e3cdce5e54789760d2941b2d62d966bcbb2c790
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
