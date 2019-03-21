@@ -26,6 +26,8 @@ To integrate RBSDKPlayer with your iOS project using CocoaPods, just add the fol
 
 ```
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/brightcove/BrightcoveSpecs.git'
+
 platform :ios, '10.0'
 
 target 'AppTargetName' do

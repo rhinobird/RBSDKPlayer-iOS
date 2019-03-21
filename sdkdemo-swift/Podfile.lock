@@ -2,6 +2,9 @@ PODS:
   - AWSCore (2.4.16)
   - AWSS3 (2.4.16):
     - AWSCore (= 2.4.16)
+  - Brightcove-Player-Core (6.3.11):
+    - Brightcove-Player-Core/default (= 6.3.11)
+  - Brightcove-Player-Core/default (6.3.11)
   - CocoaAsyncSocket (7.5.1):
     - CocoaAsyncSocket/GCD (= 7.5.1)
   - CocoaAsyncSocket/GCD (7.5.1)
@@ -12,6 +15,7 @@ PODS:
     - CocoaAsyncSocket (~> 7.5.0)
   - RBSDKPlayer (0.2.1):
     - AWSS3 (~> 2.4.0)
+    - Brightcove-Player-Core (~> 6.3)
     - GoogleAds-IMA-iOS-SDK (~> 3.7)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
@@ -31,6 +35,8 @@ DEPENDENCIES:
   - RBSDKPlayer (from `../`)
 
 SPEC REPOS:
+  https://github.com/brightcove/BrightcoveSpecs.git:
+    - Brightcove-Player-Core
   https://github.com/cocoapods/specs.git:
     - AWSCore
     - AWSS3
@@ -51,17 +57,18 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AWSCore: 7c3c129991e6387bcbad7132bc3661e7135754db
   AWSS3: fef6aa8f8f625df8f67f1b6574fe761f3a4ddc99
+  Brightcove-Player-Core: 2984d9852c0cffad76949e95172db22c20380266
   CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
   GoogleAds-IMA-iOS-SDK: 9659b8999443366d2d159413c189e55d88734b78
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 5bc76524e4e6f7eea1db809cceaf17b4ad504b05
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: 6e3cdce5e54789760d2941b2d62d966bcbb2c790
+  RBSDKPlayer: 65532be81c3ebce7dd2f7be5fb2bdc4641898b3c
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   XCDYouTubeKit: 3f4fd3eb3ed494a46a8f007b91315eed6dd6df1f
 
-PODFILE CHECKSUM: 46b70314cff7105a57afc3a20582f15a9f6c8b90
+PODFILE CHECKSUM: 2d00801c21949a3bd6a4f1c401a6414c442bbde0
 
 COCOAPODS: 1.5.3

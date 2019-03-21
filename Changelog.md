@@ -2,6 +2,12 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/)
 
+## v0.2.2 (not yet published)
+
+### Enhancements
+
+1. Add `Brightcove-Player-Core` as a pod dependency. The project using the `RBSDKPlayer` pod needs to add the source of this dependency on the `Podfile`.
+
 ## v0.2.1 (2019/03/20)
 
 ### Enhancements
