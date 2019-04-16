@@ -29,19 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RBSDKBrightcovePlayerViewController : RBSDKPlayerViewController
 
 /**
- Initialize a player controller with an array of brightcove media ids
-
- @param mediaIdArray Brightcove array of media ids
- @param accountId Brightcove account id
- @param options RBSDKPlayerOption
-
- @return An instance of `RBSDKPlayerViewController`
- */
-- (nonnull instancetype)initWithBrightcoveMediaIdArray:(nonnull NSArray<NSString *> *)mediaIdArray
-                                             accountId:(nonnull NSString *)accountId
-                                               options:(RBSDKPlayerOption)options;
-
-/**
  Initialize a player controller with a brightcove media id
 
  @param mediaId Brightcove media id
@@ -55,6 +42,19 @@ NS_ASSUME_NONNULL_BEGIN
                                           options:(RBSDKPlayerOption)options;
 
 /**
+ Initialize a player controller with an array of brightcove media ids
+
+ @param mediaIdArray Brightcove array of media ids
+ @param accountId Brightcove account id
+ @param options RBSDKPlayerOption
+
+ @return An instance of `RBSDKPlayerViewController`
+ */
+- (nonnull instancetype)initWithBrightcoveMediaIdArray:(nonnull NSArray<NSString *> *)mediaIdArray
+                                             accountId:(nonnull NSString *)accountId
+                                               options:(RBSDKPlayerOption)options;
+
+/**
  Initialize a player controller with a brightcove playlist id
 
  @param playlistId Brightcove playlist id
@@ -66,6 +66,30 @@ NS_ASSUME_NONNULL_BEGIN
 - (nonnull instancetype)initWithBrightcovePlaylistId:(nonnull NSString *)playlistId
                                            accountId:(nonnull NSString *)accountId
                                              options:(RBSDKPlayerOption)options;
+
+/**
+ Add another row to the player using a media id (enabling the vertical swiping),
+ there isn't a limit on the amount of rows that you can add.
+
+ @param mediaId Brightcove media id
+ */
+- (void)addMediaId:(nonnull NSString *)mediaId;
+
+/**
+ Add another row to the player using an array of media ids (enabling the vertical swiping),
+ there isn't a limit on the amount of rows that you can add.
+
+ @param mediaIdArray Brightcove array of media ids
+ */
+- (void)addMediaIdArray:(nonnull NSArray<NSString *> *)mediaIdArray;
+
+/**
+ Add another row to the player using a playlist id (enabling the vertical swiping),
+ there isn't a limit on the amount of rows that you can add.
+
+ @param playlistId Brightcove playlist id
+ */
+- (void)addPlaylistId:(nonnull NSString *)playlistId;
 
 @end
 

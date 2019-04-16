@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  `RBSDKRhinobirdPlayerViewController` is the Reel player controller for
  Rhinobird videos.
@@ -27,6 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nonnull instancetype)initWithMomentId:(nonnull NSString *)momentId
                                  options:(RBSDKPlayerOption)options;
+
+/**
+ Add another moment to the player (enabling the vertical swiping), there isn't a
+ limit on the amount of moments that you can add.
+
+ @param momentId Moment's string id
+ */
+- (void)addMomentId:(nonnull NSString *)momentId;
 
 @end
 

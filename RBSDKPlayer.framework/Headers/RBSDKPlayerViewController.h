@@ -13,7 +13,7 @@
 
 FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNotification;
 
-@class PlayerViewController;
+@class RBPlayerViewController;
 
 /**
  `RBSDKPlayerViewController` is an abstract class, you're not suposed to initialize
@@ -30,7 +30,7 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 /**
  Player view controller internal logic
  */
-@property (strong, nonatomic, nullable) PlayerViewController * playerViewController;
+@property (strong, nonatomic, nullable) RBPlayerViewController * playerViewController;
 
 /**
  Player's delegate

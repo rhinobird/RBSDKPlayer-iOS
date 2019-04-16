@@ -27,7 +27,7 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
 
  @return A `RBSDK` configuration singleton
  */
-+ (instancetype)sharedInstance;
++ (nonnull instancetype)sharedInstance;
 
 /**
  Set the secret and access key, this is needed for creating a player controller
@@ -58,7 +58,7 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
  @param completionHandler The completion handler will say if the configuration
  was successfull or not, and if is not, check the NSError information.
  */
-- (void)loadAsynchronouslyWithCompletionHandler:(RBLoadHandlerBlock)completionHandler;
+- (void)loadAsynchronouslyWithCompletionHandler:(nullable RBLoadHandlerBlock)completionHandler;
 
 /**
  Check if the sdk is ready to load players
@@ -73,5 +73,13 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
  @return YES when the configurator is still loading stuff
  */
 - (BOOL)isLoading;
+
+/**
+ Set a session identifier. This is needed to identify the current session and
+ a user behaviour anonymously.
+ 
+ @param sessionIdentifier identifier for the current session.
+ */
+- (void)setSessionIdentifier:(nonnull NSString *)sessionIdentifier;
 
 @end
