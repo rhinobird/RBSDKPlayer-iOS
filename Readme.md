@@ -1,6 +1,6 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.2.1-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.3.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
@@ -31,7 +31,7 @@ source 'https://github.com/brightcove/BrightcoveSpecs.git'
 platform :ios, '10.0'
 
 target 'AppTargetName' do
-  pod 'RBSDKPlayer', '~> 0.2'
+  pod 'RBSDKPlayer', '~> 0.3'
 end
 ```
 

@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RBSDKPlayer"
-  s.version      = "0.2.1"
+  s.version      = "0.3.0"
   s.summary      = "Interactive video player SDK by Rhinobird"
 
   s.homepage     = "https://github.com/rhinobird/RBSDKPlayer-iOS"
