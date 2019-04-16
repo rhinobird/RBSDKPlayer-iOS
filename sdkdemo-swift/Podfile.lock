@@ -13,9 +13,8 @@ PODS:
   - Mixpanel (3.4.5)
   - NHNetworkTime (1.7):
     - CocoaAsyncSocket (~> 7.5.0)
-  - RBSDKPlayer (0.3.0):
+  - RBSDKPlayer (0.3.1):
     - AWSS3 (~> 2.4.0)
-    - Brightcove-Player-Core (~> 6.3)
     - GoogleAds-IMA-iOS-SDK (~> 3.7)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
@@ -32,6 +31,7 @@ PODS:
   - XCDYouTubeKit (2.7.3)
 
 DEPENDENCIES:
+  - Brightcove-Player-Core (~> 6.3)
   - RBSDKPlayer (from `../`)
 
 SPEC REPOS:
@@ -63,12 +63,12 @@ SPEC CHECKSUMS:
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 85c865c57456de42f66d7c29cd1b060b41ebe279
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: 13c048f0edc9a09edec4b6c4ae7304baeedcbaf8
+  RBSDKPlayer: 3eba56a0797a6952d8359e9567fbe289769edf9e
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   XCDYouTubeKit: 3f4fd3eb3ed494a46a8f007b91315eed6dd6df1f
 
-PODFILE CHECKSUM: 2d00801c21949a3bd6a4f1c401a6414c442bbde0
+PODFILE CHECKSUM: b94df7d5ec51ac1d0decd41b17b9b08228e7519e
 
 COCOAPODS: 1.5.3

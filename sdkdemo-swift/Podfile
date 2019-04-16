@@ -8,4 +8,5 @@ target 'sdkdemo-swift' do
   use_frameworks!
 
   pod 'RBSDKPlayer', :path => '../' 
+  pod 'Brightcove-Player-Core', '~> 6.3'
 end

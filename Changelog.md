@@ -2,17 +2,22 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/)
 
+## v0.3.1 (2019/04/16)
+
+### Bugs
+
+1. Fix a dependency issue.
+
 ## v0.3.0 (2019/04/16)
 
 ### Enhancements
 
-1. Add `Brightcove-Player-Core` as a pod dependency. The project using the `RBSDKPlayer` pod needs to add the source of this dependency on the `Podfile`.
-2. Add vertical swiping support.
-3. Add infinite horizontal support.
-4. The player is capable of automatically loading more videos to support the infinite functionality.
-5. Add support to flag inappropriate content.
-6. Add support for synchronized videos.
-7. Improve the performance by using background threads for low priority tasks.
+1. Add vertical swiping support.
+2. Add infinite horizontal support.
+3. The player is capable of automatically loading more videos to support the infinite functionality.
+4. Add support to flag inappropriate content.
+5. Add support for synchronized videos.
+6. Improve the performance by using background threads for low priority tasks.
 
 ### Bugs
 
