@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           RBSDKPlayer Docs
         </a>
-         (93% documented)
+         (94% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -68,6 +68,12 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RBSDKSpotifyPlayerViewController.html">RBSDKSpotifyPlayerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/RBSDKYoutubeChannelPlayerViewController.html">RBSDKYoutubeChannelPlayerViewController</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -107,10 +113,10 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Type Definitions.html">Type Definitions</a>
+            <a class="nav-group-name-link" href="../Type%20Definitions.html">Type Definitions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a>
+                <a class="nav-group-task-link" href="../Type%20Definitions.html#/c:RBSDK.h@T@RBLoadHandlerBlock">RBLoadHandlerBlock</a>
               </li>
             </ul>
           </li>
@@ -203,7 +209,78 @@ Rhinobird videos.</p>
                         <p>An instance of <code><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></code></p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.3.0/RBSDKPlayer.framework/Headers/RBSDKRhinobirdPlayerViewController.h#L27-L28">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.4.0/RBSDKPlayer.framework/Headers/RBSDKRhinobirdPlayerViewController.h#L29-L30">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDKRhinobirdPlayerViewController(im)initWithNewMoment:options:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithNewMoment:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKRhinobirdPlayerViewController(im)initWithNewMoment:options:">-initWithNewMoment:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a player controller with a specific moment</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNewMoment</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RBSDKMoment</span> <span class="o">*</span><span class="p">)</span><span class="nv">moment</span>
+                                  <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n">newMoment</span> <span class="nv">moment</span><span class="p">:</span> <span class="kt">RBSDKMoment</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>moment</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>RBSDKMoment New Moment model.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>RBSDKPlayerOption</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of <code><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.4.0/RBSDKPlayer.framework/Headers/RBSDKRhinobirdPlayerViewController.h#L40-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -258,7 +335,78 @@ limit on the amount of moments that you can add.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.3.0/RBSDKPlayer.framework/Headers/RBSDKRhinobirdPlayerViewController.h#L36">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.4.0/RBSDKPlayer.framework/Headers/RBSDKRhinobirdPlayerViewController.h#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDKRhinobirdPlayerViewController(im)initWithCollectionId:options:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCollectionId:options:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKRhinobirdPlayerViewController(im)initWithCollectionId:options:">-initWithCollectionId:options:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize a player controller with a specific collection-id</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCollectionId</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">collectionId</span>
+                                     <span class="nf">options</span><span class="p">:(</span><span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span><span class="nv">options</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">collectionId</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>collectionId</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>collection&rsquo;s string id</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>RBSDKPlayerOption</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An instance of <code><a href="../Classes/RBSDKPlayerViewController.html">RBSDKPlayerViewController</a></code></p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/0.4.0/RBSDKPlayer.framework/Headers/RBSDKRhinobirdPlayerViewController.h#L59-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -271,8 +419,8 @@ limit on the amount of moments that you can add.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-04-16)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-11-27)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
