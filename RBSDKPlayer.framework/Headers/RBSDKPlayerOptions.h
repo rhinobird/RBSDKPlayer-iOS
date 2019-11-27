@@ -34,7 +34,26 @@ typedef NS_OPTIONS(NSUInteger, RBSDKPlayerOption) {
      By default, the Video Gravity is Aspect Fill.
      RBSDKPlayerOptionVideoGravityAspectFit preserves the aspect ratio and fit within layer bounds.
      */
-    RBSDKPlayerOptionVideoGravityAspectFit      = 1 << 3
+    RBSDKPlayerOptionVideoGravityAspectFit      = 1 << 3,
+
+    /**
+     Hide the stream caption on the player controls
+     By default the captions are shown.
+     */
+    RBSDKPlayerOptionHideCaption                = 1 << 4,
+
+    /**
+    Playback mode as preview.
+    This means the player will show the clips defined and wont allow user interacion
+    with controls as seek and others.
+    This allows all swipes (vertical and horizontal).
+     */
+    RBSDKPlayerOptionPlaybackPreview            = 1 << 5,
+
+    /**
+    Enables realtime features, as likes and chat
+     */
+    RBSDKPlayerOptionEnableRealtime             = 1 << 6
 };
 
 #endif /* RBSDKPlayerOptions_h */

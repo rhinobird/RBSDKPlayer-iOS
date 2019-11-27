@@ -39,6 +39,17 @@ typedef void(^RBLoadHandlerBlock)(BOOL success, NSError * _Nullable error);
            accessKey:(nonnull NSString *)accessKey;
 
 /**
+ Set the secret, access key and account id, this is needed for creating a player controller
+
+ @param secretKey SDK's secret key
+ @param accessKey SDK's access key
+ @param accountId SDK's account id
+ */
+- (void)setSecretKey:(nonnull NSString *)secretKey
+           accessKey:(nonnull NSString *)accessKey
+           accountId:(nonnull NSString *)accountId;
+
+/**
  Set the secret, access and token key, this is needed for creating a player
  controller
 

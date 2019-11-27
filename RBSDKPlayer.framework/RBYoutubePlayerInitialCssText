@@ -1,0 +1,3 @@
+var styleTag = document.getElementById('player').contentDocument.createElement('style');
+styleTag.textContent = css;
+document.getElementById('player').contentDocument.head.appendChild(styleTag);

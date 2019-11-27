@@ -4,3 +4,8 @@ framework module RBSDKPlayer {
   export *
   module * { export * }
 }
+
+module RBSDKPlayer.Swift {
+    header "RBSDKPlayer-Swift.h"
+    requires objc
+}
