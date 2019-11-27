@@ -60,22 +60,22 @@ A Swift demo project is included [here](https://github.com/rhinobird/RBSDKPlayer
 
 The first step is to configure the sdk for auth, use the provided keys, if you don't have them, refer to the [Introduction Section](#introduction) of this document.
 
-```
+```objc
 [RBSDK.sharedInstance setSecretKey:<#Secret Key Here#>
                          accessKey:<#Access Key Here#>];
 ```
-```
+```objc
 RBSDK.sharedInstance().setSecretKey(<#Secret Key Here#>,
                                     accessKey: <#Access Key Here#>)
 ```
 
 **Create the properties**
 
-```
+```objc
 @property (weak, nonatomic) IBOutlet UIView *playerContainerView;
 @property (strong, nonatomic) RBSDKPlayerViewController *playerController;
 ```
-```
+```objc
 @IBOutlet weak var playerContainerView: UIView?
 var playerController: RBSDKPlayerViewController?
 ```
@@ -84,7 +84,7 @@ Connect them to the interface file if needed.
 **Setting everything before loading the player**
 
 Before creating a player, make sure that everything in the SDK core is loaded, by calling `loadAsynchronouslyWithCompletionHandler:` method and in the `completionHandler` set the player. Also, is important to load the player on the main thread.
-```
+```objc
 // Objective-C
 [RBSDK.sharedInstance loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
         if (success) {
@@ -96,7 +96,7 @@ Before creating a player, make sure that everything in the SDK core is loaded, b
         }
     }];
 ```
-```
+```swift
 // Swift
 RBSDK.sharedInstance().loadAsynchronously { success, error in
             if (success) {
@@ -111,7 +111,7 @@ RBSDK.sharedInstance().loadAsynchronously { success, error in
 ```
 
 **Loading the player with Rhinobird cloud data**
-```
+```objc
 // Objective-C
 - (void)loadPlayer {
     RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
@@ -127,7 +127,7 @@ RBSDK.sharedInstance().loadAsynchronously { success, error in
 }
 ```
 **Loading the player with an array of Brightcove media ids**
-```
+```objc
 // Objective-C
 - (void)loadPlayer {
     RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
@@ -149,7 +149,7 @@ RBSDK.sharedInstance().loadAsynchronously { success, error in
 ```
 
 **Loading the player with a Brightcove media id, the player will create a Reel with content related to the media id**
-```
+```objc
 // Objective-C
 - (void)loadPlayer {
     RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
@@ -171,7 +171,7 @@ RBSDK.sharedInstance().loadAsynchronously { success, error in
 ```
 
 **Loading the player with a Brightcove playlist id, the player will create a Reel with all the media contained by the playlist**
-```
+```objc
 // Objective-C
 - (void)loadPlayer {
     RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
@@ -193,7 +193,7 @@ RBSDK.sharedInstance().loadAsynchronously { success, error in
 ```
 
 **Resize the player view on any layout change**
-```
+```objc
 // Objective-C
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
@@ -203,7 +203,7 @@ RBSDK.sharedInstance().loadAsynchronously { success, error in
     self.playerController.view.frame = self.playerContainerView.bounds;
 }
 ```
-```
+```swift
 // Swift
 override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
@@ -220,7 +220,7 @@ override func viewDidLayoutSubviews() {
 
 If you need feedback about the player, implement the `RBSDKPlayerViewControllerDelegate` methods on your class. Check [the documentation](https://rhinobird.github.io/RBSDKPlayer-iOS/Protocols/RBSDKPlayerViewControllerDelegate.html) for more details.
 
-```
+```objc
 // Objective-C
 # pragma mark - RBSDKPlayerViewControllerDelegate
 
