@@ -1,6 +1,6 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.3.1-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.4.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
