@@ -2,6 +2,13 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/)
 
+## v0.4.1 (2019/11/27)
+
+### Enhancements
+
+1. Improve player performance
+2. Add accountId parameter to the sdk as config key 
+
 ## v0.3.1 (2019/04/16)
 
 ### Bugs

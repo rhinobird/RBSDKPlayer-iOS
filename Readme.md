@@ -1,6 +1,6 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.4.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.4.1-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
@@ -32,7 +32,7 @@ platform :ios, '10.0'
 
 target 'AppTargetName' do
   pod 'Brightcove-Player-Core', '~> 6.3'
-  pod 'RBSDKPlayer', '~> 0.3'
+  pod 'RBSDKPlayer', '~> 0.4'
 end
 ```
 
@@ -62,11 +62,13 @@ The first step is to configure the sdk for auth, use the provided keys, if you d
 
 ```objc
 [RBSDK.sharedInstance setSecretKey:<#Secret Key Here#>
-                         accessKey:<#Access Key Here#>];
+                         accessKey:<#Access Key Here#>
+                         accountId:<#Account Id Here#>];
 ```
 ```objc
 RBSDK.sharedInstance().setSecretKey(<#Secret Key Here#>,
-                                    accessKey: <#Access Key Here#>)
+                                    accessKey: <#Access Key Here#>
+                                    accountId: <#Account Id Here#>)
 ```
 
 **Create the properties**
