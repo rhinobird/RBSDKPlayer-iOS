@@ -2,6 +2,17 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/)
 
+## v0.5.0 (2019/12/13)
+
+### Enhancements
+
+1. Improve Player performance
+2. Add more delegate methods to notify Player information
+3. Add methods to init Player with a new Moment type
+4. Add methods to append new Moment Streams to a current Moment
+5. Add Preview funcionality
+6. Add Vertical and Horizontal current position of the Player 
+
 ## v0.4.1 (2019/11/27)
 
 ### Enhancements

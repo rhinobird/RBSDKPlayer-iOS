@@ -9,6 +9,8 @@
 #ifndef RBPlayerViewControllerDelegate_h
 #define RBPlayerViewControllerDelegate_h
 
+#import "RBSDKPlayerContentDirection.h"
+
 @class UIScrollView;
 @class RBSDKPlayerMediaInfo;
 @class RBSDKPlayerViewController;
@@ -47,11 +49,12 @@
 
 /**
  Notifies the video on screen did switch to a new one.
- The player call this delegate method to inform the new media information.
- 
- @param media The media information
+ The player call this delegate method to inform the switch direction and the new media information.
+
+ @param contentDirection Switch content direction.
+ @param media The media information.
  */
-- (void)playerControllerDidSwitchToMedia:(nullable RBSDKPlayerMediaInfo *)media;
+- (void)playerControllerDidSwitchDirection:(RBSDKPlayerContentDirection)contentDirection media:(nullable RBSDKPlayerMediaInfo *)media;
 
 /**
  Notifies the player has changed the playing status.
@@ -77,6 +80,30 @@
  @param watchedTime Total watched time
  */
 - (void)playerControllerCurrentMedia:(nullable RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime;
+
+/**
+ Notifies the player did change the fullscreen status.
+ The player call this delegate method to inform the fullscreen status information.
+ */
+- (void)playerControllerDidChangeFullscreenStatus;
+
+/**
+ Notifies the player will change the fullscreen status.
+ The player call this delegate method to inform the fullscreen status information.
+ */
+- (void)playerControllerWillChangeFullscreenStatus;
+
+/**
+ Notifies the player will reach the end of the player content at direction.
+
+ @discussion If this delegate is added, all the content loading (vertical or horizontal)
+ won't be automatically added by the Rhinobird Api Itself. This means, this should be manually
+ done trough the playerController methods at the SDK to add content in the end.
+
+ @param contentDirection Content direction.
+ @param completionHandler Call after updating the content.
+ */
+- (void)playerControllerWillReachEnd:(RBSDKPlayerContentDirection)contentDirection completionHandler:(void(^_Nonnull)(void))completionHandler;
 
 @end
 

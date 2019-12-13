@@ -38,6 +38,16 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 @property (weak, nonatomic, nullable) id <RBSDKPlayerViewControllerDelegate> delegate;
 
 /**
+ Current Vertical position at the player
+ */
+@property (nonatomic) NSInteger verticalPosition;
+
+/**
+ Current Horizontal position at the player
+ */
+@property (nonatomic) NSInteger horizontalPosition;
+
+/**
  Check RBPlayerViewControllerDelegate for details
 
  @params delegate Object's delegate
@@ -77,5 +87,23 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
  @return RBSDKPlayerMediaInfo Media info
  */
 - (nullable RBSDKPlayerMediaInfo *)currentMediaInfo;
+
+/**
+ Returns the fullscreen status of the player.
+
+ @return BOOL YES if is fullscreen
+ */
+- (BOOL)isFullscreen;
+
+/**
+ This method sets if the player should playback as preview (clips) or full length.
+ Allows to change the playback from Preview to Full length, or change from Full length to Preview.
+
+ @discussion To use this method it's neccesary that the player options (RBSDKPlayerOption)
+ is configured as RBSDKPlayerOptionPlaybackPreview, otherwise this method won't work.
+
+ @params playbackModePreview YES if playback should be Preview, NO if playback should be Full Length
+ */
+- (void)enablePlaybackPreviewMode:(BOOL)playbackModePreview;
 
 @end

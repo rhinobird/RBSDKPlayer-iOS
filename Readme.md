@@ -1,6 +1,6 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.4.1-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v0.5.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
@@ -32,7 +32,7 @@ platform :ios, '10.0'
 
 target 'AppTargetName' do
   pod 'Brightcove-Player-Core', '~> 6.3'
-  pod 'RBSDKPlayer', '~> 0.4'
+  pod 'RBSDKPlayer', '~> 0.5'
 end
 ```
 
@@ -229,8 +229,11 @@ If you need feedback about the player, implement the `RBSDKPlayerViewControllerD
 - (void)playerControllerLoadDidSucceed:(BOOL)succeed withError:(NSError *)error {}
 - (void)playerControllerIsReadyToPlay {}
 - (UIScrollView *)playerControllerMainScrollView {}
-- (void)playerControllerDidSwitchToMedia:(RBSDKPlayerMediaInfo *)media {}
+- (void)playerControllerDidSwitchDirection:(RBSDKPlayerContentDirection)contentDirection media:(nullable RBSDKPlayerMediaInfo *)media {}
 - (void)playerControllerDidChangePlayingStatus:(BOOL)isPlaying {}
 - (UIColor *)playerControllerColor {}
 - (void)playerControllerCurrentMedia:(RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime {}
+- (void)playerControllerWillChangeFullscreenStatus {}
+- (void)playerControllerDidChangeFullscreenStatus {}
+- (void)playerControllerWillReachEnd:(RBSDKPlayerContentDirection)contentDirection completionHandler:(void(^_Nonnull)(void))completionHandler {}
 ```

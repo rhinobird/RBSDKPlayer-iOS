@@ -44,9 +44,8 @@ typedef NS_OPTIONS(NSUInteger, RBSDKPlayerOption) {
 
     /**
     Playback mode as preview.
-    This means the player will show the clips defined and wont allow user interacion
-    with controls as seek and others.
-    This allows all swipes (vertical and horizontal).
+    This means the player will show the clips defined and by some action
+    will switch to full video playback.
      */
     RBSDKPlayerOptionPlaybackPreview            = 1 << 5,
 

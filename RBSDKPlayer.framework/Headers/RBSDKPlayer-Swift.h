@@ -259,6 +259,7 @@ SWIFT_CLASS_NAMED("Stream")
 @interface RBSDKStream : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 @property (nonatomic, readonly, copy) NSString * _Nonnull caption;
+@property (nonatomic, readonly, copy) NSString * _Nonnull comment;
 @property (nonatomic, readonly, copy) NSDate * _Nonnull startedOn;
 @property (nonatomic, readonly) NSInteger duration;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull tags;
@@ -271,6 +272,8 @@ SWIFT_CLASS_NAMED("Stream")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
 
 
 SWIFT_CLASS_NAMED("ThumbList")
@@ -292,9 +295,10 @@ SWIFT_CLASS_NAMED("User")
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSString * _Nonnull username;
+@property (nonatomic, readonly, copy) NSURL * _Nullable imageUrl;
 @property (nonatomic, readonly, copy) NSString * _Nullable bio;
 @property (nonatomic, readonly) BOOL channel;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name username:(NSString * _Nonnull)username bio:(NSString * _Nullable)bio channel:(BOOL)channel OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name username:(NSString * _Nonnull)username imageUrl:(NSURL * _Nullable)imageUrl bio:(NSString * _Nullable)bio channel:(BOOL)channel OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
