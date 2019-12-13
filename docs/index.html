@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           RBSDKPlayer Docs
         </a>
-         (94% documented)
+         (95% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -99,6 +99,9 @@
             <a class="nav-group-name-link" href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RBSDKPlayerContentDirection.html">RBSDKPlayerContentDirection</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a>
               </li>
             </ul>
@@ -128,7 +131,7 @@
             
             <h1 id='rbsdkplayer' class='heading'>RBSDKPlayer</h1>
 
-<p><a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/pod-v0.4.1-blue.svg" alt="Version"></a>
+<p><a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/pod-v0.5.0-blue.svg" alt="Version"></a>
 <a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/platform-iOS-lightgrey.svg" alt="Platform"></a></p>
 <h2 id='introduction' class='heading'>Introduction</h2>
 
@@ -156,7 +159,7 @@ platform :ios, '10.0'
 
 target 'AppTargetName' do
   pod 'Brightcove-Player-Core', '~&gt; 6.3'
-  pod 'RBSDKPlayer', '~&gt; 0.4'
+  pod 'RBSDKPlayer', '~&gt; 0.5'
 end
 </code></pre>
 
@@ -335,10 +338,13 @@ A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlay
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerLoadDidSucceed</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">succeed</span> <span class="nf">withError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span> <span class="p">{}</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerIsReadyToPlay</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">UIScrollView</span> <span class="o">*</span><span class="p">)</span><span class="n">playerControllerMainScrollView</span> <span class="p">{}</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidSwitchToMedia</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerMediaInfo</span> <span class="o">*</span><span class="p">)</span><span class="n">media</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidSwitchDirection</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerContentDirection</span><span class="p">)</span><span class="n">contentDirection</span> <span class="n">media</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">RBSDKPlayerMediaInfo</span> <span class="o">*</span><span class="p">)</span><span class="n">media</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidChangePlayingStatus</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isPlaying</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="n">playerControllerColor</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerCurrentMedia</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerMediaInfo</span> <span class="o">*</span><span class="p">)</span><span class="n">media</span> <span class="n">watchedTime</span><span class="o">:</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">watchedTime</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerWillChangeFullscreenStatus</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidChangeFullscreenStatus</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerWillReachEnd</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerContentDirection</span><span class="p">)</span><span class="n">contentDirection</span> <span class="n">completionHandler</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="n">completionHandler</span> <span class="p">{}</span>
 </code></pre>
 
           </div>
@@ -348,8 +354,8 @@ A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlay
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-11-27)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-12-13)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
