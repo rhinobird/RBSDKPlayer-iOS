@@ -43,16 +43,23 @@ typedef NS_OPTIONS(NSUInteger, RBSDKPlayerOption) {
     RBSDKPlayerOptionHideCaption                = 1 << 4,
 
     /**
-    Playback mode as preview.
-    This means the player will show the clips defined and by some action
-    will switch to full video playback.
+     Playback mode as preview.
+     This means the player will show the clips defined and by some action
+     will switch to full video playback.
      */
     RBSDKPlayerOptionPlaybackPreview            = 1 << 5,
 
     /**
-    Enables realtime features, as likes and chat
+     Enables realtime features, as likes and chat
      */
-    RBSDKPlayerOptionEnableRealtime             = 1 << 6
+    RBSDKPlayerOptionEnableRealtime             = 1 << 6,
+
+    /**
+     Allow to stop the player controller manually, this means player controller tear down
+     will not be managed automatically at dissapear..
+     The tearDown method must be called on the implementation.
+     */
+    RBSDKPlayerOptionManualTearDown             = 1 << 7
 };
 
 #endif /* RBSDKPlayerOptions_h */

@@ -18,33 +18,19 @@ NS_ASSUME_NONNULL_BEGIN
 # pragma mark - properties
 
 /**
- Media id (related to the platform you're using
+ Media id (related to the platform you're using.
  */
-@property (weak, nonatomic, nullable) NSString *mediaId;
+@property (weak, nonatomic, nullable, readonly) NSString *mediaId;
 
 /**
- Caption (title) of the media
+ Caption (title) of the media.
  */
-@property (weak, nonatomic, nullable) NSString *caption;
+@property (weak, nonatomic, nullable, readonly) NSString *caption;
 
 /**
- Dictionary with other useful information.
- e.g. referenceId
+ Dictionary with other useful information. e.g. referenceId.
  */
-@property (weak, nonatomic, nullable) NSDictionary *otherParameters;
-
-# pragma mark - Init
-
-/**
- Initialize a `RBSDKPlayerMediaInfo` instance with its data
-
- @param mediaId The media id
- @param caption The media's caption (title)
- @param otherParameters Other useful info e.g. referenceId
-
- @return An instance of `RBSDKPlayerMediaInfo`
- */
-- (instancetype)initWithMediaId:(nullable NSString *)mediaId caption:(nullable NSString *)caption otherParameters:(nullable NSDictionary *)otherParameters;
+@property (weak, nonatomic, nullable, readonly) NSDictionary *otherParameters;
 
 @end
 

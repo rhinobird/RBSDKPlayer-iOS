@@ -1,24 +1,38 @@
 # RBSDKPlayer - Changelog
 
-This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/)
+This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/).
+
+## v0.6.0 (2020/01/17)
+
+### Enhancements
+
+1. Improve Player performance.
+2. Add delegate to notify when controls are showing on Player controller.
+3. Initialize methods now are only available trough RBSDKRhinobirdPlayerViewController.
+4. Add a new Configuration option (RBSDKPlayerOption) to tear down controller manually.
+5. Add a new method on Player controller to tear down manually.
+
+### Bugs
+
+1. Fix playerControllerColor delegate method.
 
 ## v0.5.0 (2019/12/13)
 
 ### Enhancements
 
-1. Improve Player performance
-2. Add more delegate methods to notify Player information
-3. Add methods to init Player with a new Moment type
-4. Add methods to append new Moment Streams to a current Moment
-5. Add Preview funcionality
-6. Add Vertical and Horizontal current position of the Player 
+1. Improve Player performance.
+2. Add more delegate methods to notify Player information.
+3. Add methods to init Player with a new Moment type.
+4. Add methods to append new Moment Streams to a current Moment.
+5. Add Preview funcionality.
+6. Add Vertical and Horizontal current position of the Player.
 
 ## v0.4.1 (2019/11/27)
 
 ### Enhancements
 
-1. Improve player performance
-2. Add accountId parameter to the sdk as config key 
+1. Improve player performance.
+2. Add accountId parameter to the sdk as config key.
 
 ## v0.3.1 (2019/04/16)
 
@@ -58,12 +72,12 @@ This is the changelog for Rhinobird's iOS SDK, the complete project can be found
 
 ### Enhancements
 
-1. Add the ability to play videos on AspectFit (the default is AspectFill)
+1. Add the ability to play videos on AspectFit (the default is AspectFill).
 2. Add the ability to define the player color, it will change the way the loading layers and the controls look.
-3. Improve feedback from the player to it delegate controller
+3. Improve feedback from the player to it delegate controller.
 4. Modify `-[RBSDKPlayerViewControllerDelegate playerControllerLoadDidSucceed:]` to `-[RBSDKPlayerViewControllerDelegate playerControllerLoadDidSucceed:withError:]`, this way if the player fails to load there’s a related error to handle it.
 
 ### Bugs
 
-1. Fix a `Visual Index` resizing bug, now it resizes as it should when the user switch toggle the fullscreen
-2. Fix RBSDKPlayerOption bug, now is `NS_OPTIONS` instead of `NS_ENUM` (edited)
+1. Fix a `Visual Index` resizing bug, now it resizes as it should when the user switch toggle the fullscreen.
+2. Fix RBSDKPlayerOption bug, now is `NS_OPTIONS` instead of `NS_ENUM` (edited).

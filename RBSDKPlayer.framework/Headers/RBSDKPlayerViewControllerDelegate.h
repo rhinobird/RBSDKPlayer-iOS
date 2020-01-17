@@ -11,6 +11,8 @@
 
 #import "RBSDKPlayerContentDirection.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class UIScrollView;
 @class RBSDKPlayerMediaInfo;
 @class RBSDKPlayerViewController;
@@ -40,21 +42,13 @@
 - (void)playerControllerIsReadyToPlay;
 
 /**
- Implement this method to override any vertical scroll in which the player
- is a subview.
-
- @return a vertical scrollview (or any subclass)
- */
-- (nullable UIScrollView *)playerControllerMainScrollView;
-
-/**
  Notifies the video on screen did switch to a new one.
  The player call this delegate method to inform the switch direction and the new media information.
 
  @param contentDirection Switch content direction.
  @param media The media information.
  */
-- (void)playerControllerDidSwitchDirection:(RBSDKPlayerContentDirection)contentDirection media:(nullable RBSDKPlayerMediaInfo *)media;
+- (void)playerControllerDidSwitchDirection:(RBSDKPlayerContentDirection)contentDirection media:(RBSDKPlayerMediaInfo *)media;
 
 /**
  Notifies the player has changed the playing status.
@@ -69,7 +63,7 @@
 
  @return desired color
  */
-- (nullable UIColor *)playerControllerColor;
+- (UIColor *)playerControllerColor;
 
 /**
  Notifies the player current media watched time.
@@ -79,7 +73,7 @@
  @param media Media information
  @param watchedTime Total watched time
  */
-- (void)playerControllerCurrentMedia:(nullable RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime;
+- (void)playerControllerCurrentMedia:(RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime;
 
 /**
  Notifies the player did change the fullscreen status.
@@ -103,8 +97,18 @@
  @param contentDirection Content direction.
  @param completionHandler Call after updating the content.
  */
-- (void)playerControllerWillReachEnd:(RBSDKPlayerContentDirection)contentDirection completionHandler:(void(^_Nonnull)(void))completionHandler;
+- (void)playerControllerWillReachEnd:(RBSDKPlayerContentDirection)contentDirection completionHandler:(void(^)(void))completionHandler;
+
+/**
+ Notifies the player is showing controls.
+ The player call this delegate method to notify the controls visibility (show/hide).
+
+ @param showingControls YES if is showing controls at the moment, No if the controls are hide.
+ */
+- (void)playerControllerShowingControls:(BOOL)showingControls;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* RBPlayerViewControllerDelegate_h */

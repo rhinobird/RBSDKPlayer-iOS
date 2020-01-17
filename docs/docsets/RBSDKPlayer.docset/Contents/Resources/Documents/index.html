@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
           RBSDKPlayer Docs
         </a>
-         (95% documented)
+         (94% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -56,9 +56,6 @@
                 <a class="nav-group-task-link" href="Classes/RBSDK.html">RBSDK</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a>
               </li>
               <li class="nav-group-task">
@@ -66,12 +63,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/RBSDKSpotifyPlayerViewController.html">RBSDKSpotifyPlayerViewController</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Classes/RBSDKYoutubeChannelPlayerViewController.html">RBSDKYoutubeChannelPlayerViewController</a>
               </li>
             </ul>
           </li>
@@ -131,13 +122,13 @@
             
             <h1 id='rbsdkplayer' class='heading'>RBSDKPlayer</h1>
 
-<p><a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/pod-v0.5.0-blue.svg" alt="Version"></a>
+<p><a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/pod-v0.6.0-blue.svg" alt="Version"></a>
 <a href="https://cocoapods.org/pods/RBSDKPlayer"><img src="https://img.shields.io/badge/platform-iOS-lightgrey.svg" alt="Platform"></a></p>
 <h2 id='introduction' class='heading'>Introduction</h2>
 
-<p>The rhinobird SDK supports content hosted by Rhinobird but it can also connect to other services like Mediastream and Brightcove.</p>
+<p>The rhinobird SDK supports content hosted by Rhinobird.</p>
 
-<p>We&rsquo;re working on making this sdk completely public, but in the mean, to make it work you&rsquo;ll need to get direct authorization from us, <a href="mailto:benjamin@rhinobird.tv">send us an email</a> and we will send you the needed keys to make this work.</p>
+<p>We&rsquo;re working on making this sdk completely public, but in the mean, to make it work you&rsquo;ll need to get direct authorization from us, <a href="mailto:bastian@rhinobird.tv">send us an email</a> and we will send you the needed keys to make this work.</p>
 <h2 id='documentation' class='heading'>Documentation</h2>
 
 <p>The documentation of this project can be found <a href="https://rhinobird.github.io/RBSDKPlayer-iOS/">here</a></p>
@@ -158,8 +149,8 @@ source 'https://github.com/brightcove/BrightcoveSpecs.git'
 platform :ios, '10.0'
 
 target 'AppTargetName' do
-  pod 'Brightcove-Player-Core', '~&gt; 6.3'
-  pod 'RBSDKPlayer', '~&gt; 0.5'
+  pod 'RBSDKPlayer', '~&gt; 0.6'
+  pod 'YoutubePlayer-in-WKWebView', :git =&gt; 'https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git'
 end
 </code></pre>
 
@@ -174,29 +165,33 @@ end
 <p>Minimum iOS Target: <code>10.0</code></p>
 <h2 id='usage' class='heading'>Usage</h2>
 
-<p>RBSDKPlayer works for both Objective-C &amp; Swift projects. There&rsquo;re multiple ways to add a controller as a subview, treat <code><a href="Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a></code> or <code><a href="Classes/RBSDKBrightcovePlayerViewController.html">RBSDKBrightcovePlayerViewController</a></code> the same as any other controller. This is just an example.</p>
+<p>RBSDKPlayer works for both Objective-C &amp; Swift projects. There&rsquo;re multiple ways to add a controller as a subview, treat <code><a href="Classes/RBSDKRhinobirdPlayerViewController.html">RBSDKRhinobirdPlayerViewController</a></code> the same as any other controller. This is just an example.</p>
 
-<p>An Objective-C demo project is included <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-objc">here</a>
-A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-swift">here</a></p>
+<p>An Objective-C demo project is included <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-objc">here</a>.
+A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/master/sdkdemo-swift">here</a>.</p>
 
 <p><strong>Initialize the SDK by setting the security &amp; access key</strong></p>
 
 <p>The first step is to configure the sdk for auth, use the provided keys, if you don&rsquo;t have them, refer to the <a href="#introduction">Introduction Section</a> of this document.</p>
-<pre class="highlight objective_c"><code><span class="p">[</span><span class="n">RBSDK</span><span class="p">.</span><span class="n">sharedInstance</span> <span class="nf">setSecretKey</span><span class="p">:</span><span class="o">&lt;</span><span class="err">#</span><span class="n">Secret</span> <span class="n">Key</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span>
+<pre class="highlight objective_c"><code><span class="c1">// Objective-C
+</span><span class="p">[</span><span class="n">RBSDK</span><span class="p">.</span><span class="n">sharedInstance</span> <span class="nf">setSecretKey</span><span class="p">:</span><span class="o">&lt;</span><span class="err">#</span><span class="n">Secret</span> <span class="n">Key</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span>
                          <span class="nf">accessKey</span><span class="p">:</span><span class="o">&lt;</span><span class="err">#</span><span class="n">Access</span> <span class="n">Key</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span>
                          <span class="n">accountId</span><span class="o">:&lt;</span><span class="err">#</span><span class="n">Account</span> <span class="n">Id</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span><span class="p">];</span>
 </code></pre>
-<pre class="highlight objective_c"><code><span class="n">RBSDK</span><span class="p">.</span><span class="n">sharedInstance</span><span class="p">().</span><span class="n">setSecretKey</span><span class="p">(</span><span class="o">&lt;</span><span class="err">#</span><span class="n">Secret</span> <span class="n">Key</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span>
-                                    <span class="n">accessKey</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">Access</span> <span class="n">Key</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span>
-                                    <span class="n">accountId</span><span class="o">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">Account</span> <span class="n">Id</span> <span class="n">Here</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="c1">// Swift</span>
+<span class="kt">RBSDK</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span><span class="o">.</span><span class="nf">setSecretKey</span><span class="p">(</span><span class="o">&lt;</span><span class="err">#</span><span class="kt">Secret</span> <span class="kt">Key</span> <span class="kt">Here</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span>
+                                    <span class="nv">accessKey</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Access</span> <span class="kt">Key</span> <span class="kt">Here</span><span class="err">#</span><span class="o">&gt;</span><span class="p">,</span>
+                                    <span class="nv">accountId</span><span class="p">:</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Account</span> <span class="kt">Id</span> <span class="kt">Here</span><span class="err">#</span><span class="o">&gt;</span><span class="p">)</span>
 </code></pre>
 
 <p><strong>Create the properties</strong></p>
-<pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">IBOutlet</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">playerContainerView</span><span class="p">;</span>
+<pre class="highlight objective_c"><code><span class="c1">// Objective-C
+</span><span class="k">@property</span> <span class="p">(</span><span class="n">weak</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">IBOutlet</span> <span class="n">UIView</span> <span class="o">*</span><span class="n">playerContainerView</span><span class="p">;</span>
 <span class="k">@property</span> <span class="p">(</span><span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RBSDKPlayerViewController</span> <span class="o">*</span><span class="n">playerController</span><span class="p">;</span>
 </code></pre>
-<pre class="highlight objective_c"><code><span class="err">@IBOutlet</span> <span class="n">weak</span> <span class="n">var</span> <span class="n">playerContainerView</span><span class="o">:</span> <span class="n">UIView</span><span class="p">?</span>
-<span class="n">var</span> <span class="n">playerController</span><span class="p">:</span> <span class="n">RBSDKPlayerViewController</span><span class="p">?</span>
+<pre class="highlight swift"><code><span class="c1">// Swift</span>
+<span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">playerContainerView</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">playerController</span><span class="p">:</span> <span class="kt">RBSDKPlayerViewController</span><span class="p">?</span>
 </code></pre>
 
 <p>Connect them to the interface file if needed.</p>
@@ -210,122 +205,49 @@ A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlay
             <span class="n">dispatch_async</span><span class="p">(</span><span class="n">dispatch_get_main_queue</span><span class="p">(),</span> <span class="o">^</span><span class="p">{</span>
                 <span class="p">[</span><span class="n">self</span> <span class="nf">loadPlayer</span><span class="p">];</span>
             <span class="p">});</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Error trying to configure the sdk: %@"</span><span class="p">,</span> <span class="n">error</span><span class="p">.</span><span class="n">localizedDescription</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}];</span>
 </code></pre>
 <pre class="highlight swift"><code><span class="c1">// Swift</span>
 <span class="kt">RBSDK</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">()</span><span class="o">.</span><span class="n">loadAsynchronously</span> <span class="p">{</span> <span class="n">success</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="p">{</span>
-                <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
-                    <span class="k">self</span><span class="o">.</span><span class="nf">loadPlayer</span><span class="p">()</span>
-                <span class="p">}</span>
-
-            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="n">error</span> <span class="p">{</span>
-                <span class="nf">print</span><span class="p">(</span><span class="s">"Error trying to configure the sdk: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
-            <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">success</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+            <span class="k">self</span><span class="o">.</span><span class="nf">loadPlayer</span><span class="p">()</span>
         <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="n">error</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Error trying to configure the sdk: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
 
 <p><strong>Loading the player with Rhinobird cloud data</strong></p>
 <pre class="highlight objective_c"><code><span class="c1">// Objective-C
 </span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">loadPlayer</span> <span class="p">{</span>
     <span class="n">RBSDKPlayerOption</span> <span class="n">options</span> <span class="o">=</span> <span class="p">(</span><span class="n">RBSDKPlayerOptionAutoPlay</span><span class="p">);</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">momentId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">Moment</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RBSDKRhinobirdPlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithMomentId</span><span class="p">:</span><span class="n">momentId</span>
-                                                                                 <span class="nf">options</span><span class="p">:</span><span class="n">options</span><span class="p">];</span>
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="nf">setDelegate</span><span class="p">:</span><span class="n">self</span><span class="p">];</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">reelId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">Reel</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RBSDKRhinobirdPlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithReelId</span><span class="p">:</span><span class="n">reelId</span>
+                                                                               <span class="nf">options</span><span class="p">:</span><span class="n">options</span>
+                                                                              <span class="n">delegate</span><span class="o">:</span><span class="n">self</span><span class="p">];</span>
 
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">autoresizingMask</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIViewAutoresizingFlexibleWidth</span> <span class="o">|</span> <span class="n">UIViewAutoresizingFlexibleHeight</span><span class="p">);</span>
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span> <span class="nf">addSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">];</span>
     <span class="p">[</span><span class="n">self</span> <span class="nf">addChildViewController</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><strong>Loading the player with an array of Brightcove media ids</strong></p>
-<pre class="highlight objective_c"><code><span class="c1">// Objective-C
-</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">loadPlayer</span> <span class="p">{</span>
-    <span class="n">RBSDKPlayerOption</span> <span class="n">options</span> <span class="o">=</span> <span class="p">(</span><span class="n">RBSDKPlayerOptionAutoPlay</span><span class="p">);</span>
-
-    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">mediaIdArray</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">Media</span> <span class="n">Ids</span> <span class="n">Array</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">bcAccountId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">BC</span> <span class="n">Account</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RBSDKBrightcovePlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithBrightcoveMediaIdArray</span><span class="p">:</span><span class="n">mediaIdArray</span>
-                                                                                              <span class="nf">accountId</span><span class="p">:</span><span class="n">bcAccountId</span>
-                                                                                                <span class="n">options</span><span class="o">:</span><span class="n">options</span><span class="p">];</span>
-
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="nf">setDelegate</span><span class="p">:</span><span class="n">self</span><span class="p">];</span>
-
     <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">autoresizingMask</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIViewAutoresizingFlexibleWidth</span> <span class="o">|</span> <span class="n">UIViewAutoresizingFlexibleHeight</span><span class="p">);</span>
     <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span> <span class="nf">addSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">];</span>
-    <span class="p">[</span><span class="n">self</span> <span class="nf">addChildViewController</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><strong>Loading the player with a Brightcove media id, the player will create a Reel with content related to the media id</strong></p>
-<pre class="highlight objective_c"><code><span class="c1">// Objective-C
-</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">loadPlayer</span> <span class="p">{</span>
-    <span class="n">RBSDKPlayerOption</span> <span class="n">options</span> <span class="o">=</span> <span class="p">(</span><span class="n">RBSDKPlayerOptionAutoPlay</span><span class="p">);</span>
-
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">mediaId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">Media</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">bcAccountId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">BC</span> <span class="n">Account</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RBSDKBrightcovePlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithBrightcoveMediaId</span><span class="p">:</span><span class="n">mediaId</span>
-                                                                                         <span class="nf">accountId</span><span class="p">:</span><span class="n">bcAccountId</span>
-                                                                                           <span class="n">options</span><span class="o">:</span><span class="n">options</span><span class="p">];</span>
-
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="nf">setDelegate</span><span class="p">:</span><span class="n">self</span><span class="p">];</span>
-
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">autoresizingMask</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIViewAutoresizingFlexibleWidth</span> <span class="o">|</span> <span class="n">UIViewAutoresizingFlexibleHeight</span><span class="p">);</span>
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span> <span class="nf">addSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">];</span>
-    <span class="p">[</span><span class="n">self</span> <span class="nf">addChildViewController</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><strong>Loading the player with a Brightcove playlist id, the player will create a Reel with all the media contained by the playlist</strong></p>
-<pre class="highlight objective_c"><code><span class="c1">// Objective-C
-</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">loadPlayer</span> <span class="p">{</span>
-    <span class="n">RBSDKPlayerOption</span> <span class="n">options</span> <span class="o">=</span> <span class="p">(</span><span class="n">RBSDKPlayerOptionAutoPlay</span><span class="p">);</span>
-
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">playlistId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">PlaylistI</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-    <span class="n">NSString</span> <span class="o">*</span><span class="n">bcAccountId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="n">BC</span> <span class="n">Account</span> <span class="n">Id</span><span class="err">#</span><span class="o">&gt;</span><span class="p">;</span>
-
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="o">=</span> <span class="p">[[</span><span class="n">RBSDKBrightcovePlayerViewController</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithBrightcovePlaylistId</span><span class="p">:</span><span class="n">playlistId</span>
-                                                                                            <span class="nf">accountId</span><span class="p">:</span><span class="n">bcAccountId</span>
-                                                                                              <span class="n">options</span><span class="o">:</span><span class="n">options</span><span class="p">];</span>
-
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span> <span class="nf">setDelegate</span><span class="p">:</span><span class="n">self</span><span class="p">];</span>
-
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">autoresizingMask</span> <span class="o">=</span> <span class="p">(</span><span class="n">UIViewAutoresizingFlexibleWidth</span> <span class="o">|</span> <span class="n">UIViewAutoresizingFlexibleHeight</span><span class="p">);</span>
-    <span class="p">[</span><span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span> <span class="nf">addSubview</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">];</span>
-    <span class="p">[</span><span class="n">self</span> <span class="nf">addChildViewController</span><span class="p">:</span><span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">];</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><strong>Resize the player view on any layout change</strong></p>
-<pre class="highlight objective_c"><code><span class="c1">// Objective-C
-</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">viewDidLayoutSubviews</span> <span class="p">{</span>
-    <span class="p">[</span><span class="n">super</span> <span class="nf">viewDidLayoutSubviews</span><span class="p">];</span>
-
-    <span class="c1">// ...
-</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">playerController</span><span class="p">.</span><span class="n">view</span><span class="p">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">playerContainerView</span><span class="p">.</span><span class="n">bounds</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 <pre class="highlight swift"><code><span class="c1">// Swift</span>
-<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLayoutSubviews</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLayoutSubviews</span><span class="p">()</span>
+<span class="kd">func</span> <span class="nf">loadPlayer</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">RBSDKPlayerOption</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">autoPlay</span><span class="p">]</span>
+    <span class="k">let</span> <span class="nv">reelId</span> <span class="o">=</span> <span class="o">&lt;</span><span class="err">#</span><span class="kt">Reel</span> <span class="kt">Id</span><span class="err">#</span><span class="o">&gt;</span>
+    <span class="n">playerController</span> <span class="o">=</span> <span class="kt">RBSDKRhinobirdPlayerViewController</span><span class="p">(</span><span class="nv">reelId</span><span class="p">:</span> <span class="n">reelId</span><span class="p">,</span>
+                                                          <span class="nv">options</span><span class="p">:</span> <span class="n">options</span><span class="p">,</span>
+                                                          <span class="nv">delegate</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
 
-    <span class="c1">// ...</span>
-
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">bounds</span> <span class="o">=</span> <span class="n">playerContainerView</span><span class="p">?</span><span class="o">.</span><span class="n">bounds</span> <span class="p">{</span>
-        <span class="n">playerController</span><span class="p">?</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">bounds</span>
-    <span class="p">}</span>
+    <span class="k">guard</span> <span class="k">let</span> <span class="nv">playerController</span> <span class="o">=</span> <span class="n">playerController</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+    <span class="nf">addChild</span><span class="p">(</span><span class="n">playerController</span><span class="p">)</span>
+    <span class="n">playerController</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="n">playerContainerView</span><span class="o">.</span><span class="n">bounds</span>
+    <span class="n">playerContainerView</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">playerController</span><span class="o">.</span><span class="n">view</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -337,14 +259,28 @@ A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlay
 </span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">playerControllerLoadDidSucceed</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">succeed</span> <span class="nf">withError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span> <span class="p">{}</span>
 <span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerIsReadyToPlay</span> <span class="p">{}</span>
-<span class="o">-</span> <span class="p">(</span><span class="n">UIScrollView</span> <span class="o">*</span><span class="p">)</span><span class="n">playerControllerMainScrollView</span> <span class="p">{}</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidSwitchDirection</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerContentDirection</span><span class="p">)</span><span class="n">contentDirection</span> <span class="n">media</span><span class="o">:</span><span class="p">(</span><span class="n">nullable</span> <span class="n">RBSDKPlayerMediaInfo</span> <span class="o">*</span><span class="p">)</span><span class="n">media</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidSwitchDirection</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerContentDirection</span><span class="p">)</span><span class="n">contentDirection</span> <span class="n">media</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerMediaInfo</span> <span class="o">*</span><span class="p">)</span><span class="n">media</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidChangePlayingStatus</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">isPlaying</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="n">UIColor</span> <span class="o">*</span><span class="p">)</span><span class="n">playerControllerColor</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerCurrentMedia</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerMediaInfo</span> <span class="o">*</span><span class="p">)</span><span class="n">media</span> <span class="n">watchedTime</span><span class="o">:</span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="n">watchedTime</span> <span class="p">{}</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerWillChangeFullscreenStatus</span> <span class="p">{}</span>
 <span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerDidChangeFullscreenStatus</span> <span class="p">{}</span>
-<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerWillReachEnd</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerContentDirection</span><span class="p">)</span><span class="n">contentDirection</span> <span class="n">completionHandler</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">_Nonnull</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="n">completionHandler</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerWillChangeFullscreenStatus</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerWillReachEnd</span><span class="o">:</span><span class="p">(</span><span class="n">RBSDKPlayerContentDirection</span><span class="p">)</span><span class="n">contentDirection</span> <span class="n">completionHandler</span><span class="o">:</span><span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="n">completionHandler</span> <span class="p">{}</span>
+<span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">playerControllerShowingControls</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">showingControls</span> <span class="p">{}</span>
+</code></pre>
+<pre class="highlight swift"><code><span class="c1">// Swift</span>
+<span class="c1">// MARK: RBSDKPlayerViewControllerDelegate</span>
+
+<span class="kd">func</span> <span class="nf">playerControllerLoadDidSucceed</span><span class="p">(</span><span class="n">_</span> <span class="nv">succeed</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerIsReadyToPlay</span><span class="p">()</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerDidSwitch</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentDirection</span><span class="p">:</span> <span class="kt">RBSDKPlayerContentDirection</span><span class="p">,</span> <span class="nv">media</span><span class="p">:</span> <span class="kt">RBSDKPlayerMediaInfo</span><span class="p">)</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerDidChangePlayingStatus</span><span class="p">(</span><span class="n">_</span> <span class="nv">isPlaying</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerColor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UIColor</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerCurrentMedia</span><span class="p">(</span><span class="n">_</span> <span class="nv">media</span><span class="p">:</span> <span class="kt">RBSDKPlayerMediaInfo</span><span class="p">,</span> <span class="nv">watchedTime</span><span class="p">:</span> <span class="kt">Float</span><span class="p">)</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerDidChangeFullscreenStatus</span><span class="p">()</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerWillChangeFullscreenStatus</span><span class="p">()</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerWillReachEnd</span><span class="p">(</span><span class="n">_</span> <span class="nv">contentDirection</span><span class="p">:</span> <span class="kt">RBSDKPlayerContentDirection</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{}</span>
+<span class="kd">func</span> <span class="nf">playerControllerShowingControls</span><span class="p">(</span><span class="n">_</span> <span class="nv">showingControls</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{}</span>
 </code></pre>
 
           </div>
@@ -354,7 +290,7 @@ A Swift demo project is included <a href="https://github.com/rhinobird/RBSDKPlay
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2019-12-13)</p>
+      <p>&copy; 2020 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2020-01-17)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

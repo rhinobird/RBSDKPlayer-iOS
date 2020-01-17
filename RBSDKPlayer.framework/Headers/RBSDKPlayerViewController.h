@@ -17,8 +17,7 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 
 /**
  `RBSDKPlayerViewController` is an abstract class, you're not suposed to initialize
- this object directly, use `RBSDKRhinobirdPlayerViewController` or
- `RBSDKBrightcovePlayerViewController` instead.
+ this object directly, use `RBSDKRhinobirdPlayerViewController` instead.
  */
 @interface RBSDKPlayerViewController : UIViewController
 
@@ -30,7 +29,7 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 /**
  Player view controller internal logic
  */
-@property (strong, nonatomic, nullable) RBPlayerViewController * playerViewController;
+@property (strong, nonatomic, nullable) RBPlayerViewController *playerViewController;
 
 /**
  Player's delegate
@@ -40,12 +39,19 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 /**
  Current Vertical position at the player
  */
-@property (nonatomic) NSInteger verticalPosition;
+@property (nonatomic, readonly) NSInteger verticalPosition;
 
 /**
  Current Horizontal position at the player
  */
-@property (nonatomic) NSInteger horizontalPosition;
+@property (nonatomic, readonly) NSInteger horizontalPosition;
+
+/**
+Returns the media info of the current media showing
+
+@return RBSDKPlayerMediaInfo Media info
+*/
+@property (nonatomic, readonly, nullable) RBSDKPlayerMediaInfo *currentMediaInfo;
 
 /**
  Check RBPlayerViewControllerDelegate for details
@@ -65,28 +71,11 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 - (void)pause;
 
 /**
- This methods is intended for internal use.
- */
-- (void)initializePlayerViewController;
-
-/**
- This methods is intended for internal use.
- */
-- (void)attachPlayerViewController;
-
-/**
  Returns the playing status of the player
  
  @return BOOL YES if is playing
  */
 - (BOOL)isPlaying;
-
-/**
- Returns the media info of the current media showing
- 
- @return RBSDKPlayerMediaInfo Media info
- */
-- (nullable RBSDKPlayerMediaInfo *)currentMediaInfo;
 
 /**
  Returns the fullscreen status of the player.
@@ -96,14 +85,11 @@ FOUNDATION_EXPORT NSNotificationName _Nonnull const RBSDKPlayerGoToFullScreenNot
 - (BOOL)isFullscreen;
 
 /**
- This method sets if the player should playback as preview (clips) or full length.
- Allows to change the playback from Preview to Full length, or change from Full length to Preview.
+Stops and removes the player controller.
 
- @discussion To use this method it's neccesary that the player options (RBSDKPlayerOption)
- is configured as RBSDKPlayerOptionPlaybackPreview, otherwise this method won't work.
-
- @params playbackModePreview YES if playback should be Preview, NO if playback should be Full Length
+ @note This method will be needed when Options contains
+ RBSDKPlayerOptionManualTearDown to stop manually the player.
  */
-- (void)enablePlaybackPreviewMode:(BOOL)playbackModePreview;
+- (void)tearDown;
 
 @end

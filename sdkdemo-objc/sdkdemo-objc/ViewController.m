@@ -10,25 +10,26 @@
 
 #import <RBSDKPlayer/RBSDKPlayer.h>
 
-@interface ViewController ()
+@interface ViewController () <RBSDKPlayerViewControllerDelegate>
 
-@property (strong, nonatomic, nullable) NSString *bcAccountId;
+@property (strong, nonatomic) RBSDKPlayerViewController *playerController;
 
 @end
 
 @implementation ViewController
 
+# pragma mark - View Controller lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.bcAccountId = @""; //TODO: Change this to your Brightcove account id
 
     [RBSDK.sharedInstance loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [self loadPlayerWithMediaIdArray];
-//                [self loadPlayerWithMediaId];
-//                [self loadPlayerWithPlaylistId];
+                // Load a Rhinobird player controller with a Reel id
+                [self loadPlayerWithReelId];
+                // Load a Rhinobird player controller with a Collection id
+                //[self loadPlayerWithCollectionId];
             });
         } else {
             NSLog(@"Error trying to configure the sdk: %@", error.localizedDescription);
@@ -36,76 +37,30 @@
     }];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
+# pragma mark - Load methods
 
-    self.playerController.view.frame = self.playerContainerView.bounds;
-}
-
-- (void)loadPlayerWithMediaIdArray {
-    if (!self.bcAccountId) {
-        NSLog(@"BC Account Id not provided");
-        return;
-    }
-
+- (void)loadPlayerWithReelId {
     RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
-
-    NSArray<NSString *> *mediaIdArray = @[@"",
-                                          @"",
-                                          @""]; //TODO: Change this to a list of Brightcove media ids
-
-    self.playerController = [[RBSDKBrightcovePlayerViewController alloc] initWithBrightcoveMediaIdArray:mediaIdArray
-                                                                                              accountId:self.bcAccountId
-                                                                                                options:options];
-
-    [self.playerController setDelegate:self];
-
+    NSString *reelId = @"#SET A REEL ID PROVIDED BY THE RHINOBIRD DASHBOARD#";
+    self.playerController = [[RBSDKRhinobirdPlayerViewController alloc] initWithReelId:reelId
+                                                                               options:options
+                                                                              delegate:self];
     [self attachPlayerController];
 }
 
-- (void)loadPlayerWithMediaId {
-    if (!self.bcAccountId) {
-        NSLog(@"BC Account Id not provided");
-        return;
-    }
-
+- (void)loadPlayerWithCollectionId {
     RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
-
-    NSString *mediaId = @""; //TODO: Change this to a Brightcove media id
-
-    self.playerController = [[RBSDKBrightcovePlayerViewController alloc] initWithBrightcoveMediaId:mediaId
-                                                                                         accountId:self.bcAccountId
-                                                                                           options:options];
-
-    [self.playerController setDelegate:self];
-
-    [self attachPlayerController];
-}
-
-- (void)loadPlayerWithPlaylistId {
-    if (!self.bcAccountId) {
-        NSLog(@"BC Account Id not provided");
-        return;
-    }
-
-    RBSDKPlayerOption options = (RBSDKPlayerOptionAutoPlay);
-
-    NSString *playlistId = @""; //TODO: Change this to a Brightcove playlist id
-
-    self.playerController = [[RBSDKBrightcovePlayerViewController alloc] initWithBrightcovePlaylistId:playlistId
-                                                                                            accountId:self.bcAccountId
-                                                                                              options:options];
-
-    [self.playerController setDelegate:self];
-
+    NSString *collectionId = @"#SET A COLLECTION ID PROVIDED BY THE RHINOBIRD DASHBOARD#";
+    self.playerController = [[RBSDKRhinobirdPlayerViewController alloc] initWithCollectionId:collectionId
+                                                                                     options:options
+                                                                                    delegate:self];
     [self attachPlayerController];
 }
 
 - (void)attachPlayerController {
-    self.playerController.view.frame = self.playerContainerView.bounds;
-    self.playerController.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
-    [self.playerContainerView addSubview:self.playerController.view];
     [self addChildViewController:self.playerController];
+    self.playerController.view.frame = self.playerContainerView.bounds;
+    [self.playerContainerView addSubview:self.playerController.view];
 }
 
 # pragma mark - RBPlayerViewControllerDelegate
@@ -117,13 +72,6 @@
         NSLog(@"Player was not able to load, error: %@", error.localizedDescription);
     } else {
         NSLog(@"Player was not able to load");
-    }
-
-}
-
-- (void)playerControllerCurrentMedia:(RBSDKPlayerMediaInfo *)media watchedTime:(float)watchedTime {
-    if (media && media.otherParameters) {
-        NSLog(@"Other parameters: %@", media.otherParameters);
     }
 }
 

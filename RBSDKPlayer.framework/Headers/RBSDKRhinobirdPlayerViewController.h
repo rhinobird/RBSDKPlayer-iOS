@@ -6,81 +6,51 @@
 //  Copyright © 2019 Rhinobird. All rights reserved.
 //
 
-#import "RBSDKPlayer.h"
-
-@class RBSDKMoment;
-@class RBSDKMomentStream;
+#import <UIKit/UIKit.h>
+#import "RBSDKPlayerOptions.h"
+#import "RBSDKPlayerViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- `RBSDKRhinobirdPlayerViewController` is the Reel player controller for
- Rhinobird videos.
+ `RBSDKRhinobirdPlayerViewController` is the player controller for Rhinobird.
  */
 @interface RBSDKRhinobirdPlayerViewController : RBSDKPlayerViewController
 
 /**
- Initialize a player controller with a specific moment-id
+ Creates an instance of a Rhinobird player controller with a Reel id provided by the dashboard.
 
- @param momentId Moment's string id
- @param options RBSDKPlayerOption
- @param delegate Related controller delegate.
+ @param reelId Reel id.
+ @param options RBSDKPlayerOption configuration.
+ @param delegate Controller delegate.
 
- @return An instance of `RBSDKPlayerViewController`
+ @return An instance of `RBSDKPlayerViewController` with a Reel.
  */
-- (nonnull instancetype)initWithMomentId:(nonnull NSString *)momentId
-                                 options:(RBSDKPlayerOption)options
-                                delegate:(id)delegate;
+- (nonnull instancetype)initWithReelId:(nonnull NSString *)reelId
+                               options:(RBSDKPlayerOption)options
+                              delegate:(id)delegate;
 
 /**
- Initialize a player controller with a specific moment
+ Inserts a Reel (by it's id) to the player controller (vertically added).
 
- @param moment RBSDKMoment New Moment model.
- @param options RBSDKPlayerOption
- @param delegate Related controller delegate.
+ @note There isn't a limit on the amount of reels that you can add.
 
- @return An instance of `RBSDKPlayerViewController`
+ @param reelId Reel id.
  */
-- (nonnull instancetype)initWithNewMoment:(nonnull RBSDKMoment *)moment
-                                  options:(RBSDKPlayerOption)options
-                                  delegate:(id)delegate;
+- (void)addReelId:(nonnull NSString *)reelId;
 
 /**
- Add another moment to the player (enabling the vertical swiping), there isn't a
- limit on the amount of moments that you can add.
+ Creates an instance of a Rhinobird player controller with a collection id provided by the dashboard.
 
- @param momentId Moment's string id
- */
-- (void)addMomentId:(nonnull NSString *)momentId;
+ @param collectionId collection id.
+ @param options RBSDKPlayerOption configuration.
+ @param delegate Controller delegate.
 
-/**
- Add another new moment to the player (enabling the vertical swiping).
- There isn't a limit on the amount of moments that you can add.
-
- @param newMoment New Moment.
- */
-- (void)addNewMoment:(RBSDKMoment *)newMoment;
-
-/**
- Add moment streams to the current moment.
- There isn't a limit on the amount of moment streans that you can add.
-
- @param momentStreamsArray Array of moment streams.
- */
-- (void)addMomentStreamsArray:(NSArray<RBSDKMomentStream *> *)momentStreamsArray;
-
-/**
- Initialize a player controller with a specific collection-id
-
- @param collectionId collection's string id
- @param options RBSDKPlayerOption
- @param delegate Related controller delegate. 
-
- @return An instance of `RBSDKPlayerViewController`
+ @return An instance of `RBSDKPlayerViewController` with a Collection.
  */
 - (nonnull instancetype)initWithCollectionId:(nonnull NSString *)collectionId
                                      options:(RBSDKPlayerOption)options
-                                     delegate:(id)delegate;
+                                    delegate:(id)delegate;
 
 @end
 

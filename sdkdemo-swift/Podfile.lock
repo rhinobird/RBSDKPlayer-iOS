@@ -2,9 +2,7 @@ PODS:
   - AWSCore (2.4.16)
   - AWSS3 (2.4.16):
     - AWSCore (= 2.4.16)
-  - Brightcove-Player-Core (6.4.2):
-    - Brightcove-Player-Core/default (= 6.4.2)
-  - Brightcove-Player-Core/default (6.4.2)
+  - Brightcove-Player-Core/dynamic (6.4.5)
   - CocoaAsyncSocket (7.5.1):
     - CocoaAsyncSocket/GCD (= 7.5.1)
   - CocoaAsyncSocket/GCD (7.5.1)
@@ -13,31 +11,33 @@ PODS:
   - Mixpanel (3.4.5)
   - NHNetworkTime (1.7):
     - CocoaAsyncSocket (~> 7.5.0)
-  - RBSDKPlayer (0.3.1):
+  - RBSDKPlayer (0.6.0):
     - AWSS3 (~> 2.4.0)
+    - Brightcove-Player-Core/dynamic (~> 6.4.2)
     - GoogleAds-IMA-iOS-SDK (~> 3.7)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
     - NHNetworkTime (~> 1.7)
     - SDWebImage (~> 3.7)
-    - Socket.IO-Client-Swift (~> 13.0)
+    - Socket.IO-Client-Swift (~> 15.0)
     - XCDYouTubeKit (~> 2.5)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - Socket.IO-Client-Swift (13.4.0):
-    - Starscream (~> 3.0.2)
-  - Starscream (3.0.6)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
   - XCDYouTubeKit (2.7.3)
+  - YoutubePlayer-in-WKWebView (0.3.0)
 
 DEPENDENCIES:
-  - Brightcove-Player-Core (~> 6.3)
   - RBSDKPlayer (from `../`)
+  - YoutubePlayer-in-WKWebView (from `https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git`)
 
 SPEC REPOS:
   https://github.com/brightcove/BrightcoveSpecs.git:
     - Brightcove-Player-Core
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AWSCore
     - AWSS3
     - CocoaAsyncSocket
@@ -53,22 +53,30 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   RBSDKPlayer:
     :path: "../"
+  YoutubePlayer-in-WKWebView:
+    :git: https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git
+
+CHECKOUT OPTIONS:
+  YoutubePlayer-in-WKWebView:
+    :commit: 7b920102330dfa6d11ca0f99e3fdfd03363ea154
+    :git: https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git
 
 SPEC CHECKSUMS:
   AWSCore: 7c3c129991e6387bcbad7132bc3661e7135754db
   AWSS3: fef6aa8f8f625df8f67f1b6574fe761f3a4ddc99
-  Brightcove-Player-Core: 697f27cfe9aba0b81561908a3f46fd29e3a74b8e
+  Brightcove-Player-Core: bcd099cdc27a807ae23fcf22ecfb1eb52c72980c
   CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
   GoogleAds-IMA-iOS-SDK: 8f57879738137b81a48ba792e42439e6bff5413b
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 85c865c57456de42f66d7c29cd1b060b41ebe279
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: 3eba56a0797a6952d8359e9567fbe289769edf9e
+  RBSDKPlayer: e357f4f8d31649742398f28c8ae21ab4f297253a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
-  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   XCDYouTubeKit: 3f4fd3eb3ed494a46a8f007b91315eed6dd6df1f
+  YoutubePlayer-in-WKWebView: 17a33b2fa619d357c9ddd763942ce556660facae
 
-PODFILE CHECKSUM: b94df7d5ec51ac1d0decd41b17b9b08228e7519e
+PODFILE CHECKSUM: 8132cddfd72110d3518e0eba1b9114f1ffa820e0
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

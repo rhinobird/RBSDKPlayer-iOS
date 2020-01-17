@@ -12,25 +12,23 @@ import RBSDKPlayer
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var playerContainerView: UIView?
+    @IBOutlet weak var playerContainerView: UIView!
     var playerController: RBSDKPlayerViewController?
-    var bcAccountId: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.bcAccountId = "" //TODO: Change this to your Brightcove account id
-
         RBSDK.sharedInstance().loadAsynchronously { success, error in
             if (success) {
                 DispatchQueue.main.async {
-                    self.loadPlayerWithMediaIdArray()
-//                    self.loadPlayerWithMediaId()
-//                    self.loadPlayerWithPlaylistId()
-                }
+                    // Load Player with a Reel Id
+                    self.loadPlayerWithReelId()
 
+                    // Load Player with a Collection Id
+//                    self.loadPlayerWithCollectionId()
+                }
             } else if let error = error {
-                print("Error trying to configure the sdk: \(error)")
+                print("Error trying to configure the sdk: \(error.localizedDescription)")
             }
         }
     }
@@ -43,72 +41,32 @@ class ViewController: UIViewController {
         }
     }
 
-    func loadPlayerWithMediaIdArray() {
-        guard let accountId = self.bcAccountId else {
-            print("BC Account Id not provided")
-            return
-        }
+    // MARK: - Private methods
 
-        let options: RBSDKPlayerOption = .autoPlay
-        let mediaIdArray = ["",
-                            "",
-                            ""]  //TODO: Change this to a list of Brightcove media ids
-
-        self.playerController = RBSDKBrightcovePlayerViewController(brightcoveMediaIdArray: mediaIdArray,
-                                                                    accountId: accountId,
-                                                                    options: options)
-
-        self.playerController?.delegate = self
-
-        self.attachPlayerController()
+    private func loadPlayerWithReelId() {
+        let options: RBSDKPlayerOption = [.autoPlay]
+        let reelId = "#SET A REEL ID PROVIDED BY THE RHINOBIRD DASHBOARD#"
+        playerController = RBSDKRhinobirdPlayerViewController(reelId: reelId,
+                                                              options: options,
+                                                              delegate: self)
+        attachPlayerController()
     }
 
-    func loadPlayerWithMediaId() {
-        guard let accountId = self.bcAccountId else {
-            print("BC Account Id not provided")
-            return
-        }
-
-        let options: RBSDKPlayerOption = .autoPlay
-        let mediaId = "" //TODO: Change this to a Brightcove media id
-
-        self.playerController = RBSDKBrightcovePlayerViewController(brightcoveMediaId: mediaId,
-                                                                    accountId: accountId,
-                                                                    options: options)
-
-        self.playerController?.delegate = self
-
-        self.attachPlayerController()
+    private func loadPlayerWithCollectionId() {
+        let options: RBSDKPlayerOption = [.autoPlay]
+        let collectionId = "#SET A COLLECTION ID PROVIDED BY THE RHINOBIRD DASHBOARD#"
+        playerController = RBSDKRhinobirdPlayerViewController(collectionId: collectionId,
+                                                              options: options,
+                                                              delegate: self)
+        attachPlayerController()
     }
 
-    func loadPlayerWithPlaylistId() {
-        guard let accountId = self.bcAccountId else {
-            print("BC Account Id not provided")
-            return
-        }
+    private func attachPlayerController() {
+        guard let playerController = playerController else { return }
 
-        let options: RBSDKPlayerOption = .autoPlay
-        let playlistId = "" //TODO: Change this to a Brightcove playlist id
-
-        self.playerController = RBSDKBrightcovePlayerViewController(brightcovePlaylistId: playlistId,
-                                                                    accountId: accountId,
-                                                                    options: options)
-
-        self.playerController?.delegate = self
-
-        self.attachPlayerController()
-    }
-
-    func attachPlayerController() {
-        if let playerController = self.playerController,
-            let playerContainerView = self.playerContainerView {
-
-            playerController.view.frame = playerContainerView.bounds
-            playerController.view.autoresizingMask = [.flexibleWidth,
-                                                      .flexibleHeight]
-            playerContainerView.addSubview(playerController.view)
-            self.addChildViewController(playerController)
-        }
+        addChild(playerController)
+        playerController.view.frame = playerContainerView.bounds
+        playerContainerView.addSubview(playerController.view)
     }
 }
 
@@ -125,12 +83,5 @@ extension ViewController: RBSDKPlayerViewControllerDelegate {
             print("Player was not able to load")
         }
     }
-
-    func playerControllerCurrentMedia(_ media: RBSDKPlayerMediaInfo?, watchedTime: Float) {
-        if let otherParameters = media?.otherParameters {
-            print("Other parameters: \(otherParameters)")
-        }
-    }
-
 }
 
