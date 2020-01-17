@@ -24,6 +24,6 @@ Pod::Spec.new do |s|
   s.dependency 'XCDYouTubeKit', '~> 2.5'
   s.dependency 'Socket.IO-Client-Swift', '~> 15.0'
   s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.7'
-  s.dependency 'Brightcove-Player-Core/dynamic', '~> 6.4.2'
+  s.dependency 'Brightcove-Player-Core/dynamic', '~> 6.4'
 
 end

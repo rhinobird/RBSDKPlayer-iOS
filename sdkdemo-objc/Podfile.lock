@@ -13,7 +13,7 @@ PODS:
     - CocoaAsyncSocket (~> 7.5.0)
   - RBSDKPlayer (0.6.0):
     - AWSS3 (~> 2.4.0)
-    - Brightcove-Player-Core/dynamic (~> 6.4.2)
+    - Brightcove-Player-Core/dynamic (~> 6.4)
     - GoogleAds-IMA-iOS-SDK (~> 3.7)
     - MBCircularProgressBar (~> 0.3)
     - Mixpanel (~> 3.2)
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   MBCircularProgressBar: 0b795b722a5eb5b0923822f90474e2576a1a7855
   Mixpanel: 85c865c57456de42f66d7c29cd1b060b41ebe279
   NHNetworkTime: b140ee21770aed41e7b8fd43647bce6349ad10f2
-  RBSDKPlayer: e357f4f8d31649742398f28c8ae21ab4f297253a
+  RBSDKPlayer: 6bda5ccccf8ea5599455013ab7fc85a629c4468b
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
