@@ -9,4 +9,5 @@ target 'sdkdemo-objc' do
 
   pod 'RBSDKPlayer', :path => '../' 
   pod 'YoutubePlayer-in-WKWebView', :git => 'https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git'
+  pod 'Brightcove-Player-Core/dynamic', '~> 6.4'
 end

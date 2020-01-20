@@ -25,7 +25,7 @@ class ViewController: UIViewController {
                     self.loadPlayerWithReelId()
 
                     // Load Player with a Collection Id
-//                    self.loadPlayerWithCollectionId()
+                    //self.loadPlayerWithCollectionId()
                 }
             } else if let error = error {
                 print("Error trying to configure the sdk: \(error.localizedDescription)")
