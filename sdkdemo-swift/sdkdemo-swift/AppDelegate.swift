@@ -17,7 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Configure the sdk
-        RBSDK.sharedInstance().setSecretKey("", accessKey: "")
+        SDK.setKeys(clientId: "",
+                    clientSecret: "",
+                    accountId: "")
 
         return true
     }

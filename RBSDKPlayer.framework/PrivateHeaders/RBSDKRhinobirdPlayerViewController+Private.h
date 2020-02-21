@@ -21,26 +21,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface RBSDKRhinobirdPlayerViewController (Private)
 
 /**
- Creates an instance of a Rhinobird player controller with a moment.
-
- @param moment RBSDKMoment New Moment model.
- @param options RBSDKPlayerOption configuration.
- @param delegate Controller delegate.
-
- @return An instance of `RBSDKPlayerViewController`
- */
-- (instancetype)initWithNewMoment:(RBSDKMoment *)moment
-                          options:(RBSDKPlayerOption)options
-                         delegate:(id)delegate;
-
-/**
  Inserts a Moment to the player controller (vertically added).
 
  @discussion There isn't a limit on the amount of reels that you can add.
 
  @param newMoment New Moment.
  */
-- (void)addNewMoment:(RBSDKMoment *)newMoment;
+- (void)addMoment:(RBSDKMoment *)moment;
 
 /**
  Inserts a moment streams array to the current moment.

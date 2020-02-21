@@ -2,6 +2,14 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/).
 
+## v1.0.0 (2020/02/21)
+
+### Enhancements
+
+1. Improve Player performance.
+2. Update Rhinobird API.
+3. Update Set keys and Load methods.
+
 ## v0.6.0 (2020/01/17)
 
 ### Enhancements

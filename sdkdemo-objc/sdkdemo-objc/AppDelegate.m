@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import <RBSDKPlayer/RBSDKPlayer.h>
+#import <RBSDKPlayer/RBSDKPlayer-Swift.h>
 
 @interface AppDelegate ()
 
@@ -18,8 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Configure the sdk
-    [RBSDK.sharedInstance setSecretKey:@""
-                             accessKey:@""];
+    [RBSDKV2 setKeysWithClientId:@""
+                    clientSecret:@""
+                       accountId:@""];
 
     return YES;
 }

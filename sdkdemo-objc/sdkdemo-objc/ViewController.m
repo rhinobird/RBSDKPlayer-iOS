@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [RBSDK.sharedInstance loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
+    [RBSDKV2 loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * error) {
         if (success) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Load a Rhinobird player controller with a Reel id

@@ -201,13 +201,53 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
+SWIFT_CLASS_NAMED("Avatar")
+@interface RBSDKAvatar : NSObject
+@property (nonatomic, readonly, copy) NSURL * _Nullable small;
+@property (nonatomic, readonly, copy) NSURL * _Nullable medium;
+@property (nonatomic, readonly, copy) NSURL * _Nullable navBar;
+@end
+
+
 
 
 SWIFT_CLASS_NAMED("Clip")
 @interface RBSDKClip : NSObject
-@property (nonatomic, readonly) NSInteger startMiliseconds;
+@property (nonatomic, readonly) NSInteger startMilliseconds;
 @property (nonatomic, readonly) NSInteger endMilliseconds;
-- (nonnull instancetype)initWithStartMiliseconds:(NSInteger)startMiliseconds endMilliseconds:(NSInteger)endMilliseconds OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)initWithStartMilliseconds:(NSInteger)startMilliseconds endMilliseconds:(NSInteger)endMilliseconds OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class RBSDKCollectionMoment;
+
+SWIFT_CLASS_NAMED("Collection")
+@interface RBSDKCollection : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull id;
+@property (nonatomic, readonly, copy) NSString * _Nullable caption;
+@property (nonatomic, readonly, copy) NSString * _Nullable createdAt;
+@property (nonatomic, readonly, copy) NSString * _Nullable updatedAt;
+@property (nonatomic, readonly, copy) NSArray<RBSDKCollectionMoment *> * _Nullable collectionMoments;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id caption:(NSString * _Nullable)caption createdAt:(NSString * _Nullable)createdAt updatedAt:(NSString * _Nullable)updatedAt collectionMoments:(NSArray<RBSDKCollectionMoment *> * _Nullable)collectionMoments OBJC_DESIGNATED_INITIALIZER;
++ (void)requestCollectionById:(NSString * _Nonnull)byId completionHandler:(void (^ _Nonnull)(BOOL, NSError * _Nullable, id _Nullable))completionHandler;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+@class RBSDKMoment;
+
+SWIFT_CLASS_NAMED("CollectionMoment")
+@interface RBSDKCollectionMoment : NSObject
+@property (nonatomic, readonly, copy) NSString * _Nonnull momentId;
+@property (nonatomic, readonly) NSInteger position;
+@property (nonatomic, readonly, copy) NSString * _Nullable caption;
+@property (nonatomic, readonly, copy) NSString * _Nullable createdAt;
+@property (nonatomic, readonly) NSInteger streamCount;
+@property (nonatomic, readonly, strong) RBSDKMoment * _Nullable moment;
+- (nonnull instancetype)initWithMomentId:(NSString * _Nonnull)momentId position:(NSInteger)position caption:(NSString * _Nullable)caption createdAt:(NSString * _Nullable)createdAt streamCount:(NSInteger)streamCount moment:(RBSDKMoment * _Nonnull)moment OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -215,11 +255,26 @@ SWIFT_CLASS_NAMED("Clip")
 
 SWIFT_CLASS_NAMED("MediaTrack")
 @interface RBSDKMediaTrack : NSObject
-@property (nonatomic, readonly, copy) NSURL * _Nonnull url;
-@property (nonatomic, readonly, copy) NSString * _Nonnull mediaFormatString;
+@property (nonatomic, readonly, copy) NSURL * _Nullable url;
+@property (nonatomic, readonly, copy) NSString * _Nullable mediaFormat;
+@property (nonatomic, readonly) NSInteger mediaFormatInt;
+- (nonnull instancetype)initWithUrl:(NSURL * _Nullable)url mediaFormat:(NSString * _Nullable)mediaFormat OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, RBSDKMediaTrackMediaFormat, "MediaFormat", closed) {
+  RBSDKMediaTrackMediaFormatMp4 = 0,
+  RBSDKMediaTrackMediaFormatHlsv3 = 1,
+  RBSDKMediaTrackMediaFormatMov = 2,
+  RBSDKMediaTrackMediaFormatDash = 3,
+  RBSDKMediaTrackMediaFormatWebm = 4,
+  RBSDKMediaTrackMediaFormatMkv = 5,
+  RBSDKMediaTrackMediaFormatFlv = 6,
+  RBSDKMediaTrackMediaFormatMpeg = 7,
+  RBSDKMediaTrackMediaFormatRtsp = 8,
+  RBSDKMediaTrackMediaFormatUnknown = 9,
+};
 
 @class RBSDKThumbList;
 @class RBSDKUser;
@@ -229,15 +284,32 @@ SWIFT_CLASS_NAMED("Moment")
 @interface RBSDKMoment : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 @property (nonatomic, readonly, copy) NSString * _Nullable caption;
-@property (nonatomic, readonly) NSInteger streamCount;
-@property (nonatomic, readonly, copy) NSDate * _Nullable startsAt;
+@property (nonatomic, readonly, copy) NSString * _Nullable createdAt;
+@property (nonatomic) NSInteger streamCount;
+@property (nonatomic, readonly, copy) NSString * _Nullable startsAt;
+@property (nonatomic, readonly, copy) NSString * _Nullable endsAt;
+@property (nonatomic, readonly, copy) NSString * _Nonnull reelType;
+@property (nonatomic, readonly, copy) NSArray<NSString *> * _Nullable tags;
 @property (nonatomic, readonly) BOOL switchWithAudio;
+@property (nonatomic, copy) NSString * _Nullable nextPageToken;
 @property (nonatomic, readonly, strong) RBSDKThumbList * _Nullable thumbs;
-@property (nonatomic, readonly, strong) RBSDKUser * _Nonnull user;
-@property (nonatomic, readonly, copy) NSArray<RBSDKMomentStream *> * _Nonnull momentStreams;
+@property (nonatomic, readonly, strong) RBSDKUser * _Nullable user;
+@property (nonatomic, copy) NSArray<RBSDKMomentStream *> * _Nullable momentStreams;
+@property (nonatomic, readonly) NSInteger reelTypeInt;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id caption:(NSString * _Nullable)caption createdAt:(NSString * _Nullable)createdAt streamCount:(NSInteger)streamCount startsAt:(NSString * _Nullable)startsAt endsAt:(NSString * _Nullable)endsAt reelType:(NSString * _Nonnull)reelType tags:(NSArray<NSString *> * _Nullable)tags switchWithAudio:(BOOL)switchWithAudio nextPageToken:(NSString * _Nullable)nextPageToken thumbs:(RBSDKThumbList * _Nullable)thumbs user:(RBSDKUser * _Nonnull)user momentStreams:(NSArray<RBSDKMomentStream *> * _Nonnull)momentStreams OBJC_DESIGNATED_INITIALIZER;
++ (void)requestMomentById:(NSString * _Nonnull)byId completionHandler:(void (^ _Nonnull)(BOOL, NSError * _Nullable, id _Nullable))completionHandler;
+- (double)getDuration SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, RBSDKMomentReelType, "ReelType", closed) {
+  RBSDKMomentReelTypeEvent = 0,
+  RBSDKMomentReelTypeSong = 1,
+  RBSDKMomentReelTypeTag = 2,
+};
+
+
 
 @class RBSDKStream;
 
@@ -245,11 +317,44 @@ SWIFT_CLASS_NAMED("MomentStream")
 @interface RBSDKMomentStream : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 @property (nonatomic, readonly, copy) NSString * _Nonnull streamId;
-@property (nonatomic, readonly, copy) NSString * _Nonnull order;
+@property (nonatomic, readonly) NSInteger order;
 @property (nonatomic, readonly) NSInteger offsetMilliseconds;
 @property (nonatomic, readonly, strong) RBSDKClip * _Nullable clip;
-@property (nonatomic, readonly, strong) RBSDKStream * _Nonnull stream;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id streamId:(NSString * _Nonnull)streamId order:(NSString * _Nonnull)order offsetMilliseconds:(NSInteger)offsetMilliseconds clip:(RBSDKClip * _Nullable)clip stream:(RBSDKStream * _Nonnull)stream OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) RBSDKStream * _Nullable stream;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id streamId:(NSString * _Nonnull)streamId order:(NSInteger)order offsetMilliseconds:(NSInteger)offsetMilliseconds clip:(RBSDKClip * _Nullable)clip stream:(RBSDKStream * _Nonnull)stream OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS_NAMED("RestClient")
+@interface RBSDKRestClient : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+/// <code>RBSDK</code> object provide a singleton to load easily player controllers, the first
+/// step is to set the secret and access keys, then use the
+/// <code>-[RBSDK loadAsynchronouslyWithCompletionHandler:]</code> method to load everything.
+SWIFT_CLASS_NAMED("SDK")
+@interface RBSDKV2 : NSObject
++ (RBSDKV2 * _Nullable)mainAndReturnError:(NSError * _Nullable * _Nullable)error SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly, strong) RBSDKRestClient * _Nonnull restClient;
+@property (nonatomic, readonly) BOOL isReady;
+@property (nonatomic, readonly) BOOL isLoading;
+/// Set the secret, access and token key, this is needed for creating a player
+/// controller
+/// @param secretKey SDK’s secret key
+/// @param accessKey SDK’s access key
+/// @param tokenKey SDK’s token key
++ (void)setKeysWithClientId:(NSString * _Nonnull)clientId clientSecret:(NSString * _Nonnull)clientSecret accountId:(NSString * _Nonnull)accountId;
+/// Use this method if you want to initialize a player a soon as posible, completion
+/// handler will be called after the configuration ends, is important to check
+/// if the process ended successfully or not.
+/// @param completionHandler The completion handler will say if the configuration
+/// was successfull or not, and if is not, check the NSError information.
++ (void)loadAsynchronouslyWithCompletionHandler:(void (^ _Nullable)(BOOL, NSError * _Nullable))completionHandler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -258,32 +363,62 @@ SWIFT_CLASS_NAMED("MomentStream")
 SWIFT_CLASS_NAMED("Stream")
 @interface RBSDKStream : NSObject
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
+@property (nonatomic, readonly, copy) NSString * _Nullable vendorId;
 @property (nonatomic, readonly, copy) NSString * _Nonnull caption;
-@property (nonatomic, readonly, copy) NSString * _Nonnull comment;
-@property (nonatomic, readonly, copy) NSDate * _Nonnull startedOn;
+@property (nonatomic, readonly, copy) NSString * _Nullable startedOn;
+@property (nonatomic, readonly, copy) NSString * _Nonnull videoSource;
+@property (nonatomic, readonly, copy) NSString * _Nonnull status;
 @property (nonatomic, readonly) NSInteger duration;
+@property (nonatomic, readonly, copy) NSString * _Nonnull category;
 @property (nonatomic, readonly, copy) NSArray<NSString *> * _Nonnull tags;
 @property (nonatomic, readonly, strong) RBSDKThumbList * _Nullable thumbs;
-@property (nonatomic, readonly, strong) RBSDKUser * _Nonnull user;
+@property (nonatomic, readonly, strong) RBSDKUser * _Nullable createdBy;
 @property (nonatomic, readonly, copy) NSArray<RBSDKMediaTrack *> * _Nonnull mediaTracks;
-@property (nonatomic, readonly, copy) NSString * _Nonnull videoSourceString;
-@property (nonatomic, readonly, copy) NSString * _Nonnull statusString;
-@property (nonatomic, readonly, copy) NSString * _Nonnull categoryString;
+@property (nonatomic, readonly, copy) NSDate * _Nonnull startedOnDate;
+@property (nonatomic, readonly) NSInteger videoSourceInt;
+@property (nonatomic, readonly) NSInteger statusInt;
+@property (nonatomic, readonly) NSInteger categoryInt;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id vendorId:(NSString * _Nullable)vendorId caption:(NSString * _Nonnull)caption startedOn:(NSString * _Nonnull)startedOn videoSource:(NSString * _Nonnull)videoSource status:(NSString * _Nonnull)status duration:(NSInteger)duration category:(NSString * _Nonnull)category tags:(NSArray<NSString *> * _Nonnull)tags thumbs:(RBSDKThumbList * _Nullable)thumbs createdBy:(RBSDKUser * _Nonnull)createdBy mediaTracks:(NSArray<RBSDKMediaTrack *> * _Nonnull)mediaTracks OBJC_DESIGNATED_INITIALIZER;
++ (void)reportById:(NSString * _Nonnull)byId reason:(NSString * _Nonnull)reason service:(NSString * _Nonnull)service completionHandler:(void (^ _Nonnull)(BOOL, NSError * _Nullable, id _Nullable))completionHandler;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, RBSDKStreamVideoSource, "VideoSource", closed) {
+  RBSDKStreamVideoSourceRhinobird = 0,
+  RBSDKStreamVideoSourceYoutube = 1,
+  RBSDKStreamVideoSourceBrightcove = 2,
+  RBSDKStreamVideoSourceSelfhosted = 3,
+};
+
+typedef SWIFT_ENUM_NAMED(NSInteger, RBSDKStreamStatus, "Status", closed) {
+  RBSDKStreamStatusCreated = 0,
+  RBSDKStreamStatusLive = 1,
+  RBSDKStreamStatusPending = 2,
+  RBSDKStreamStatusArchived = 3,
+};
+
+typedef SWIFT_ENUM_NAMED(NSInteger, RBSDKStreamCategory, "Category", closed) {
+  RBSDKStreamCategoryExperience = 0,
+  RBSDKStreamCategoryOpinion = 1,
+  RBSDKStreamCategoryReaction = 2,
+  RBSDKStreamCategoryExperienceRev = 3,
+  RBSDKStreamCategoryLipsync = 4,
+  RBSDKStreamCategoryNone = 5,
+};
 
 
 
 
 SWIFT_CLASS_NAMED("ThumbList")
 @interface RBSDKThumbList : NSObject
-@property (nonatomic, readonly, copy) NSURL * _Nonnull boxSize;
-@property (nonatomic, readonly, copy) NSURL * _Nonnull small;
-@property (nonatomic, readonly, copy) NSURL * _Nonnull medium;
-@property (nonatomic, readonly, copy) NSURL * _Nonnull burned;
-@property (nonatomic, readonly, copy) NSURL * _Nonnull large;
-@property (nonatomic, readonly, copy) NSURL * _Nonnull featured;
+@property (nonatomic, readonly, copy) NSURL * _Nullable boxSize;
+@property (nonatomic, readonly, copy) NSURL * _Nullable small;
+@property (nonatomic, readonly, copy) NSURL * _Nullable medium;
+@property (nonatomic, readonly, copy) NSURL * _Nullable burned;
+@property (nonatomic, readonly, copy) NSURL * _Nullable large;
+@property (nonatomic, readonly, copy) NSURL * _Nullable featured;
+- (nonnull instancetype)initWithBoxSize:(NSURL * _Nullable)boxSize small:(NSURL * _Nullable)small medium:(NSURL * _Nullable)medium burned:(NSURL * _Nullable)burned large:(NSURL * _Nullable)large featured:(NSURL * _Nullable)featured OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithUrl:(NSURL * _Nonnull)url OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -295,10 +430,10 @@ SWIFT_CLASS_NAMED("User")
 @property (nonatomic, readonly, copy) NSString * _Nonnull id;
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
 @property (nonatomic, readonly, copy) NSString * _Nonnull username;
-@property (nonatomic, readonly, copy) NSURL * _Nullable imageUrl;
 @property (nonatomic, readonly, copy) NSString * _Nullable bio;
 @property (nonatomic, readonly) BOOL channel;
-- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name username:(NSString * _Nonnull)username imageUrl:(NSURL * _Nullable)imageUrl bio:(NSString * _Nullable)bio channel:(BOOL)channel OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, strong) RBSDKAvatar * _Nullable avatar;
+- (nonnull instancetype)initWithId:(NSString * _Nonnull)id name:(NSString * _Nonnull)name username:(NSString * _Nonnull)username bio:(NSString * _Nullable)bio channel:(BOOL)channel avatar:(RBSDKAvatar * _Nullable)avatar OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

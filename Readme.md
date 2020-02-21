@@ -1,6 +1,6 @@
 # RBSDKPlayer
 
-[![Version](https://img.shields.io/badge/pod-v0.6.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
+[![Version](https://img.shields.io/badge/pod-v1.0.0-blue.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)](https://cocoapods.org/pods/RBSDKPlayer)
 
 ## Introduction
@@ -31,7 +31,7 @@ source 'https://github.com/brightcove/BrightcoveSpecs.git'
 platform :ios, '10.0'
 
 target 'AppTargetName' do
-  pod 'RBSDKPlayer', '~> 0.6'
+  pod 'RBSDKPlayer', '~> 1.0'
   pod 'YoutubePlayer-in-WKWebView', :git => 'https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git'
   pod 'Brightcove-Player-Core/dynamic', '~> 6.4'
 end
@@ -42,9 +42,6 @@ Then run the installation command:
 ```
 $ pod install
 ```
-
-## Install the SDK using Carthage
-_We're currently working on adding support for Carthage._
 
 ## Requirements
 
@@ -63,15 +60,15 @@ The first step is to configure the sdk for auth, use the provided keys, if you d
 
 ```objc
 // Objective-C
-[RBSDK.sharedInstance setSecretKey:<#Secret Key Here#>
-                         accessKey:<#Access Key Here#>
-                         accountId:<#Account Id Here#>];
+[RBSDKV2 setKeysWithClientId:@""
+                clientSecret:@""
+                   accountId:@""];
 ```
 ```swift
 // Swift
-RBSDK.sharedInstance().setSecretKey(<#Secret Key Here#>,
-                                    accessKey: <#Access Key Here#>,
-                                    accountId: <#Account Id Here#>)
+SDK.setKeys(clientId: "",
+            clientSecret: "",
+            accountId: "")
 ```
 
 **Create the properties**
@@ -93,19 +90,19 @@ Connect them to the interface file if needed.
 Before creating a player, make sure that everything in the SDK core is loaded, by calling `loadAsynchronouslyWithCompletionHandler:` method and in the `completionHandler` set the player. Also, is important to load the player on the main thread.
 ```objc
 // Objective-C
-[RBSDK.sharedInstance loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * _Nullable error) {
-        if (success) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self loadPlayer];
-            });
-        } else if (error) {
-            NSLog(@"Error trying to configure the sdk: %@", error.localizedDescription);
-        }
-    }];
+[RBSDKV2 loadAsynchronouslyWithCompletionHandler:^(BOOL success, NSError * error) {
+    if (success) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self loadPlayer];
+        });
+    } else if (error) {
+        NSLog(@"Error trying to configure the sdk: %@", error.localizedDescription);
+    }
+}];
 ```
 ```swift
 // Swift
-RBSDK.sharedInstance().loadAsynchronously { success, error in
+SDK.loadAsynchronously { (success, error) in
     if (success) {
         DispatchQueue.main.async {
             self.loadPlayer()

@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        RBSDK.sharedInstance().loadAsynchronously { success, error in
+        SDK.loadAsynchronously { (success, error) in
             if (success) {
                 DispatchQueue.main.async {
                     // Load Player with a Reel Id
