@@ -2,6 +2,13 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/).
 
+## v1.0.1 (2020/02/26)
+
+### Enhancements
+
+1. Add more information to RBSDKMediaInfo.
+2. Add option to hide Reel and Stream index.
+
 ## v1.0.0 (2020/02/21)
 
 ### Enhancements

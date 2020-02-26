@@ -55,11 +55,17 @@ typedef NS_OPTIONS(NSUInteger, RBSDKPlayerOption) {
     RBSDKPlayerOptionEnableRealtime             = 1 << 6,
 
     /**
-     Allow to stop the player controller manually, this means player controller tear down
+     Allows to stop the player controller manually, this means player controller tear down
      will not be managed automatically at dissapear..
      The tearDown method must be called on the implementation.
      */
-    RBSDKPlayerOptionManualTearDown             = 1 << 7
+    RBSDKPlayerOptionManualTearDown             = 1 << 7,
+
+    /**
+     Allows to hide the vertical and horizontal Visual index that shows what Reel and
+     Stream the Player is currently playbacking.
+     */
+    RBSDKPlayerOptionHideVisualIndex            = 1 << 8
 };
 
 #endif /* RBSDKPlayerOptions_h */

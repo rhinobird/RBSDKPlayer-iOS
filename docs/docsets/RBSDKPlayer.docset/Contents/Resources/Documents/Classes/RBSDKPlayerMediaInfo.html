@@ -139,9 +139,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RBSDKPlayerMediaInfo(py)mediaId"></a>
-                    <a name="//apple_ref/objc/Property/mediaId" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RBSDKPlayerMediaInfo(py)mediaId">mediaId</a>
+                    <a name="/c:objc(cs)RBSDKPlayerMediaInfo(py)streamId"></a>
+                    <a name="//apple_ref/objc/Property/streamId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKPlayerMediaInfo(py)streamId">streamId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -149,24 +149,59 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Media id (related to the platform you&rsquo;re using.</p>
+                        <p>Stream id assigned in the Rhinobird dashboard.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">mediaId</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">streamId</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">mediaId</span><span class="p">:</span> <span class="kt">NSString</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">streamId</span><span class="p">:</span> <span class="kt">NSString</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.0/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L23">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.1/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RBSDKPlayerMediaInfo(py)reelId"></a>
+                    <a name="//apple_ref/objc/Property/reelId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RBSDKPlayerMediaInfo(py)reelId">reelId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reel id assigned in the Rhinobird dashboard.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">reelId</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">reelId</span><span class="p">:</span> <span class="kt">NSString</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.1/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L28">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -184,7 +219,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Caption (title) of the media.</p>
+                        <p>Caption (title) of the stream.</p>
 
                       </div>
                       <div class="declaration">
@@ -201,7 +236,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.0/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L28">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.1/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,7 +271,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.0/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L33">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.1/RBSDKPlayer.framework/Headers/RBSDKPlayerMediaInfo.h#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -249,7 +284,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2020-02-21)</p>
+      <p>&copy; 2020 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2020-02-26)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

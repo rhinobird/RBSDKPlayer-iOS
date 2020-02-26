@@ -18,12 +18,17 @@ NS_ASSUME_NONNULL_BEGIN
 # pragma mark - properties
 
 /**
- Media id (related to the platform you're using.
+ Stream id assigned in the Rhinobird dashboard.
  */
-@property (weak, nonatomic, nullable, readonly) NSString *mediaId;
+@property (weak, nonatomic, nullable, readonly) NSString *streamId;
 
 /**
- Caption (title) of the media.
+ Reel id assigned in the Rhinobird dashboard.
+ */
+@property (weak, nonatomic, nullable, readonly) NSString *reelId;
+
+/**
+ Caption (title) of the stream.
  */
 @property (weak, nonatomic, nullable, readonly) NSString *caption;
 

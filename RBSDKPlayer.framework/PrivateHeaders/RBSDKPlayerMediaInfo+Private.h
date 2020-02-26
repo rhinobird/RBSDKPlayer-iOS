@@ -39,21 +39,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Initialize a `RBSDKPlayerMediaInfo` instance with its data
 
- @param mediaId The media id.
- @param caption The media's caption (title).
- @param username The media's username owner.
- @param userImageUrl The media's user image url.
- @param duration The media's duration (seconds).
+ @param streamId The stream id.
+ @param reelId The reel id.
+ @param caption The stream's caption (title).
+ @param username The stream's username owner.
+ @param userImageUrl The stream's user image url.
+ @param duration The stream's duration (seconds).
  @param otherParameters Other useful info e.g. referenceId.
 
  @return An instance of `RBSDKPlayerMediaInfo`
  */
-- (instancetype)initWithMediaId:(nullable NSString *)mediaId
-                        caption:(nullable NSString *)caption
-                       username:(nullable NSString *)username
-                   userImageUrl:(nullable NSURL *)userImageUrl
-                       duration:(float)duration
-                otherParameters:(nullable NSDictionary *)otherParameters;
+- (instancetype)initWithStreamId:(nullable NSString *)streamId
+                          reelId:(nullable NSString *)reelId
+                         caption:(nullable NSString *)caption
+                        username:(nullable NSString *)username
+                    userImageUrl:(nullable NSURL *)userImageUrl
+                        duration:(float)duration
+                 otherParameters:(nullable NSDictionary *)otherParameters;
 
 @end
 
