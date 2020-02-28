@@ -297,7 +297,7 @@ SWIFT_CLASS_NAMED("Moment")
 @property (nonatomic, copy) NSArray<RBSDKMomentStream *> * _Nullable momentStreams;
 @property (nonatomic, readonly) NSInteger reelTypeInt;
 - (nonnull instancetype)initWithId:(NSString * _Nonnull)id caption:(NSString * _Nullable)caption createdAt:(NSString * _Nullable)createdAt streamCount:(NSInteger)streamCount startsAt:(NSString * _Nullable)startsAt endsAt:(NSString * _Nullable)endsAt reelType:(NSString * _Nonnull)reelType tags:(NSArray<NSString *> * _Nullable)tags switchWithAudio:(BOOL)switchWithAudio nextPageToken:(NSString * _Nullable)nextPageToken thumbs:(RBSDKThumbList * _Nullable)thumbs user:(RBSDKUser * _Nonnull)user momentStreams:(NSArray<RBSDKMomentStream *> * _Nonnull)momentStreams OBJC_DESIGNATED_INITIALIZER;
-+ (void)requestMomentById:(NSString * _Nonnull)byId completionHandler:(void (^ _Nonnull)(BOOL, NSError * _Nullable, id _Nullable))completionHandler;
++ (void)requestMomentById:(NSString * _Nonnull)byId startStreamAtPosition:(NSString * _Nonnull)startStreamAtPosition completionHandler:(void (^ _Nonnull)(BOOL, NSError * _Nullable, id _Nullable))completionHandler;
 - (double)getDuration SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

@@ -31,6 +31,21 @@ NS_ASSUME_NONNULL_BEGIN
                               delegate:(id)delegate;
 
 /**
+ Creates an instance of a Rhinobird player controller with a Reel id provided by the dashboard.
+
+ @param reelId Reel id.
+ @param startStreamAtPosition Position order of the stream to start the reel.
+ @param options RBSDKPlayerOption configuration.
+ @param delegate Controller delegate.
+
+ @return An instance of `RBSDKPlayerViewController` with a Reel.
+ */
+- (nonnull instancetype)initWithReelId:(nonnull NSString *)reelId
+                 startStreamAtPosition:(NSString *)startStreamAtPosition
+                               options:(RBSDKPlayerOption)options
+                              delegate:(id)delegate;
+
+/**
  Inserts a Reel (by it's id) to the player controller (vertically added).
 
  @note There isn't a limit on the amount of reels that you can add.

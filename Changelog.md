@@ -2,6 +2,12 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/).
 
+## v1.0.2 (2020/02/28)
+
+### Enhancements
+
+1. Add initialization in RBSDKRhinobirdPlayerViewController to start a reel from a specific stream at position.
+
 ## v1.0.1 (2020/02/26)
 
 ### Enhancements
