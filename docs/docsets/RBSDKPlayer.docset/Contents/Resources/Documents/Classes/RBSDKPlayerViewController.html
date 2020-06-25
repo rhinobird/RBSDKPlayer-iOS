@@ -157,7 +157,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span> <span class="n">options</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/RBSDKPlayerOption.html">RBSDKPlayerOption</a></span> <span class="n">options</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -167,7 +167,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L27">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L27">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -192,8 +192,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span>
-    <span class="n">RBPlayerViewController</span> <span class="o">*</span><span class="n">playerViewController</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">RBPlayerViewController</span> <span class="o">*</span><span class="n">playerViewController</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -203,7 +202,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L32">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L32">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -228,8 +227,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RBSDKPlayerViewControllerDelegate.html">RBSDKPlayerViewControllerDelegate</a></span><span class="o">&gt;</span>
-    <span class="n">delegate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RBSDKPlayerViewControllerDelegate.html">RBSDKPlayerViewControllerDelegate</a></span><span class="o">&gt;</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -239,7 +237,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L37">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -264,7 +262,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">verticalPosition</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">verticalPosition</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -274,7 +272,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L42">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -299,7 +297,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">horizontalPosition</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSInteger</span> <span class="n">horizontalPosition</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -309,7 +307,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L47">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,7 +332,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a></span> <span class="o">*</span><span class="n">currentMediaInfo</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/RBSDKPlayerMediaInfo.html">RBSDKPlayerMediaInfo</a></span> <span class="o">*</span><span class="n">currentMediaInfo</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -348,7 +346,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <p>RBSDKPlayerMediaInfo Media info</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L54">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -383,7 +381,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -418,7 +416,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L71">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -457,7 +455,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <p>BOOL YES if is playing</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -496,7 +494,7 @@ this object directly, use <code><a href="../Classes/RBSDKRhinobirdPlayerViewCont
                         <p>BOOL YES if is fullscreen</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L85">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -537,7 +535,7 @@ RBSDKPlayerOptionManualTearDown to stop manually the player.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.2/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L93">Show on GitHub</a>
+                        <a href="https://github.com/rhinobird/RBSDKPlayer-iOS/tree/1.0.3/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -550,8 +548,8 @@ RBSDKPlayerOptionManualTearDown to stop manually the player.
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2020 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2020-02-28)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="https://rhinobird.tv" target="_blank" rel="external">Rhinobird</a>. All rights reserved. (Last updated: 2020-06-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

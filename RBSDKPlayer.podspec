@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RBSDKPlayer"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "Interactive video player SDK by Rhinobird"
 
   s.homepage     = "https://github.com/rhinobird/RBSDKPlayer-iOS"
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.dependency 'MBCircularProgressBar', '~> 0.3'
   s.dependency 'Mixpanel', '~> 3.2'
   s.dependency 'NHNetworkTime', '~> 1.7'
-  s.dependency 'SDWebImage', '~> 3.7'
+  s.dependency 'SDWebImage', '~> 5.8'
   s.dependency 'XCDYouTubeKit', '~> 2.5'
   s.dependency 'Socket.IO-Client-Swift', '~> 15.0'
   s.dependency 'GoogleAds-IMA-iOS-SDK', '~> 3.7'

@@ -31,7 +31,7 @@ source 'https://github.com/brightcove/BrightcoveSpecs.git'
 platform :ios, '10.0'
 
 target 'AppTargetName' do
-  pod 'RBSDKPlayer', '~> 1.0'
+  pod 'RBSDKPlayer', '~> 1.0.3'
   pod 'YoutubePlayer-in-WKWebView', :git => 'https://github.com/rhinobird/YoutubePlayer-in-WKWebView.git'
   pod 'Brightcove-Player-Core/dynamic', '~> 6.4'
 end

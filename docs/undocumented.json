@@ -1,33 +1,33 @@
 {
   "warnings": [
     {
-      "file": "/Users/Bastich/Documents/Proyectos/iOS/Rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKError.h",
+      "file": "/Users/Jimi/Sites/rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKError.h",
       "line": 25,
       "symbol": "",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.enum",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Bastich/Documents/Proyectos/iOS/Rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKPlayer.h",
+      "file": "/Users/Jimi/Sites/rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKPlayer.h",
       "line": 12,
       "symbol": "RBSDKPlayerVersionNumber",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Bastich/Documents/Proyectos/iOS/Rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKPlayer.h",
+      "file": "/Users/Jimi/Sites/rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKPlayer.h",
       "line": 15,
       "symbol": "RBSDKPlayerVersionString",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/Bastich/Documents/Proyectos/iOS/Rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h",
+      "file": "/Users/Jimi/Sites/rhinobird/RBSDKPlayer-iOS/RBSDKPlayer.framework/Headers/RBSDKPlayerViewController.h",
       "line": 14,
       "symbol": "RBSDKPlayerGoToFullScreenNotification",
       "symbol_kind": "sourcekitten.source.lang.objc.decl.constant",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/Bastich/Documents/Proyectos/iOS/Rhinobird/RBSDKPlayer-iOS"
+  "source_directory": "/Users/Jimi/Sites/rhinobird/RBSDKPlayer-iOS"
 }

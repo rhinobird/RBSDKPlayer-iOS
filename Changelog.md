@@ -2,6 +2,13 @@
 
 This is the changelog for Rhinobird's iOS SDK, the complete project can be found [here](https://github.com/rhinobird/RBSDKPlayer-iOS/).
 
+## v1.0.3 (2020/06/25)
+
+### Enhancements
+
+1. Point API to Rhinobird production server.
+2. Upgrade SDWebImage to 5.8 version.
+
 ## v1.0.2 (2020/02/28)
 
 ### Enhancements
